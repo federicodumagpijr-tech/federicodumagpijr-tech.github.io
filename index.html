@@ -572,34 +572,38 @@
     </section>
 
     <!-- Contact & Footer Section -->
-    <section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto surface-card border p-8 sm:p-12 rounded-3xl shadow-2xl reveal-on-scroll">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold tracking-tight mb-3">Let's Connect</h2>
-                <p class="text-base" style="color: var(--text-secondary);">Reach out for executive opportunities in HR leadership, total rewards, and digital transformation.</p>
-            </div>
-            
-            <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase mb-2" style="color: var(--text-secondary);">Your Name</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-xl border surface-card focus:outline-none focus:border-excel-500 transition-colors" placeholder="John Doe">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase mb-2" style="color: var(--text-secondary);">Email Address</label>
-                        <input type="email" required class="w-full px-4 py-3 rounded-xl border surface-card focus:outline-none focus:border-excel-500 transition-colors" placeholder="john@example.com">
-                    </div>
+<section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto surface-card border p-8 sm:p-12 rounded-3xl shadow-2xl reveal-on-scroll">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold tracking-tight mb-3">Let's Connect</h2>
+            <p class="text-base" style="color: var(--text-secondary);">Reach out for executive opportunities in HR leadership, total rewards, and digital transformation.</p>
+        </div>
+        
+        <form action="https://formsubmit.co/federico.dumagpi.jr@gmail.com" method="POST" class="space-y-6">
+            <!-- Optional FormSubmit Configurations -->
+            <input type="hidden" name="_subject" value="New Contact Inquiry from Website">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-semibold uppercase mb-2" style="color: var(--text-secondary);">Your Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border surface-card focus:outline-none focus:border-excel-500 transition-colors" placeholder="John Doe">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold uppercase mb-2" style="color: var(--text-secondary);">Message</label>
-                    <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border surface-card focus:outline-none focus:border-excel-500 transition-colors" placeholder="Discussing potential leadership role..."></textarea>
+                    <label class="block text-xs font-semibold uppercase mb-2" style="color: var(--text-secondary);">Email Address</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border surface-card focus:outline-none focus:border-excel-500 transition-colors" placeholder="john@example.com">
                 </div>
-                <button type="submit" class="w-full py-4 text-sm font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all transform hover:scale-[1.02]">
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </section>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase mb-2" style="color: var(--text-secondary);">Message</label>
+                <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border surface-card focus:outline-none focus:border-excel-500 transition-colors" placeholder="Discussing potential leadership role..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 text-sm font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all transform hover:scale-[1.02]">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="py-12 border-t surface-card" style="border-color: var(--border-color);">
