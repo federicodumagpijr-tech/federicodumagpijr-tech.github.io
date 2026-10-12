@@ -779,4 +779,21 @@
 
     <!-- SAMPLE PREVIEW MODAL BACKDROP -->
     <div id="modal-backdrop" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="surface-card rounded-2xl max-w-xl w-full p-6 border shadow-2xl relative animate-in fade-in zoom-in-
+        <div class="surface-card rounded-2xl max-w-xl w-full p-6 border shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
+            <button onclick="closeModal()" class="absolute top-4 right-4 opacity-60 hover:opacity-100 p-1">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-32 transition-transform duration-300 bg-excel-600 text-white px-6 py-3 rounded-xl shadow-xl flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span class="text-sm sm:text-base font-semibold">Inquiry sent successfully! Federico will respond within 24 hours.</span>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
