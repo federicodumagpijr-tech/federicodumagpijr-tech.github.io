@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (progressBar) progressBar.style.width = scrolled + '%';
     });
 
-    // Theme Toggle
+    // Theme Toggle (Desktop & Mobile)
     const themeToggleBtn = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const htmlElement = document.documentElement;
 
     function toggleTheme() {
-        if (htmlElement.getAttribute('data-theme') === 'dark') {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
             htmlElement.setAttribute('data-theme', 'light');
             if (themeIcon) themeIcon.className = 'fa-solid fa-moon text-excel-500';
             if (mobileThemeIcon) mobileThemeIcon.className = 'fa-solid fa-moon text-excel-500';
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                if (entry.target.querySelector('.counter')) {
+                if (entry.target.querySelector('.counter') || entry.target.classList.contains('counter')) {
                     startCounters();
                 }
             }
@@ -61,8 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let countersStarted = false;
     function startCounters() {
         if (countersStarted) return;
+        const counters = document.querySelectorAll('.counter');
+        if (counters.length === 0) return;
         countersStarted = true;
-        document.querySelectorAll('.counter').forEach(counter => {
+        counters.forEach(counter => {
             const target = +counter.getAttribute('data-target');
             let count = 0;
             const speed = target / 50;
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Skill Filter Engine
     const filterBtns = document.querySelectorAll('.skill-filter-btn');
     const skillCards = document.querySelectorAll('.skill-card');
-    if (filterBtns.length > 0) {
+    if (filterBtns.length > 0 && skillCards.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
