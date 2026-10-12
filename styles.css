@@ -66,3 +66,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #107c41;
 }
+/* Improve mobile base readability */
+@media (max-width: 640px) {
+    body {
+        font-size: 16px; /* Sets a comfortable baseline for mobile */
+        line-height: 1.6;
+    }
+    p, li {
+        font-size: 0.95rem; /* Ensures small body text doesn't drop below readable thresholds */
+    }
+}
