@@ -1,0 +1,68 @@
+:root {
+    --bg - primary: #0f172a;
+    --bg - surface: #1e293b;
+    --border - color: #334155;
+    --text - primary: #f8fafc;
+    --text - secondary: #94a3b8;
+}
+
+[data - theme="light"] {
+    --bg - primary: #f8fafc;
+    --bg - surface: #ffffff;
+    --border - color: #e2e8f0;
+    --text - primary: #0f172a;
+    --text - secondary: #64748b;
+}
+
+body {
+    background - color: var(--bg - primary);
+    color: var(--text - primary);
+    font - family: 'Plus Jakarta Sans', sans - serif;
+    transition: background - color 0.3s ease, color 0.3s ease;
+}
+
+.surface - card {
+    background - color: var(--bg - surface);
+    border - color: var(--border - color);
+}
+
+.reveal - on - scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease - out, transform 0.6s ease - out;
+}
+
+.reveal - on - scroll.is - visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll progress bar */
+#scroll - progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #107c41;
+    width: 0 %;
+    z - index: 100;
+    transition: width 0.1s ease - out;
+}
+
+/* Custom scrollbar */
+:: -webkit - scrollbar {
+    width: 8px;
+}
+
+:: -webkit - scrollbar - track {
+    background: var(--bg - primary);
+}
+
+:: -webkit - scrollbar - thumb {
+    background: var(--border - color);
+    border - radius: 4px;
+}
+
+:: -webkit - scrollbar - thumb:hover {
+    background: #107c41;
+}
