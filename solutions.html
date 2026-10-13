@@ -36,7 +36,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="antialiased selection:bg-excel-500 selection:text-white min-h-screen flex flex-col justify-between">
 
@@ -44,7 +44,7 @@
     <div id="scroll-progress"></div>
 
     <!-- NAVIGATION HEADER -->
-    <header class="sticky top-0 z-40 surface-card/90 backdrop-blur-md border-b">
+    <header class="sticky top-0 z-40 surface-card/95 backdrop-blur-md border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <a href="index.html" class="flex items-center space-x-3 group">
@@ -61,7 +61,7 @@
                     <a href="#section-excel" class="hover:text-excel-500 transition-colors">Excel Solutions</a>
                     <a href="#section-web" class="hover:text-excel-500 transition-colors">Web Templates</a>
                     <a href="#section-automation" class="hover:text-excel-500 transition-colors">Automated Workflows</a>
-                    <a href="index.html" class="font-semibold transition-opacity hover:opacity-80" style="color: #ED1C24;"><i class="fa-solid fa-arrow-left text-xs"></i> Main Profile</a>
+                    <a href="index.html" class="font-semibold transition-opacity hover:opacity-80 text-solutions-red"><i class="fa-solid fa-arrow-left text-xs"></i> Main Profile</a>
 
                     <button id="theme-toggle" class="p-2.5 rounded-xl surface-card border hover:border-excel-500 transition-colors" aria-label="Toggle theme">
                         <i id="theme-icon" class="fa-solid fa-moon text-excel-500"></i>
@@ -104,7 +104,7 @@
                         <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
                             Elevate your digital presence & data automation
                         </h1>
-                        <p class="text-base sm:text-lg opacity-80 max-w-2xl leading-relaxed">
+                        <p class="text-base sm:text-lg opacity-80 max-w-2xl leading-relaxed text-secondary-custom">
                             Discover ready-to-deploy web templates, powerful Excel & M-Code automation models, and scalable digital solutions crafted for maximum performance and professional deployment.
                         </p>
                     </div>
@@ -180,16 +180,16 @@
                 <div class="flex items-center justify-between py-3 overflow-x-auto scrollbar-none gap-2">
                     <span class="text-xs font-bold uppercase tracking-wider opacity-60 shrink-0 hidden sm:inline-block">Filter Category:</span>
                     <div class="flex items-center space-x-2 w-full sm:w-auto">
-                        <button onclick="filterCategory('all')" id="btn-all" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 bg-excel-600 text-white shadow-md">
+                        <button data-filter="all" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 bg-excel-600 text-white shadow-md">
                             <i class="fa-solid fa-border-all mr-1.5"></i> All Offerings
                         </button>
-                        <button onclick="filterCategory('excel')" id="btn-excel" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 border border-slate-700 hover:border-excel-500">
+                        <button data-filter="excel" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 border border-slate-700 hover:border-excel-500">
                             <i class="fa-solid fa-file-excel mr-1.5 text-excel-500"></i> Excel & Power Query
                         </button>
-                        <button onclick="filterCategory('web')" id="btn-web" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 border border-slate-700 hover:border-excel-500">
+                        <button data-filter="web" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 border border-slate-700 hover:border-excel-500">
                             <i class="fa-solid fa-laptop-code mr-1.5 text-blue-500"></i> Web Creation
                         </button>
-                        <button onclick="filterCategory('automation')" id="btn-automation" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 border border-slate-700 hover:border-excel-500">
+                        <button data-filter="automation" class="filter-btn text-xs sm:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-150 shrink-0 border border-slate-700 hover:border-excel-500">
                             <i class="fa-solid fa-diagram-project mr-1.5 text-purple-500"></i> Automated Workflows
                         </button>
                     </div>
@@ -209,7 +209,7 @@
                         </div>
                         <div>
                             <h2 class="text-xl sm:text-2xl font-bold">Excel & Power Query Data Automation</h2>
-                            <p class="text-xs sm:text-sm opacity-70">Automated transformation pipelines, reconciliation models, and custom M-code solutions.</p>
+                            <p class="text-xs sm:text-sm opacity-70 text-secondary-custom">Automated transformation pipelines, reconciliation models, and custom M-code solutions.</p>
                         </div>
                     </div>
                     <span class="hidden sm:inline-flex text-xs font-semibold bg-excel-500/10 text-excel-500 border border-excel-500/20 px-3 py-1 rounded-full">
@@ -219,7 +219,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <!-- Excel Card 1 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="excel">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-excel-500/10 text-excel-500 border border-excel-500/20">
@@ -230,27 +230,27 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Multi-Source CSV & Excel Data Unifier Template
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 Stop manual copy-pasting. Automatically combine, clean, and standardize multiple raw folder exports into one clean master dataset using pre-configured M-code.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Automated Folder Ingestion Query</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Dynamic Header Mapping & Error Handler</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>10-page Step-by-Step PDF Setup Guide</span>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6 pt-0 mt-auto border-t flex items-center gap-3">
-                            <button onclick="openPreviewModal('Multi-Source CSV Unifier', 'excel-unifier')" class="flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors">
+                            <button class="preview-trigger flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors" data-title="Multi-Source CSV & Excel Data Unifier Template" data-template="excel-unifier">
                                 <i class="fa-solid fa-eye mr-1"></i> Preview
                             </button>
                             <a href="#contact-section" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-excel-600 text-white font-semibold text-sm sm:text-base hover:bg-excel-700 transition-colors shadow-sm">
@@ -260,7 +260,7 @@
                     </div>
 
                     <!-- Excel Card 2 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="excel">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
@@ -271,27 +271,27 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Payroll & Compensation Reconciliation Tool
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 Compare payroll records against HR master lists in seconds. Highlighting discrepancies, missing tax details, and variance tracking dynamically.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>2-Way Automated Matching Query</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Audit Discrepancy Dashboard Sheet</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Sample Test Data & M-Code Source</span>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6 pt-0 mt-auto border-t flex items-center gap-3">
-                            <button onclick="openPreviewModal('Payroll Reconciliation Tool', 'excel-payroll')" class="flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors">
+                            <button class="preview-trigger flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors" data-title="Payroll & Compensation Reconciliation Tool" data-template="excel-payroll">
                                 <i class="fa-solid fa-eye mr-1"></i> Preview
                             </button>
                             <a href="#contact-section" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-excel-600 text-white font-semibold text-sm sm:text-base hover:bg-excel-700 transition-colors shadow-sm">
@@ -301,7 +301,7 @@
                     </div>
 
                     <!-- Excel Card 3 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="excel">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-excel-500/10 text-excel-500 border border-excel-500/20">
@@ -312,20 +312,20 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Custom Power Query Pipeline Build
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 Have a complex spreadsheet problem? I will build a tailored M-Code pipeline to automate your company's exact reporting or data extraction workflow.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>1-on-1 Data Requirement Scoping</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Custom M-Code Script & Excel Model</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Loom Video Walkthrough & Revision Round</span>
                                 </div>
@@ -349,7 +349,7 @@
                         </div>
                         <div>
                             <h2 class="text-xl sm:text-2xl font-bold">Custom Web Development & Landing Pages</h2>
-                            <p class="text-xs sm:text-sm opacity-70">Fast, responsive static websites built with Tailwind CSS and professional deployment.</p>
+                            <p class="text-xs sm:text-sm opacity-70 text-secondary-custom">Fast, responsive static websites built with Tailwind CSS and professional deployment.</p>
                         </div>
                     </div>
                     <span class="hidden sm:inline-flex text-xs font-semibold bg-blue-500/10 text-blue-500 border border-blue-500/20 px-3 py-1 rounded-full">
@@ -359,7 +359,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <!-- Web Card 1 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="web">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-500/10 text-blue-500 border border-blue-500/20">
@@ -370,27 +370,27 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Tech Portfolio & Store Landing Blueprint
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 A clean, single-page HTML template designed for technical professionals to showcase both portfolio projects and monetize extra templates/services.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-blue-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Single-File HTML5/Tailwind CSS Code</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-blue-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Mobile Responsive & Interactive Modals</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-blue-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Deployment Documentation Readme</span>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6 pt-0 mt-auto border-t flex items-center gap-3">
-                            <button onclick="openPreviewModal('Tech Portfolio Blueprint', 'web-portfolio')" class="flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors">
+                            <button class="preview-trigger flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors" data-title="Tech Portfolio & Store Landing Blueprint" data-template="web-portfolio">
                                 <i class="fa-solid fa-eye mr-1"></i> Demo
                             </button>
                             <a href="#contact-section" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-blue-600 text-white font-semibold text-sm sm:text-base hover:bg-blue-700 transition-colors shadow-sm">
@@ -400,7 +400,7 @@
                     </div>
 
                     <!-- Web Card 2 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="web">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-purple-500/10 text-purple-500 border border-purple-500/20">
@@ -411,20 +411,20 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Custom Web Setup Package
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 I will build, customize, and deploy your complete personal portfolio website with a custom domain, contact form, and optimized responsive layout.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-purple-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Custom Content & Branding Integration</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-purple-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Professional Hosting & DNS Setup</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-purple-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Contact Form & Social Link Wiring</span>
                                 </div>
@@ -438,7 +438,7 @@
                     </div>
 
                     <!-- Web Card 3 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="web">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
@@ -449,20 +449,20 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Product Launch Micro-Landing Page
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 High-converting single page web build tailored for selling an eBook, digital download, or freelance consulting package with integrated payment triggers.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>High-Conversion Layout & CTA Structure</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Gumroad / PayPal / Stripe Integration</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Ultra-Fast Loading Under 1 Second</span>
                                 </div>
@@ -486,7 +486,7 @@
                         </div>
                         <div>
                             <h2 class="text-xl sm:text-2xl font-bold">Productivity & Automated Workflow Systems</h2>
-                            <p class="text-xs sm:text-sm opacity-70">Standardized procedure frameworks and M365 automation blueprints.</p>
+                            <p class="text-xs sm:text-sm opacity-70 text-secondary-custom">Standardized procedure frameworks and M365 automation blueprints.</p>
                         </div>
                     </div>
                     <span class="hidden sm:inline-flex text-xs font-semibold bg-purple-500/10 text-purple-500 border border-purple-500/20 px-3 py-1 rounded-full">
@@ -496,7 +496,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                     <!-- Workflow Card 1 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="automation">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20">
@@ -507,23 +507,23 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Microsoft 365 Automated Reporting Blueprint
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 Learn how to link Microsoft Forms, Power Automate, and Excel Power Query to build zero-touch automated weekly reporting workflows for teams.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-amber-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Power Automate Flow JSON Export File</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-amber-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Visual Flow Diagram & Setup Instructions</span>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6 pt-0 mt-auto border-t flex items-center gap-3">
-                            <button onclick="openPreviewModal('M365 Reporting Blueprint', 'sop-reporting')" class="flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors">
+                            <button class="preview-trigger flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors" data-title="Microsoft 365 Automated Reporting Blueprint" data-template="sop-reporting">
                                 <i class="fa-solid fa-eye mr-1"></i> Preview
                             </button>
                             <a href="#contact-section" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-purple-600 text-white font-semibold text-sm sm:text-base hover:bg-purple-700 transition-colors shadow-sm">
@@ -533,7 +533,7 @@
                     </div>
 
                     <!-- Workflow Card 2 -->
-                    <div class="surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group">
+                    <div class="offering-card surface-card rounded-2xl border shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden group" data-category="automation">
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-excel-500/10 text-excel-500 border border-excel-500/20">
@@ -544,23 +544,23 @@
                             <h3 class="text-lg sm:text-xl font-bold mb-2 group-hover:text-excel-500 transition-colors">
                                 Data Audit & Cleaning Automated Workflow
                             </h3>
-                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6">
+                            <p class="text-sm sm:text-base opacity-80 leading-relaxed mb-6 text-secondary-custom">
                                 A standardized, multi-step validation checklist and template to ensure data integrity prior to running analytical models or monthly closing.
                             </p>
                             <div class="space-y-2.5 border-t pt-4 mb-6">
                                 <div class="text-xs font-bold opacity-60 uppercase tracking-wider mb-2">Key Deliverables:</div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Editable Excel Validation Matrix</span>
                                 </div>
-                                <div class="flex items-start text-sm sm:text-base opacity-90">
+                                <div class="flex items-start text-sm sm:text-base opacity-90 text-secondary-custom">
                                     <i class="fa-solid fa-check text-excel-500 mt-1 mr-2.5 shrink-0"></i>
                                     <span>Data Sanitization Checklist Document</span>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6 pt-0 mt-auto border-t flex items-center gap-3">
-                            <button onclick="openPreviewModal('Data Audit Workflow', 'sop-audit')" class="flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors">
+                            <button class="preview-trigger flex-1 text-center py-2.5 px-3 rounded-xl border hover:border-excel-500 font-semibold text-sm sm:text-base transition-colors" data-title="Data Audit & Cleaning Automated Workflow" data-template="sop-audit">
                                 <i class="fa-solid fa-eye mr-1"></i> Preview
                             </button>
                             <a href="#contact-section" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-purple-600 text-white font-semibold text-sm sm:text-base hover:bg-purple-700 transition-colors shadow-sm">
@@ -583,7 +583,7 @@
                     <h2 class="text-2xl sm:text-3xl font-extrabold mt-3">
                         Payment Options & Instant Fulfillment
                     </h2>
-                    <p class="text-sm sm:text-base opacity-70 mt-2">
+                    <p class="text-sm sm:text-base opacity-70 mt-2 text-secondary-custom">
                         Flexible purchasing channels designed for secure checkout and immediate digital delivery.
                     </p>
                 </div>
@@ -594,7 +594,7 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </div>
                         <h3 class="font-bold text-lg">Gumroad & PayPal Store</h3>
-                        <p class="text-sm sm:text-base opacity-80 leading-relaxed">
+                        <p class="text-sm sm:text-base opacity-80 leading-relaxed text-secondary-custom">
                             Purchase ready-made Excel templates and web blueprints instantly via secure checkout links. Downloads are delivered straight to your inbox.
                         </p>
                         <div class="pt-2">
@@ -609,7 +609,7 @@
                             <i class="fa-solid fa-file-invoice-dollar"></i>
                         </div>
                         <h3 class="font-bold text-lg">Direct Corporate Invoicing</h3>
-                        <p class="text-sm sm:text-base opacity-80 leading-relaxed">
+                        <p class="text-sm sm:text-base opacity-80 leading-relaxed text-secondary-custom">
                             For custom web builds, consulting, or corporate licensing, request a formal invoice payable via bank transfer or major credit cards.
                         </p>
                         <div class="pt-2">
@@ -624,7 +624,7 @@
                             <i class="fa-solid fa-cloud-arrow-down"></i>
                         </div>
                         <h3 class="font-bold text-lg">Instant Automated Delivery</h3>
-                        <p class="text-sm sm:text-base opacity-80 leading-relaxed">
+                        <p class="text-sm sm:text-base opacity-80 leading-relaxed text-secondary-custom">
                             Digital asset purchases trigger an automated fulfillment email with secure archive links (`.zip`, `.xlsx`, or `.m`) and setup guides.
                         </p>
                         <div class="pt-2">
@@ -647,58 +647,58 @@
                     <h2 class="text-2xl sm:text-3xl font-extrabold mt-3">
                         Frequently Asked Questions
                     </h2>
-                    <p class="text-sm sm:text-base opacity-70 mt-2">
+                    <p class="text-sm sm:text-base opacity-70 mt-2 text-secondary-custom">
                         Everything you need to know about purchasing templates and custom technical services.
                     </p>
                 </div>
 
                 <div class="space-y-4">
                     <div class="surface-card rounded-2xl border overflow-hidden shadow-sm transition-all duration-200">
-                        <button onclick="toggleFaq('faq-1')" class="w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none" data-target="faq-1">
                             <span class="text-sm sm:text-base">How are digital templates delivered after purchase?</span>
                             <i id="faq-icon-faq-1" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-200"></i>
                         </button>
-                        <div id="faq-1" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3">
+                        <div id="faq-1" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3 text-secondary-custom">
                             Immediately upon checkout via Gumroad or PayPal, you will receive a direct download link containing all files (Excel workbooks, `.m` script files, or website code archives) along with a quick-start PDF installation guide.
                         </div>
                     </div>
 
                     <div class="surface-card rounded-2xl border overflow-hidden shadow-sm transition-all duration-200">
-                        <button onclick="toggleFaq('faq-2')" class="w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none" data-target="faq-2">
                             <span class="text-sm sm:text-base">What payment methods are supported?</span>
                             <i id="faq-icon-faq-2" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-200"></i>
                         </button>
-                        <div id="faq-2" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3">
+                        <div id="faq-2" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3 text-secondary-custom">
                             All digital store purchases are securely processed through Gumroad and PayPal, supporting major Credit/Debit cards, Apple Pay, and PayPal accounts worldwide. Direct corporate invoices are also available upon request.
                         </div>
                     </div>
 
                     <div class="surface-card rounded-2xl border overflow-hidden shadow-sm transition-all duration-200">
-                        <button onclick="toggleFaq('faq-3')" class="w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none" data-target="faq-3">
                             <span class="text-sm sm:text-base">How long does a custom website or Power Query build take?</span>
                             <i id="faq-icon-faq-3" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-200"></i>
                         </button>
-                        <div id="faq-3" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3">
+                        <div id="faq-3" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3 text-secondary-custom">
                             Custom Power Query pipelines are typically delivered within 2–3 business days. Professional web development setups usually take 3–5 business days from the initial consultation and content review.
                         </div>
                     </div>
 
                     <div class="surface-card rounded-2xl border overflow-hidden shadow-sm transition-all duration-200">
-                        <button onclick="toggleFaq('faq-4')" class="w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none" data-target="faq-4">
                             <span class="text-sm sm:text-base">Do I need advanced coding knowledge to use these templates?</span>
                             <i id="faq-icon-faq-4" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-200"></i>
                         </button>
-                        <div id="faq-4" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3">
+                        <div id="faq-4" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3 text-secondary-custom">
                             No advanced skills required! Power Query templates are designed for plug-and-play simplicity. You only need to change folder paths or drop raw files into designated folders and click refresh. Detailed documentation is included with every item.
                         </div>
                     </div>
 
                     <div class="surface-card rounded-2xl border overflow-hidden shadow-sm transition-all duration-200">
-                        <button onclick="toggleFaq('faq-5')" class="w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-semibold hover:text-excel-500 focus:outline-none" data-target="faq-5">
                             <span class="text-sm sm:text-base">Can I request custom modifications to a template I bought?</span>
                             <i id="faq-icon-faq-5" class="fa-solid fa-chevron-down opacity-60 transition-transform duration-200"></i>
                         </button>
-                        <div id="faq-5" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3">
+                        <div id="faq-5" class="hidden px-5 pb-5 text-sm sm:text-base opacity-80 leading-relaxed border-t pt-3 text-secondary-custom">
                             Yes! If your data structure requires specific alterations or custom business rules, you can send a message through the contact form below to request a tailored modification quote.
                         </div>
                     </div>
@@ -733,19 +733,22 @@
                             </div>
                         </div>
 
-                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="bg-white/15 backdrop-blur-md p-6 rounded-2xl border border-white/10 space-y-4">
-                            <div>
-                                <label class="block text-xs sm:text-sm font-medium text-slate-200 mb-1">Your Name</label>
-                                <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-excel-500 transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-xs sm:text-sm font-medium text-slate-200 mb-1">Email Address</label>
-                                <input type="email" required placeholder="john@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-excel-500 transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-xs sm:text-sm font-medium text-slate-200 mb-1">Service Request / Details</label>
-                                <textarea rows="3" required placeholder="Describe what you need help with..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-excel-500 transition-colors"></textarea>
-                            </div>
+                        <form id="contact-form" action="https://formsubmit.co/5b45344a6c274bef042d9e5d48424720" method="POST" class="bg-white/15 backdrop-blur-md p-6 rounded-2xl border border-white/10 space-y-4">
+                            <input type="hidden" name="_subject" value="New Solutions Inquiry from Website">
+                            <input type="hidden" name="_captcha" value="false">
+
+                           <div>
+    <label for="solutions-name" class="block text-xs sm:text-sm font-medium text-slate-200 mb-1">Your Name</label>
+    <input type="text" id="solutions-name" name="name" autocomplete="name" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-excel-500 transition-colors">
+</div>
+<div>
+    <label for="solutions-email" class="block text-xs sm:text-sm font-medium text-slate-200 mb-1">Email Address</label>
+    <input type="email" id="solutions-email" name="email" autocomplete="email" required placeholder="john@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-excel-500 transition-colors">
+</div>
+<div>
+    <label for="solutions-message" class="block text-xs sm:text-sm font-medium text-slate-200 mb-1">Service Request / Details</label>
+    <textarea id="solutions-message" name="message" rows="3" required placeholder="Describe what you need help with..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-excel-500 transition-colors"></textarea>
+</div>
                             <button type="submit" class="w-full py-3 px-4 rounded-xl bg-excel-500 hover:bg-excel-600 text-white font-semibold text-sm sm:text-base transition-colors shadow-lg shadow-excel-500/30">
                                 Send Inquiry
                             </button>
@@ -766,7 +769,7 @@
                     </div>
                     <span class="font-semibold">Federico Dumagpi Jr.</span>
                 </div>
-                <div class="text-center sm:text-left opacity-75">
+                <div class="text-center sm:text-left opacity-75 text-secondary-custom">
                     &copy; 2026 Federico Dumagpi Jr. All rights reserved. Professional Web Deployment.
                 </div>
                 <div class="flex items-center space-x-4">
@@ -780,7 +783,7 @@
     <!-- SAMPLE PREVIEW MODAL BACKDROP -->
     <div id="modal-backdrop" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="surface-card rounded-2xl max-w-xl w-full p-6 border shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
-            <button onclick="closeModal()" class="absolute top-4 right-4 opacity-60 hover:opacity-100 p-1">
+            <button class="modal-close absolute top-4 right-4 opacity-60 hover:opacity-100 p-1">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
             <div id="modal-content"></div>
