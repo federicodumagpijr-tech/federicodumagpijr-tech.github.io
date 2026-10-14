@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. ROOT VARIABLES & THEMES
+   ========================================================================== */
 :root {
     --bg-primary: #ffffff;
     --text-primary: #0f172a;
@@ -14,14 +17,58 @@
     --border-color: #334155;
 }
 
-body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+/* ==========================================================================
+   2. MOBILE-FIRST RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
+html {
+    /* Prevents font size adjustments on orientation change in iOS */
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem; /* 16px baseline */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    word-wrap: break-word;
+}
+
+/* Ensure images, SVGs, and media fit within mobile viewports */
+img, svg, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Touch target optimizations for mobile devices */
+a, button, input, select, textarea {
+    touch-action: manipulation;
+}
+
+button, .btn, nav a {
+    min-height: 44px; /* Minimum ergonomic touch height */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   3. CUSTOM UTILITY CLASSES
+   ========================================================================== */
 .surface-card {
     background-color: var(--surface-card);
-    border-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .text-secondary-custom {
@@ -32,6 +79,18 @@ body {
     color: #ED1C24;
 }
 
+/* Container responsive padding */
+.container {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   4. FIXED UI & ANIMATIONS
+   ========================================================================== */
 /* Scroll Progress Bar */
 #scroll-progress {
     position: fixed;
@@ -47,11 +106,45 @@ body {
 /* Scroll Reveal Initial State */
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px); /* Reduced slightly for smoother mobile performance */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Disable reveal translations on devices where reduced motion is requested */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ==========================================================================
+   5. BREAKPOINTS & LAYOUT ADJUSTMENTS
+   ========================================================================== */
+/* Tablet Viewports (768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .surface-card {
+        padding: 1.75rem;
+    }
+}
+
+/* Desktop Viewports (1024px and up) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1140px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
