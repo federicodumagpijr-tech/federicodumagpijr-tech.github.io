@@ -90,61 +90,36 @@
         </div>
     </header>
 
-    <!-- 3. Hero Section -->
-    <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-28 overflow-hidden">
+    <!-- 3. Hero Section (Centered & Clean) -->
+    <section class="relative pt-24 pb-16 lg:pt-36 lg:pb-28 overflow-hidden text-center">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#107c41_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                <div class="lg:col-span-8 space-y-6">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase">
-                        <span class="w-2 h-2 rounded-full bg-excel-500 animate-pulse"></span>
-                        <span>CONSULTING · 2026 &bull; By Federico Dumagpi</span>
-                    </div>
-                    <div class="p-6 sm:p-8 rounded-2xl surface-card border shadow-lg border-l-4 border-l-excel-600">
-                        <p class="text-xs sm:text-sm font-mono uppercase tracking-wider text-excel-600 font-bold mb-2">Operational Problem Hook</p>
-                        <p class="text-base sm:text-xl font-medium text-secondary-custom leading-relaxed">
-                            Your HR team needs to verify attendance for <strong class="text-slate-900 font-bold">4,800+ employees</strong> every month. Your current setup takes <strong class="text-slate-900 font-bold">48 manual hours</strong>.
-                        </p>
-                    </div>
-                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
-                        Power Query Automation <span class="text-excel-600">& AI Applied.</span>
-                    </h1>
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-                        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all text-center flex items-center justify-center space-x-2">
-                            <span>INQUIRE</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#system" class="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold border border-slate-300 hover:border-excel-600 rounded-xl transition-all text-center flex items-center justify-center space-x-2">
-                            <span>Explore Process</span>
-                            <i class="fa-solid fa-chevron-down text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-4">
-                    <div class="relative p-6 sm:p-8 rounded-3xl surface-card border shadow-2xl overflow-hidden group">
-                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-excel-500/10 rounded-full blur-2xl group-hover:bg-excel-500/20 transition-all"></div>
-                        <div class="space-y-6 relative z-10">
-                            <div class="flex items-center justify-between border-b pb-4 border-slate-200">
-                                <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-excel-600 font-bold">Advisory & Engineering</span>
-                                <i class="fa-solid fa-shield-halved text-excel-600"></i>
-                            </div>
-                            <div class="space-y-4 text-sm sm:text-base text-secondary-custom">
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-slate-400">Core Engine</span>
-                                    <span class="font-bold text-slate-900">Power Query M Language</span>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-slate-400">Scale</span>
-                                    <span class="font-bold text-slate-900">4,800+ Workforce Processed</span>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-slate-400">Execution</span>
-                                    <span class="font-bold text-slate-900">Zero-Touch Automation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto">
+                <span class="w-2 h-2 rounded-full bg-excel-500 animate-pulse"></span>
+                <span>CONSULTING · 2026</span>
+            </div>
+
+            <p class="text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed text-slate-800 italic max-w-3xl mx-auto">
+                "Your HR team needs to verify attendance for <strong class="text-slate-900 font-bold not-italic">4,800+ employees</strong> every month. Your current setup takes <strong class="text-slate-900 font-bold not-italic">48 manual hours</strong>."
+            </p>
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                Power Query Automation <span class="text-excel-600">& AI Applied.</span>
+            </h1>
+
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto">
+                <span>By Federico Dumagpi</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all text-center flex items-center justify-center space-x-2">
+                    <span>INQUIRE</span>
+                    <i class="fa-solid fa-play text-[10px] ml-1.5"></i>
+                </a>
+                <a href="#system" class="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold border border-slate-300 hover:border-excel-600 rounded-xl transition-all text-center flex items-center justify-center space-x-2">
+                    <span>Explore Process</span>
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -173,11 +148,11 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- Card 01 -->
+            <!-- Stage 01 -->
             <div class="surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">CARD 01</span>
+                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">STAGE 01</span>
                         <i class="fa-solid fa-database text-excel-600 text-xl"></i>
                     </div>
                     <span class="text-xs uppercase font-bold text-excel-600 tracking-wider">Automated Data & HRIS Ingestion</span>
@@ -188,11 +163,11 @@
                 </div>
             </div>
 
-            <!-- Card 02 -->
+            <!-- Stage 02 -->
             <div class="surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between border-excel-600/50 shadow-excel-600/5">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">CARD 02</span>
+                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">STAGE 02</span>
                         <i class="fa-solid fa-gears text-excel-600 text-xl"></i>
                     </div>
                     <span class="text-xs uppercase font-bold text-excel-600 tracking-wider">Automated Generation & Processing</span>
@@ -203,11 +178,11 @@
                 </div>
             </div>
 
-            <!-- Card 03 -->
+            <!-- Stage 03 -->
             <div class="surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">CARD 03</span>
+                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">STAGE 03</span>
                         <i class="fa-solid fa-chart-line text-excel-600 text-xl"></i>
                     </div>
                     <span class="text-xs uppercase font-bold text-excel-600 tracking-wider">Scaling & Continuous Reporting</span>
@@ -410,13 +385,12 @@
         </div>
     </section>
 
-    <!-- 8. Start Here / Intake Section -->
+    <!-- 8. Start Here Section -->
     <section id="contact" class="py-16 sm:py-24 surface-card border-y">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="surface-card border p-6 sm:p-12 rounded-3xl shadow-2xl reveal-on-scroll">
                 <div class="text-center mb-8 sm:mb-10">
-                    <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold tracking-wider uppercase">START HERE</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-3 mb-2">Let's Connect · Send a Message</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Start Here</h2>
                     <p class="text-sm sm:text-lg text-secondary-custom">Share a few details about your employee scale and current reporting bottleneck. I'll review your setup and reply within 24 hours with a recommended automation roadmap.</p>
                 </div>
                 
@@ -439,7 +413,7 @@
                         <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border bg-white text-sm sm:text-base focus:outline-none focus:border-excel-600 transition-colors" placeholder="Describe your employee scale and reporting bottleneck..."></textarea>
                     </div>
                     <button type="submit" class="w-full py-4 text-sm sm:text-base font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2">
-                        <span>INQUIRE ABOUT YOUR PROJECT</span>
+                        <span>Send Message</span>
                         <i class="fa-solid fa-play text-xs"></i>
                     </button>
                 </form>
@@ -473,7 +447,7 @@
             <i class="fa-solid fa-check"></i>
         </div>
         <div>
-            <h4 class="font-bold text-xs sm:text-base">Inquiry Sent Successfully!</h4>
+            <h4 class="font-bold text-xs sm:text-base">Message Sent Successfully!</h4>
             <p class="text-xs sm:text-sm text-secondary-custom">Federico will review your setup and reply within 24 hours.</p>
         </div>
     </div>
