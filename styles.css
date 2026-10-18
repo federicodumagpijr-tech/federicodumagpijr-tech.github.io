@@ -106,7 +106,7 @@ button, .btn, nav a {
 /* Scroll Reveal Initial State */
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(30px); /* Reduced slightly for smoother mobile performance */
+    transform: translateY(20px); /* Reduced slightly for smoother mobile performance */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
