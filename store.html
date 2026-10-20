@@ -1,502 +1,308 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solutions & Digital Store | Federico Dumagpi Jr.</title>
-    <meta
-      name="description"
-      content="Ready-to-use AI Skills, Power Query Templates, and Automated Data Solutions for professionals, business owners, and analysts."
-    />
-
+    <meta name="description" content="Ready-to-use AI Skills, Power Query Templates, and Automated Data Solutions for professionals, business owners, and analysts." />
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              excel: {
-                50: "#e6f4ea",
-                100: "#cce9d5",
-                500: "#107c41",
-                600: "#0e6b37",
-                700: "#0b522a",
-                800: "#08391d",
-                900: "#052312",
-              },
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        excel: {
+                            50: "#e6f4ea",
+                            100: "#cce9d5",
+                            500: "#107c41",
+                            600: "#0e6b37",
+                            700: "#0b522a",
+                            800: "#08391d",
+                            900: "#052312",
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', "Inter", "sans-serif"],
+                    },
+                },
             },
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', "Inter", "sans-serif"],
-            },
-          },
-        },
-      };
+        };
     </script>
-
+    
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
     <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <!-- External Stylesheet (Shared Ecosystem) -->
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body
-    class="selection:bg-excel-500 selection:text-white flex flex-col min-h-screen"
-  >
+</head>
+<body class="selection:bg-excel-500 selection:text-white flex flex-col min-h-screen">
+
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
     <!-- 1. Global Announcement Top Bar -->
-    <div
-      class="bg-[#111111] text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide"
-    >
-      <a
-        href="index.html#contact"
-        class="hover:underline inline-flex items-center space-x-2"
-      >
-        <span>⚡ AVAILABLE FOR CONSULTING PROJECTS — GET IN TOUCH TODAY</span>
-        <i class="fa-solid fa-play text-[10px]"></i>
-      </a>
+    <div class="bg-[#111111] text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide">
+        <a href="index.html#contact" class="hover:underline inline-flex items-center space-x-2">
+            <span>⚡ AVAILABLE FOR CONSULTING PROJECTS — GET IN TOUCH TODAY</span>
+            <i class="fa-solid fa-play text-[10px]"></i>
+        </a>
     </div>
 
     <!-- 2. Sticky Header Navigation -->
-    <header
-      class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b surface-card transition-colors duration-300"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
-      >
-        <a
-          href="index.html"
-          class="flex items-center space-x-2 font-bold text-lg tracking-tight"
-        >
-          <div
-            class="w-9 h-9 rounded-lg bg-excel-600 flex items-center justify-center text-white font-mono shadow-lg shadow-excel-600/30"
-          >
-            <i class="fa-solid fa-chart-simple"></i>
-          </div>
-          <span class="truncate">Federico Dumagpi</span>
-        </a>
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b surface-card transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 font-bold text-lg tracking-tight">
+                <div class="w-9 h-9 rounded-lg bg-excel-600 flex items-center justify-center text-white font-mono shadow-lg shadow-excel-600/30">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <span class="truncate">Federico Dumagpi</span>
+            </a>
 
-        <nav
-          class="hidden md:flex items-center space-x-8 text-sm sm:text-base font-medium text-secondary-custom"
-        >
-          <a
-            href="index.html#system"
-            class="hover:text-excel-500 transition-colors"
-            >Process</a
-          >
-          <a
-            href="index.html#promise"
-            class="hover:text-excel-500 transition-colors"
-            >The Promise</a
-          >
-          <a
-            href="index.html#skills"
-            class="hover:text-excel-500 transition-colors"
-            >Expertise</a
-          >
-          <a
-            href="index.html#experience"
-            class="hover:text-excel-500 transition-colors"
-            >Experience</a
-          >
-          <a
-            href="store.html"
-            class="font-semibold transition-opacity text-excel-600"
-            >Solutions & Store</a
-          >
-        </nav>
+            <nav class="hidden md:flex items-center space-x-8 text-sm sm:text-base font-medium text-secondary-custom">
+    <a href="javascript:filterCategory('all')" class="hover:text-excel-500 transition-colors">All Assets</a>
+    <a href="javascript:filterCategory('ai-skills')" class="hover:text-excel-500 transition-colors">AI Prompts</a>
+    <a href="javascript:filterCategory('power-query')" class="hover:text-excel-500 transition-colors">Excel Templates</a>
+    <a href="javascript:filterCategory('services')" class="hover:text-excel-500 transition-colors">Setup Services</a>
+    <a href="index.html" class="hover:text-excel-500 transition-colors text-slate-500">← Back to Portfolio</a>
+</nav>
 
-        <div class="flex items-center space-x-3 sm:space-x-4">
-          <a
-            href="index.html#contact"
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-lg shadow-md shadow-excel-600/20 transition-all transform hover:scale-105"
-          >
-            <span>INQUIRE</span>
-            <i class="fa-solid fa-play text-[10px] ml-1.5"></i>
-          </a>
-          <button
-            id="mobile-menu-btn"
-            class="md:hidden p-2 text-slate-600 hover:text-excel-600"
-            aria-label="Toggle Mobile Menu"
-          >
-            <i class="fa-solid fa-bars text-xl"></i>
-          </button>
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <a href="index.html#contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-lg shadow-md shadow-excel-600/20 transition-all transform hover:scale-105">
+                    <span>INQUIRE</span>
+                    <i class="fa-solid fa-play text-[10px] ml-1.5"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-excel-600" aria-label="Toggle Mobile Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
-      </div>
 
-      <!-- Mobile Navigation Drawer -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden px-4 pt-2 pb-4 border-t surface-card"
-      >
-        <div class="flex flex-col space-y-3 text-sm sm:text-base font-medium">
-          <a href="index.html#system" class="mobile-link hover:text-excel-500"
-            >Process</a
-          >
-          <a href="index.html#promise" class="mobile-link hover:text-excel-500"
-            >The Promise</a
-          >
-          <a href="index.html#skills" class="mobile-link hover:text-excel-500"
-            >Expertise</a
-          >
-          <a
-            href="index.html#experience"
-            class="mobile-link hover:text-excel-500"
-            >Experience</a
-          >
-          <a href="store.html" class="mobile-link font-semibold text-excel-600"
-            >Solutions & Store</a
-          >
-          <a
-            href="index.html#contact"
-            class="mobile-link text-excel-600 font-semibold"
-            >INQUIRE</a
-          >
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 border-t surface-card">
+            <div class="flex flex-col space-y-3 text-sm sm:text-base font-medium">
+                <a href="javascript:filterCategory('all')" class="mobile-link hover:text-excel-500">All Assets</a>
+                <a href="javascript:filterCategory('ai-skills')" class="mobile-link hover:text-excel-500">AI Prompts</a>
+                <a href="javascript:filterCategory('power-query')" class="mobile-link hover:text-excel-500">Excel Templates</a>
+                <a href="javascript:filterCategory('services')" class="mobile-link hover:text-excel-500">Setup Services</a>
+                <a href="index.html" class="mobile-link font-semibold text-excel-600">← Back to Portfolio</a>
+                <a href="index.html#contact" class="mobile-link text-excel-600 font-semibold">INQUIRE</a>
+            </div>
         </div>
-      </div>
     </header>
 
     <!-- 3. Hero Section -->
-    <section
-      class="relative pt-16 pb-12 lg:pt-24 lg:pb-16 overflow-hidden text-center"
-    >
-      <div
-        class="absolute inset-0 opacity-10 bg-[radial-gradient(#107c41_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"
-      ></div>
-      <div
-        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6"
-      >
-        <div
-          class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto"
-        >
-          <span class="w-2 h-2 rounded-full bg-excel-500 animate-pulse"></span>
-          <span>READY-TO-USE DIGITAL TOOLS</span>
+    <section class="relative pt-16 pb-12 lg:pt-24 lg:pb-16 overflow-hidden text-center">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#107c41_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto">
+                <span class="w-2 h-2 rounded-full bg-excel-500 animate-pulse"></span>
+                <span>READY-TO-USE DIGITAL TOOLS</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                AI Tools, Excel Templates & <span class="text-excel-600">Data Services.</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg lg:text-xl text-secondary-custom max-w-2xl mx-auto leading-relaxed">
+                Simple, ready-to-use AI prompts, automated Excel templates, and setup services to save you time and eliminate repetitive work.
+            </p>
+
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+                <button onclick="filterCategory('all')" class="filter-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-excel-600 text-white shadow-md transition-all">All Solutions</button>
+                <button onclick="filterCategory('ai-skills')" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all">AI Skills (.md)</button>
+                <button onclick="filterCategory('power-query')" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all">Excel & Power Query</button>
+                <button onclick="filterCategory('services')" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all">Setup Services</button>
+            </div>
         </div>
-
-        <h1
-          class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
-        >
-          AI Tools, Excel Templates &
-          <span class="text-excel-600">Data Services.</span>
-        </h1>
-
-        <p
-          class="text-base sm:text-lg lg:text-xl text-secondary-custom max-w-2xl mx-auto leading-relaxed"
-        >
-          Simple, ready-to-use AI prompts, automated Excel templates, and setup
-          services to save you time and eliminate repetitive work.
-        </p>
-
-        <!-- Filter Categories -->
-        <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
-          <button
-            onclick="filterCategory('all')"
-            class="filter-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-excel-600 text-white shadow-md transition-all"
-          >
-            All Solutions
-          </button>
-          <button
-            onclick="filterCategory('ai-skills')"
-            class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all"
-          >
-            AI Skills (.md)
-          </button>
-          <button
-            onclick="filterCategory('power-query')"
-            class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all"
-          >
-            Excel & Power Query
-          </button>
-          <button
-            onclick="filterCategory('services')"
-            class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all"
-          >
-            Setup Services
-          </button>
-        </div>
-      </div>
     </section>
 
     <!-- 4. Main Catalog Grid -->
     <main class="flex-grow py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div
-        id="catalogGrid"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-      >
-        <!-- Item 1: B2B Strategist AI Skill -->
-        <div
-          class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
-                <i class="fa-solid fa-robot mr-1"></i> AI PROMPT FILE
-              </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >.md File + PDF</span
-              >
-            </div>
-            <h3 class="text-xl font-bold mb-2">
-              B2B Business Model Strategist
-            </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
-              An interactive AI assistant that guides you step-by-step through
-              creating, pricing, and landing your first client for a B2B service
-              in 30–60 days.
-            </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Full
-                `b2b-strategist.md` prompt file
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Easy setup
-                guide for Gemini, ChatGPT & Claude
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Sales call
-                scripts and pricing guides included
-              </li>
-            </ul>
-          </div>
-          <div class="pt-4 border-t flex items-center justify-between">
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900"
-                >AED 120</span
-              >
-              <span class="text-xs text-slate-500 block">~$32 USD</span>
-            </div>
-            <a
-              href="https://gumroad.com"
-              target="_blank"
-              class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5"
-            >
-              <span>BUY FILE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
-        </div>
+        <div id="catalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-        <!-- Item 2: Automated Attendance Verification ETL -->
-        <div
-          class="store-item category-power-query surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
-                <i class="fa-solid fa-file-excel mr-1"></i> EXCEL TEMPLATE
-              </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >Excel / Power BI</span
-              >
+            <!-- Item 1: B2B Strategist AI Skill -->
+            <div class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">
+                            <i class="fa-solid fa-robot mr-1"></i> AI PROMPT FILE
+                        </span>
+                        <span class="text-xs text-slate-400 font-mono">.md File + PDF</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        B2B Business Model Strategist
+                    </h3>
+                    <p class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6">
+                        An interactive AI assistant that guides you step-by-step through creating, pricing, and landing your first client for a B2B service in 30–60 days.
+                    </p>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Full `b2b-strategist.md` prompt file
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Easy setup guide for Gemini, ChatGPT & Claude
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Sales call scripts and pricing guides included
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t flex items-center justify-between">
+                    <div>
+                        <span class="text-2xl font-extrabold text-slate-900">AED 120</span>
+                        <span class="text-xs text-slate-500 block">~$32 USD</span>
+                    </div>
+                    <a href="https://gumroad.com" target="_blank" class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5">
+                        <span>BUY FILE</span>
+                        <i class="fa-solid fa-play text-[10px]"></i>
+                    </a>
+                </div>
             </div>
-            <h3 class="text-xl font-bold mb-2">
-              Payroll Attendance Verification Template
-            </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
-              Automatically cleans raw biometric punch logs, flags missed
-              entries, calculates late arrivals, and generates ready-to-use
-              payroll reports.
-            </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Pre-built Power
-                Query M-Code script
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Power BI
-                dashboard formulas included
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Works with any
-                biometric system log
-              </li>
-            </ul>
-          </div>
-          <div class="pt-4 border-t flex items-center justify-between">
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900"
-                >AED 250</span
-              >
-              <span class="text-xs text-slate-500 block">~$68 USD</span>
-            </div>
-            <a
-              href="https://gumroad.com"
-              target="_blank"
-              class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5"
-            >
-              <span>GET TEMPLATE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
-        </div>
 
-        <!-- Item 3: Done-For-You Service -->
-        <div
-          class="store-item category-services surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
-                <i class="fa-solid fa-handshake mr-1"></i> SETUP SERVICE
-              </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >1-on-1 Service</span
-              >
+            <!-- Item 2: Automated Attendance Verification ETL -->
+            <div class="store-item category-power-query surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">
+                            <i class="fa-solid fa-file-excel mr-1"></i> EXCEL TEMPLATE
+                        </span>
+                        <span class="text-xs text-slate-400 font-mono">Excel / Power BI</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        Payroll Attendance Verification Template
+                    </h3>
+                    <p class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6">
+                        Automatically cleans raw biometric punch logs, flags missed entries, calculates late arrivals, and generates ready-to-use payroll reports.
+                    </p>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Pre-built Power Query M-Code script
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Power BI dashboard formulas included
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Works with any biometric system log
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t flex items-center justify-between">
+                    <div>
+                        <span class="text-2xl font-extrabold text-slate-900">AED 250</span>
+                        <span class="text-xs text-slate-500 block">~$68 USD</span>
+                    </div>
+                    <a href="https://gumroad.com" target="_blank" class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5">
+                        <span>GET TEMPLATE</span>
+                        <i class="fa-solid fa-play text-[10px]"></i>
+                    </a>
+                </div>
             </div>
-            <h3 class="text-xl font-bold mb-2">
-              Custom AI Setup & Prompt Configuration
-            </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
-              I will build and set up custom AI prompts and tools tailored
-              directly for your team inside Gemini or ChatGPT to automate your
-              daily tasks.
-            </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Prompts built
-                specifically for your daily business needs
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> 1-on-1 training
-                and setup session
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> 30 days of
-                ongoing updates and support
-              </li>
-            </ul>
-          </div>
-          <div class="pt-4 border-t flex items-center justify-between">
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900"
-                >AED 2,500</span
-              >
-              <span class="text-xs text-slate-500 block">One-time fee</span>
-            </div>
-            <a
-              href="index.html#contact"
-              class="px-4 py-2 border border-slate-300 hover:border-excel-600 text-slate-800 font-semibold rounded-lg text-sm transition-all flex items-center gap-1.5"
-            >
-              <span>BOOK SETUP</span>
-              <i class="fa-solid fa-calendar text-[10px]"></i>
-            </a>
-          </div>
-        </div>
 
-        <!-- Item 4: Placeholder for Future Skill -->
-        <div
-          class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl opacity-60 flex flex-col justify-between"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-slate-200 text-slate-600 text-xs font-mono font-bold"
-              >
-                COMING SOON
-              </span>
-              <span class="text-xs text-slate-400 font-mono">.md File</span>
+            <!-- Item 3: Done-For-You Service -->
+            <div class="store-item category-services surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold">
+                            <i class="fa-solid fa-handshake mr-1"></i> SETUP SERVICE
+                        </span>
+                        <span class="text-xs text-slate-400 font-mono">1-on-1 Service</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">
+                        Custom AI Setup & Prompt Configuration
+                    </h3>
+                    <p class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6">
+                        I will build and set up custom AI prompts and tools tailored directly for your team inside Gemini or ChatGPT to automate your daily tasks.
+                    </p>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> Prompts built specifically for your daily business needs
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> 1-on-1 training and setup session
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-excel-600"></i> 30 days of ongoing updates and support
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t flex items-center justify-between">
+                    <div>
+                        <span class="text-2xl font-extrabold text-slate-900">AED 2,500</span>
+                        <span class="text-xs text-slate-500 block">One-time fee</span>
+                    </div>
+                    <a href="index.html#contact" class="px-4 py-2 border border-slate-300 hover:border-excel-600 text-slate-800 font-semibold rounded-lg text-sm transition-all flex items-center gap-1.5">
+                        <span>BOOK SETUP</span>
+                        <i class="fa-solid fa-calendar text-[10px]"></i>
+                    </a>
+                </div>
             </div>
-            <h3 class="text-xl font-bold text-slate-500 mb-2">
-              Power Query M-Code Assistant
-            </h3>
-            <p class="text-sm text-slate-400 leading-relaxed mb-6">
-              An AI prompt file that helps you write, debug, and optimize
-              complex Excel Power Query scripts automatically.
-            </p>
-          </div>
-          <div class="pt-4 border-t flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold"
-              >IN DEVELOPMENT</span
-            >
-            <button
-              disabled
-              class="px-3 py-1.5 bg-slate-200 text-slate-400 rounded-lg text-xs font-medium cursor-not-allowed"
-            >
-              Notify Me
-            </button>
-          </div>
+
+            <!-- Item 4: Placeholder for Future Skill -->
+            <div class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl opacity-60 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-slate-200 text-slate-600 text-xs font-mono font-bold">
+                            COMING SOON
+                        </span>
+                        <span class="text-xs text-slate-400 font-mono">.md File</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-500 mb-2">
+                        Power Query M-Code Assistant
+                    </h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        An AI prompt file that helps you write, debug, and optimize complex Excel Power Query scripts automatically.
+                    </p>
+                </div>
+                <div class="pt-4 border-t flex items-center justify-between">
+                    <span class="text-xs text-slate-400 font-semibold">IN DEVELOPMENT</span>
+                    <button disabled class="px-3 py-1.5 bg-slate-200 text-slate-400 rounded-lg text-xs font-medium cursor-not-allowed">Notify Me</button>
+                </div>
+            </div>
+
         </div>
-      </div>
     </main>
 
     <!-- 5. Footer -->
     <footer class="mt-auto border-t surface-card py-8">
-      <div
-        class="max-w-7xl mx-auto px-4 text-center text-xs sm:text-sm text-secondary-custom"
-      >
-        <p>
-          &copy; 2026 Federico Dumagpi Jr. All rights reserved. Powered by Power
-          Query & Applied AI.
-        </p>
-      </div>
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs sm:text-sm text-secondary-custom">
+            <p>&copy; 2026 Federico Dumagpi Jr. All rights reserved. Powered by Power Query & Applied AI.</p>
+        </div>
     </footer>
 
     <!-- Client-Side Filter Logic -->
     <script>
-      function filterCategory(category) {
-        const items = document.querySelectorAll(".store-item");
-        const buttons = document.querySelectorAll(".filter-btn");
+        function filterCategory(category) {
+            const items = document.querySelectorAll('.store-item');
+            const buttons = document.querySelectorAll('.filter-btn');
 
-        buttons.forEach((btn) => {
-          btn.classList.remove("bg-excel-600", "text-white", "shadow-md");
-          btn.classList.add(
-            "bg-white",
-            "text-slate-700",
-            "border",
-            "border-slate-300",
-          );
-        });
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-excel-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+            });
 
-        event.currentTarget.classList.remove(
-          "bg-white",
-          "text-slate-700",
-          "border",
-          "border-slate-300",
-        );
-        event.currentTarget.classList.add(
-          "bg-excel-600",
-          "text-white",
-          "shadow-md",
-        );
+            event.currentTarget.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+            event.currentTarget.classList.add('bg-excel-600', 'text-white', 'shadow-md');
 
-        items.forEach((item) => {
-          if (category === "all") {
-            item.style.display = "flex";
-          } else if (item.classList.contains(`category-${category}`)) {
-            item.style.display = "flex";
-          } else {
-            item.style.display = "none";
-          }
-        });
-      }
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'flex';
+                } else if (item.classList.contains(`category-${category}`)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
     </script>
 
     <!-- Shared Ecosystem External Script -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
