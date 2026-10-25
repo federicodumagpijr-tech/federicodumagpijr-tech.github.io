@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth" data-theme="light">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +9,77 @@
       content="Ready-to-use AI Skills, Power Query Templates, and Automated Data Solutions for professionals, business owners, and analysts."
     />
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
             colors: {
-              excel: {
-                50: "#e6f4ea",
-                100: "#cce9d5",
-                500: "#107c41",
-                600: "#0e6b37",
-                700: "#0b522a",
-                800: "#08391d",
-                900: "#052312",
+              navy: {
+                50: "#e7f2fd",
+                100: "#cfe5fc",
+                200: "#a0cbf8",
+                300: "#70b0f5",
+                400: "#4096f2",
+                500: "#117cee",
+                600: "#0d63bf",
+                700: "#0a4a8f",
+                800: "#07325f",
+                900: "#031930",
+                950: "#021121",
+              },
+              beige: {
+                50: "#f7f7ee",
+                100: "#efefdc",
+                200: "#dfdfb9",
+                300: "#cfcf96",
+                400: "#bfbf73",
+                500: "#afaf50",
+                600: "#8c8c40",
+                700: "#696930",
+                800: "#464620",
+                900: "#232310",
+                950: "#18180b",
+              },
+              gold: {
+                50: "#fdf9e7",
+                100: "#fcf2cf",
+                200: "#f8e5a0",
+                300: "#f5d870",
+                400: "#f2cb40",
+                500: "#eebe11",
+                600: "#bf980d",
+                700: "#8f720a",
+                800: "#5f4c07",
+                900: "#302603",
+                950: "#211b02",
+              },
+              brown: {
+                50: "#fdf2e8",
+                100: "#fbe4d0",
+                200: "#f6c9a2",
+                300: "#f2ae73",
+                400: "#ee9344",
+                500: "#e97816",
+                600: "#bb6011",
+                700: "#8c480d",
+                800: "#5d3009",
+                900: "#2f1804",
+                950: "#211103",
+              },
+              tomato: {
+                50: "#feeae6",
+                100: "#fdd6ce",
+                200: "#fcac9c",
+                300: "#fa836b",
+                400: "#f95939",
+                500: "#f73008",
+                600: "#c62606",
+                700: "#941d05",
+                800: "#631303",
+                900: "#310a02",
+                950: "#230701",
               },
             },
             fontFamily: {
@@ -34,101 +89,81 @@
         },
       };
     </script>
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <!-- External Stylesheet (Shared Ecosystem) -->
+    <!-- Unified Liquid Crystal Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body
-    class="selection:bg-excel-500 selection:text-white flex flex-col min-h-screen"
-  >
-    <!-- Scroll Progress Bar -->
+  <body class="flex flex-col min-h-screen">
+    <!-- Prismatic Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
     <!-- 1. Global Announcement Top Bar -->
-    <div
-      class="bg-[#111111] text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide"
-    >
-      <a
-        href="index.html#contact"
-        class="hover:underline inline-flex items-center space-x-2"
-      >
+    <div class="announcement-bar">
+      <a href="index.html#contact" class="announcement-link">
+        <span class="announcement-dot"></span>
         <span>⚡ AVAILABLE FOR CONSULTING PROJECTS — GET IN TOUCH TODAY</span>
         <i class="fa-solid fa-play text-[10px]"></i>
       </a>
     </div>
 
     <!-- 2. Sticky Header Navigation -->
-    <header
-      class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b surface-card transition-colors duration-300"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
-      >
-        <a
-          href="index.html"
-          class="flex items-center space-x-2 font-bold text-lg tracking-tight"
-        >
-          <div
-            class="w-9 h-9 rounded-lg bg-excel-600 flex items-center justify-center text-white font-mono shadow-lg shadow-excel-600/30"
-          >
-            <i class="fa-solid fa-chart-simple"></i>
+    <header class="header-glass">
+      <div class="header-inner">
+        <a href="index.html" class="flex items-center space-x-3 brand-link">
+          <div class="brand-badge">
+            <i class="fa-solid fa-chart-simple text-lg"></i>
           </div>
-          <span class="truncate">Federico Dumagpi</span>
+          <div>
+            <span class="brand-title">Federico Dumagpi</span>
+            <span class="brand-sub">Store & Solutions</span>
+          </div>
         </a>
 
-        <nav
-          class="hidden md:flex items-center space-x-8 text-sm sm:text-base font-medium text-secondary-custom"
-        >
-          <a
-            href="javascript:filterCategory('all')"
-            class="hover:text-excel-500 transition-colors"
-            >All Assets</a
+        <nav class="nav-crystal-bar">
+          <button
+            data-filter-category="all"
+            class="nav-crystal-link category-nav-btn active"
           >
-          <a
-            href="javascript:filterCategory('ai-skills')"
-            class="hover:text-excel-500 transition-colors"
-            >AI Prompts</a
+            All Assets
+          </button>
+          <button
+            data-filter-category="ai-skills"
+            class="nav-crystal-link category-nav-btn"
           >
-          <a
-            href="javascript:filterCategory('power-query')"
-            class="hover:text-excel-500 transition-colors"
-            >Excel Templates</a
+            AI Prompts
+          </button>
+          <button
+            data-filter-category="power-query"
+            class="nav-crystal-link category-nav-btn"
           >
-          <a
-            href="javascript:filterCategory('services')"
-            class="hover:text-excel-500 transition-colors"
-            >Setup Services</a
+            Excel Templates
+          </button>
+          <button
+            data-filter-category="services"
+            class="nav-crystal-link category-nav-btn"
           >
-          <a
-            href="index.html"
-            class="hover:text-excel-500 transition-colors text-slate-500"
+            Setup Services
+          </button>
+          <a href="index.html" class="nav-crystal-link text-slate-500"
             >← Back to Portfolio</a
           >
         </nav>
 
-        <div class="flex items-center space-x-3 sm:space-x-4">
+        <div class="flex items-center space-x-3">
           <a
             href="index.html#contact"
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-lg shadow-md shadow-excel-600/20 transition-all transform hover:scale-105"
+            class="btn-gold text-xs sm:text-sm py-2 px-4 sm:px-6"
           >
             <span>INQUIRE</span>
-            <i class="fa-solid fa-play text-[10px] ml-1.5"></i>
+            <i class="fa-solid fa-play text-[10px]"></i>
           </a>
           <button
             id="mobile-menu-btn"
-            class="md:hidden p-2 text-slate-600 hover:text-excel-600"
+            class="md:hidden p-2 rounded-xl bg-white border border-navy-200 text-navy-900"
             aria-label="Toggle Mobile Menu"
           >
             <i class="fa-solid fa-bars text-xl"></i>
@@ -137,168 +172,165 @@
       </div>
 
       <!-- Mobile Navigation Drawer -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden px-4 pt-2 pb-4 border-t surface-card"
-      >
-        <div class="flex flex-col space-y-3 text-sm sm:text-base font-medium">
-          <a
-            href="javascript:filterCategory('all')"
-            class="mobile-link hover:text-excel-500"
-            >All Assets</a
-          >
-          <a
-            href="javascript:filterCategory('ai-skills')"
-            class="mobile-link hover:text-excel-500"
-            >AI Prompts</a
-          >
-          <a
-            href="javascript:filterCategory('power-query')"
-            class="mobile-link hover:text-excel-500"
-            >Excel Templates</a
-          >
-          <a
-            href="javascript:filterCategory('services')"
-            class="mobile-link hover:text-excel-500"
-            >Setup Services</a
-          >
-          <a href="index.html" class="mobile-link font-semibold text-excel-600"
-            >← Back to Portfolio</a
-          >
-          <a
-            href="index.html#contact"
-            class="mobile-link text-excel-600 font-semibold"
-            >INQUIRE</a
-          >
-        </div>
+      <div id="mobile-menu" class="hidden md:hidden mobile-drawer">
+        <button
+          data-filter-category="all"
+          class="text-left mobile-nav-item category-nav-btn"
+        >
+          All Assets
+        </button>
+        <button
+          data-filter-category="ai-skills"
+          class="text-left mobile-nav-item category-nav-btn"
+        >
+          AI Prompts
+        </button>
+        <button
+          data-filter-category="power-query"
+          class="text-left mobile-nav-item category-nav-btn"
+        >
+          Excel Templates
+        </button>
+        <button
+          data-filter-category="services"
+          class="text-left mobile-nav-item category-nav-btn"
+        >
+          Setup Services
+        </button>
+        <a href="index.html" class="mobile-nav-item font-bold text-navy-800"
+          >← Back to Portfolio</a
+        >
+        <a
+          href="index.html#contact"
+          class="btn-navy text-center mt-2 mobile-link"
+          >INQUIRE</a
+        >
       </div>
     </header>
 
-    <!-- 3. Hero Section -->
-    <section
-      class="relative pt-16 pb-12 lg:pt-24 lg:pb-16 overflow-hidden text-center"
-    >
-      <div
-        class="absolute inset-0 opacity-10 bg-[radial-gradient(#107c41_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"
-      ></div>
+    <!-- 3. Store Hero Section -->
+    <section class="relative pt-14 pb-12 lg:pt-20 lg:pb-16 text-center">
+      <div class="geometric-facet-backdrop">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 1440 600"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="opacity-25"
+        >
+          <polygon
+            points="680,20 840,140 760,280 600,200"
+            stroke="#0a4a8f"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            fill="none"
+          />
+          <circle
+            cx="200"
+            cy="180"
+            r="120"
+            stroke="#eebe11"
+            stroke-width="1"
+            stroke-dasharray="6 6"
+            fill="none"
+          />
+        </svg>
+      </div>
+
       <div
         class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6"
       >
-        <div
-          class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto"
-        >
-          <span class="w-2 h-2 rounded-full bg-excel-500 animate-pulse"></span>
+        <div class="prism-pill">
+          <span class="pulse-node"></span>
           <span>READY-TO-USE DIGITAL TOOLS</span>
         </div>
 
-        <h1
-          class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
-        >
+        <h1 class="heading-hero">
           AI Tools, Excel Templates &
-          <span class="text-excel-600">Data Services.</span>
+          <span class="text-gold-gradient">Data Services.</span>
         </h1>
 
         <p
-          class="text-base sm:text-lg lg:text-xl text-secondary-custom max-w-2xl mx-auto leading-relaxed"
+          class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
         >
           Simple, ready-to-use AI prompts, automated Excel templates, and setup
           services to save you time and eliminate repetitive work.
         </p>
 
-        <!-- Filter Categories -->
-        <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
-          <button
-            onclick="filterCategory('all')"
-            class="filter-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-excel-600 text-white shadow-md transition-all"
-          >
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <button data-filter-category="all" class="filter-btn active">
             All Solutions
           </button>
-          <button
-            onclick="filterCategory('ai-skills')"
-            class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all"
-          >
+          <button data-filter-category="ai-skills" class="filter-btn">
             AI Skills (.md)
           </button>
-          <button
-            onclick="filterCategory('power-query')"
-            class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all"
-          >
+          <button data-filter-category="power-query" class="filter-btn">
             Excel & Power Query
           </button>
-          <button
-            onclick="filterCategory('services')"
-            class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold border border-slate-300 hover:border-excel-600 text-slate-700 surface-card transition-all"
-          >
+          <button data-filter-category="services" class="filter-btn">
             Setup Services
           </button>
         </div>
       </div>
     </section>
 
-    <!-- 4. Main Catalog Grid -->
+    <!-- 4. Main Catalog Grid (Liquid Crystal Capsules) -->
     <main class="flex-grow py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div
         id="catalogGrid"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        <!-- Item 1: Your Payhip Product -->
+        <!-- Item 1: Payhip Product -->
         <div
-          class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
+          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
+              <span class="prism-pill">
                 <i class="fa-solid fa-robot mr-1"></i> DIGITAL ASSET / FILE
               </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >.zip / .md File</span
-              >
+              <span class="text-xs text-slate-400">.zip / .md File</span>
             </div>
 
-            <!-- Product Title -->
-            <h3 class="text-xl font-bold mb-2">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
               Webpage Generator: AI Agent Skill & Landing Page Engine
             </h3>
 
-            <!-- Product Description -->
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
               An advanced AI prompt engine (FDDFlow) that turns ChatGPT, Claude,
               or Gemini into a production-ready front-end engineering
               powerhouse.
             </p>
 
-            <!-- Key Features Checklist -->
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Universal
+                <i class="fa-solid fa-check text-gold-500"></i> Universal
                 Aesthetic Freedom: SaaS, Bento, Corporate, Cyberpunk
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Smart Reference
+                <i class="fa-solid fa-check text-gold-500"></i> Smart Reference
                 URL Emulation: Auto-samples colors & theme spacing
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Instant
+                <i class="fa-solid fa-check text-gold-500"></i> Instant
                 Deployment Ready: Outputs clean HTML5, Tailwind CSS & JS
               </li>
             </ul>
           </div>
 
-          <!-- Pricing and Payhip Checkout Button -->
-          <div class="pt-4 border-t flex items-center justify-between">
+          <div
+            class="pt-5 border-t border-navy-100 flex items-center justify-between"
+          >
             <div>
               <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
               <span class="text-xs text-slate-500 block">~$55 AED</span>
             </div>
-            <!-- Your Payhip Link Inserted Here -->
             <a
               href="https://payhip.com/b/A2iZC"
               target="_blank"
-              class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5"
+              class="btn-gold text-sm py-2 px-5"
             >
               <span>BUY FILE</span>
               <i class="fa-solid fa-play text-[10px]"></i>
@@ -306,61 +338,59 @@
           </div>
         </div>
 
-        <!-- Item 2: B2B Business Model Strategist Product Card -->
+        <!-- Item 2: B2B Business Model Strategist -->
         <div
-          class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
+          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
+              <span class="prism-pill">
                 <i class="fa-solid fa-robot mr-1"></i> DIGITAL ASSET / FILE
               </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >.zip / .md File</span
-              >
+              <span class="text-xs text-slate-400">.zip / .md File</span>
             </div>
-            <h3 class="text-xl font-bold mb-2">
+
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
               B2B Sales & GTM Strategy Coach for Freelancers & Consultants
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
               An interactive GTM framework that guides solopreneurs and
               specialists through building, pricing, and selling a high-value
               B2B service to land their first client.
             </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Turn any
+                <i class="fa-solid fa-check text-gold-500"></i> Turn any
                 background into a B2B service
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Complete
-                pricing & retainer frameworks
+                <i class="fa-solid fa-check text-gold-500"></i> Complete pricing
+                & retainer frameworks
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Verbatim sales
-                & discovery scripts
+                <i class="fa-solid fa-check text-gold-500"></i> Verbatim sales &
+                discovery scripts
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> 4-Week client
+                <i class="fa-solid fa-check text-gold-500"></i> 4-Week client
                 acquisition roadmap
               </li>
             </ul>
           </div>
-          <div class="pt-4 border-t flex items-center justify-between">
+
+          <div
+            class="pt-5 border-t border-navy-100 flex items-center justify-between"
+          >
             <div>
               <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
               <span class="text-xs text-slate-500 block">~$55 AED</span>
             </div>
-
-            <!-- Your Payhip Link Inserted Here -->
             <a
               href="https://payhip.com/b/9Psap"
               target="_blank"
-              class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5"
+              class="btn-gold text-sm py-2 px-5"
             >
               <span>BUY FILE</span>
               <i class="fa-solid fa-play text-[10px]"></i>
@@ -368,56 +398,54 @@
           </div>
         </div>
 
-        <!-- Item 3: Clinical Health & Fitness AI Coach Framework for Gemini / ChatGPT / Claude Product Card -->
+        <!-- Item 3: Clinical Health & Fitness AI Coach -->
         <div
-          class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
+          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
+              <span class="prism-pill">
                 <i class="fa-solid fa-robot mr-1"></i> DIGITAL ASSET / FILE
               </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >.zip / .md File</span
-              >
+              <span class="text-xs text-slate-400">.zip / .md File</span>
             </div>
-            <h3 class="text-xl font-bold mb-2">
+
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
               Clinical Health & Fitness AI Coach
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
               Turnkey AI system prompt with AHA/ACC, DASH nutrition, ACSM
               exercise, and clinical safety protocols.
             </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> AHA/ACC & ACSM
+                <i class="fa-solid fa-check text-gold-500"></i> AHA/ACC & ACSM
                 Guideline Compliant
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Interactive
+                <i class="fa-solid fa-check text-gold-500"></i> Interactive
                 Cooking & Grocery Protocols
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Includes Prompt
+                <i class="fa-solid fa-check text-gold-500"></i> Includes Prompt
                 Library & User Manual
               </li>
             </ul>
           </div>
-          <div class="pt-4 border-t flex items-center justify-between">
+
+          <div
+            class="pt-5 border-t border-navy-100 flex items-center justify-between"
+          >
             <div>
               <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
               <span class="text-xs text-slate-500 block">~$55 AED</span>
             </div>
-
-            <!-- Your Payhip Link Inserted Here -->
             <a
               href="https://payhip.com/b/G5Lzm"
               target="_blank"
-              class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5"
+              class="btn-gold text-sm py-2 px-5"
             >
               <span>BUY FILE</span>
               <i class="fa-solid fa-play text-[10px]"></i>
@@ -427,45 +455,45 @@
 
         <!-- Item 4: Automated Attendance Verification ETL -->
         <div
-          class="store-item category-power-query surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
+          class="store-item category-power-query crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
+              <span class="prism-pill">
                 <i class="fa-solid fa-file-excel mr-1"></i> EXCEL TEMPLATE
               </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >Excel / Power BI</span
-              >
+              <span class="text-xs text-slate-400">Excel / Power BI</span>
             </div>
-            <h3 class="text-xl font-bold mb-2">
+
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
               Payroll Attendance Verification Template
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
               Automatically cleans raw biometric punch logs, flags missed
               entries, calculates late arrivals, and generates ready-to-use
               payroll reports.
             </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Pre-built Power
+                <i class="fa-solid fa-check text-gold-500"></i> Pre-built Power
                 Query M-Code script
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Power BI
+                <i class="fa-solid fa-check text-gold-500"></i> Power BI
                 dashboard formulas included
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Works with any
+                <i class="fa-solid fa-check text-gold-500"></i> Works with any
                 biometric system log
               </li>
             </ul>
           </div>
-          <div class="pt-4 border-t flex items-center justify-between">
+
+          <div
+            class="pt-5 border-t border-navy-100 flex items-center justify-between"
+          >
             <div>
               <span class="text-2xl font-extrabold text-slate-900"
                 >AED 250</span
@@ -475,7 +503,7 @@
             <a
               href="https://gumroad.com"
               target="_blank"
-              class="px-4 py-2 bg-excel-600 hover:bg-excel-700 text-white font-semibold rounded-lg shadow-md shadow-excel-600/20 text-sm transition-all flex items-center gap-1.5"
+              class="btn-gold text-sm py-2 px-5"
             >
               <span>GET TEMPLATE</span>
               <i class="fa-solid fa-play text-[10px]"></i>
@@ -485,55 +513,52 @@
 
         <!-- Item 5: Done-For-You Service -->
         <div
-          class="store-item category-services surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between hover:border-excel-600/50 transition-all"
+          class="store-item category-services crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-              >
+              <span class="prism-pill">
                 <i class="fa-solid fa-handshake mr-1"></i> SETUP SERVICE
               </span>
-              <span class="text-xs text-slate-400 font-mono"
-                >1-on-1 Service</span
-              >
+              <span class="text-xs text-slate-400">1-on-1 Service</span>
             </div>
-            <h3 class="text-xl font-bold mb-2">
+
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
               Custom AI Setup & Prompt Configuration
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed mb-6"
-            >
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
               I will build and set up custom AI prompts and tools tailored
               directly for your team inside Gemini or ChatGPT to automate your
               daily tasks.
             </p>
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 mb-6">
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> Prompts built
+                <i class="fa-solid fa-check text-gold-500"></i> Prompts built
                 specifically for your daily business needs
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> 1-on-1 training
+                <i class="fa-solid fa-check text-gold-500"></i> 1-on-1 training
                 and setup session
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-excel-600"></i> 30 days of
+                <i class="fa-solid fa-check text-gold-500"></i> 30 days of
                 ongoing updates and support
               </li>
             </ul>
           </div>
-          <div class="pt-4 border-t flex items-center justify-between">
+
+          <div
+            class="pt-5 border-t border-navy-100 flex items-center justify-between"
+          >
             <div>
               <span class="text-2xl font-extrabold text-slate-900"
                 >AED 2,500</span
               >
               <span class="text-xs text-slate-500 block">One-time fee</span>
             </div>
-            <a
-              href="index.html#contact"
-              class="px-4 py-2 border border-slate-300 hover:border-excel-600 text-slate-800 font-semibold rounded-lg text-sm transition-all flex items-center gap-1.5"
-            >
+            <a href="index.html#contact" class="btn-glass text-sm py-2 px-5">
               <span>BOOK SETUP</span>
               <i class="fa-solid fa-calendar text-[10px]"></i>
             </a>
@@ -542,32 +567,33 @@
 
         <!-- Item 6: Placeholder for Future Skill -->
         <div
-          class="store-item category-ai-skills surface-card border p-6 sm:p-8 rounded-3xl opacity-60 flex flex-col justify-between"
+          class="store-item category-ai-skills crystal-panel p-8 rounded-3xl opacity-60 flex flex-col justify-between bg-white/40"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-slate-200 text-slate-600 text-xs font-mono font-bold"
-              >
-                COMING SOON
-              </span>
-              <span class="text-xs text-slate-400 font-mono">.md File</span>
+              <span class="prism-pill"> COMING SOON </span>
+              <span class="text-xs text-slate-400">.md File</span>
             </div>
-            <h3 class="text-xl font-bold text-slate-500 mb-2">
+
+            <h3 class="text-2xl font-extrabold text-slate-500 mb-2">
               Power Query M-Code Assistant
             </h3>
+
             <p class="text-sm text-slate-400 leading-relaxed mb-6">
               An AI prompt file that helps you write, debug, and optimize
               complex Excel Power Query scripts automatically.
             </p>
           </div>
-          <div class="pt-4 border-t flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold"
+
+          <div
+            class="pt-5 border-t border-navy-100 flex items-center justify-between"
+          >
+            <span class="text-xs text-slate-500 font-semibold"
               >IN DEVELOPMENT</span
             >
             <button
               disabled
-              class="px-3 py-1.5 bg-slate-200 text-slate-400 rounded-lg text-xs font-medium cursor-not-allowed"
+              class="px-4 py-2 bg-slate-200 text-slate-400 rounded-xl text-xs font-bold cursor-not-allowed"
             >
               Notify Me
             </button>
@@ -577,9 +603,11 @@
     </main>
 
     <!-- 5. Footer -->
-    <footer class="mt-auto border-t surface-card py-8">
+    <footer
+      class="mt-auto border-t border-navy-100 bg-white/70 backdrop-blur-md py-10"
+    >
       <div
-        class="max-w-7xl mx-auto px-4 text-center text-xs sm:text-sm text-secondary-custom"
+        class="max-w-7xl mx-auto px-4 text-center text-xs sm:text-sm text-slate-600"
       >
         <p>
           &copy; 2026 Federico Dumagpi Jr. All rights reserved. Powered by Power
@@ -588,47 +616,7 @@
       </div>
     </footer>
 
-    <!-- Client-Side Filter Logic -->
-    <script>
-      function filterCategory(category) {
-        const items = document.querySelectorAll(".store-item");
-        const buttons = document.querySelectorAll(".filter-btn");
-
-        buttons.forEach((btn) => {
-          btn.classList.remove("bg-excel-600", "text-white", "shadow-md");
-          btn.classList.add(
-            "bg-white",
-            "text-slate-700",
-            "border",
-            "border-slate-300",
-          );
-        });
-
-        event.currentTarget.classList.remove(
-          "bg-white",
-          "text-slate-700",
-          "border",
-          "border-slate-300",
-        );
-        event.currentTarget.classList.add(
-          "bg-excel-600",
-          "text-white",
-          "shadow-md",
-        );
-
-        items.forEach((item) => {
-          if (category === "all") {
-            item.style.display = "flex";
-          } else if (item.classList.contains(`category-${category}`)) {
-            item.style.display = "flex";
-          } else {
-            item.style.display = "none";
-          }
-        });
-      }
-    </script>
-
-    <!-- Shared Ecosystem External Script -->
+    <!-- Liquid Crystal JavaScript Engine -->
     <script src="script.js"></script>
   </body>
 </html>

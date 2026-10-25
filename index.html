@@ -1,25 +1,80 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth" data-theme="light">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Federico Dumagpi | Power Query Automation & AI Applied</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
             colors: {
-              excel: {
-                50: "#e6f4ea",
-                100: "#cce9d5",
-                500: "#107c41",
-                600: "#0e6b37",
-                700: "#0b522a",
-                800: "#08391d",
-                900: "#052312",
+              navy: {
+                50: "#e7f2fd",
+                100: "#cfe5fc",
+                200: "#a0cbf8",
+                300: "#70b0f5",
+                400: "#4096f2",
+                500: "#117cee",
+                600: "#0d63bf",
+                700: "#0a4a8f",
+                800: "#07325f",
+                900: "#031930",
+                950: "#021121",
+              },
+              beige: {
+                50: "#f7f7ee",
+                100: "#efefdc",
+                200: "#dfdfb9",
+                300: "#cfcf96",
+                400: "#bfbf73",
+                500: "#afaf50",
+                600: "#8c8c40",
+                700: "#696930",
+                800: "#464620",
+                900: "#232310",
+                950: "#18180b",
+              },
+              gold: {
+                50: "#fdf9e7",
+                100: "#fcf2cf",
+                200: "#f8e5a0",
+                300: "#f5d870",
+                400: "#f2cb40",
+                500: "#eebe11",
+                600: "#bf980d",
+                700: "#8f720a",
+                800: "#5f4c07",
+                900: "#302603",
+                950: "#211b02",
+              },
+              brown: {
+                50: "#fdf2e8",
+                100: "#fbe4d0",
+                200: "#f6c9a2",
+                300: "#f2ae73",
+                400: "#ee9344",
+                500: "#e97816",
+                600: "#bb6011",
+                700: "#8c480d",
+                800: "#5d3009",
+                900: "#2f1804",
+                950: "#211103",
+              },
+              tomato: {
+                50: "#feeae6",
+                100: "#fdd6ce",
+                200: "#fcac9c",
+                300: "#fa836b",
+                400: "#f95939",
+                500: "#f73008",
+                600: "#c62606",
+                700: "#941d05",
+                800: "#631303",
+                900: "#310a02",
+                950: "#230701",
               },
             },
             fontFamily: {
@@ -29,213 +84,284 @@
         },
       };
     </script>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- External Stylesheet -->
+    <!-- Unified Liquid Crystal Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="selection:bg-excel-500 selection:text-white">
-    <!-- Scroll Progress Bar -->
+  <body>
+    <!-- Prismatic Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
-    <!-- 1. Global Announcement / Top Bar -->
-    <div
-      class="bg-[#111111] text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide"
-    >
-      <a
-        href="#contact"
-        class="hover:underline inline-flex items-center space-x-2"
-      >
+    <!-- 1. Crystalline Announcement Top Bar -->
+    <div class="announcement-bar">
+      <a href="#contact" class="announcement-link">
+        <span class="announcement-dot"></span>
         <span>⚡ AVAILABLE FOR SELECT CONSULTING PROJECTS — INQUIRE TODAY</span>
         <i class="fa-solid fa-play text-[10px]"></i>
       </a>
     </div>
 
-    <!-- 2. Navigation Header -->
-    <header
-      class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b surface-card transition-colors duration-300"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
-      >
-        <a
-          href="#"
-          class="flex items-center space-x-2 font-bold text-lg tracking-tight"
-        >
-          <div
-            class="w-9 h-9 rounded-lg bg-excel-600 flex items-center justify-center text-white font-mono shadow-lg shadow-excel-600/30"
-          >
-            <i class="fa-solid fa-chart-simple"></i>
+    <!-- 2. Regal Navy / Beige Glass Navigation Header -->
+    <header class="header-glass">
+      <div class="header-inner">
+        <a href="#" class="flex items-center space-x-3 brand-link">
+          <div class="brand-badge">
+            <i class="fa-solid fa-chart-simple text-lg"></i>
           </div>
-          <span class="truncate">Federico Dumagpi</span>
+          <div>
+            <span class="brand-title">Federico Dumagpi</span>
+            <span class="brand-sub">Power Query & Applied AI</span>
+          </div>
         </a>
 
-        <nav
-          class="hidden md:flex items-center space-x-8 text-sm sm:text-base font-medium text-secondary-custom"
-        >
-          <a href="#system" class="hover:text-excel-500 transition-colors"
-            >Process</a
-          >
-          <a href="#promise" class="hover:text-excel-500 transition-colors"
-            >The Promise</a
-          >
-          <a href="#skills" class="hover:text-excel-500 transition-colors"
-            >Expertise</a
-          >
-          <a href="#experience" class="hover:text-excel-500 transition-colors"
-            >Experience</a
-          >
-          <a
-            href="store.html"
-            class="font-semibold transition-opacity hover:opacity-80 text-solutions-red"
+        <nav class="nav-crystal-bar">
+          <a href="#system" class="nav-crystal-link">Process</a>
+          <a href="#promise" class="nav-crystal-link">The Promise</a>
+          <a href="#skills" class="nav-crystal-link">Expertise</a>
+          <a href="#experience" class="nav-crystal-link">Experience</a>
+          <a href="store.html" class="nav-crystal-link highlight"
             >Store & Solutions</a
           >
         </nav>
 
-        <div class="flex items-center space-x-3 sm:space-x-4">
+        <div class="flex items-center space-x-3">
           <a
             href="#contact"
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-lg shadow-md shadow-excel-600/20 transition-all transform hover:scale-105"
+            class="btn-gold text-xs sm:text-sm py-2 px-4 sm:px-6"
           >
             <span>INQUIRE</span>
-            <i class="fa-solid fa-play text-[10px] ml-1.5"></i>
+            <i class="fa-solid fa-play text-[10px]"></i>
           </a>
           <button
             id="mobile-menu-btn"
-            class="md:hidden p-2 text-slate-600 hover:text-excel-600"
+            class="md:hidden p-2 rounded-xl bg-white border border-navy-200 text-navy-900"
             aria-label="Toggle Mobile Menu"
           >
             <i class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
       </div>
+
       <!-- Mobile Navigation Drawer -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden px-4 pt-2 pb-4 border-t surface-card"
-      >
-        <div class="flex flex-col space-y-3 text-sm sm:text-base font-medium">
-          <a href="#system" class="mobile-link hover:text-excel-500">Process</a>
-          <a href="#promise" class="mobile-link hover:text-excel-500"
-            >The Promise</a
-          >
-          <a href="#skills" class="mobile-link hover:text-excel-500"
-            >Expertise</a
-          >
-          <a href="#experience" class="mobile-link hover:text-excel-500"
-            >Experience</a
-          >
-          <a
-            href="store.html"
-            class="mobile-link font-semibold text-solutions-red"
-            >Store & Solutions</a
-          >
-          <a href="#contact" class="mobile-link text-excel-600 font-semibold"
-            >INQUIRE</a
-          >
-        </div>
+      <div id="mobile-menu" class="hidden md:hidden mobile-drawer">
+        <a href="#system" class="mobile-nav-item mobile-link">Process</a>
+        <a href="#promise" class="mobile-nav-item mobile-link">The Promise</a>
+        <a href="#skills" class="mobile-nav-item mobile-link">Expertise</a>
+        <a href="#experience" class="mobile-nav-item mobile-link">Experience</a>
+        <a href="store.html" class="mobile-nav-item mobile-link font-bold"
+          >Store & Solutions</a
+        >
+        <a href="#contact" class="btn-navy text-center mt-2 mobile-link"
+          >INQUIRE</a
+        >
       </div>
     </header>
 
-    <!-- 3. Hero Section (Centered & Clean) -->
-    <section
-      class="relative pt-10 pb-12 lg:pt-14 lg:pb-16 overflow-hidden text-center"
-    >
-      <div
-        class="absolute inset-0 opacity-10 bg-[radial-gradient(#107c41_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"
-      ></div>
-      <div
-        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6"
-      >
-        <div
-          class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto"
+    <!-- 3. Liquid Crystal Hero: Asymmetric Refraction Layout -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+      <!-- Geometric Caustic Facet Layer -->
+      <div class="geometric-facet-backdrop">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 1440 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="opacity-25"
         >
-          <span class="w-2 h-2 rounded-full bg-excel-500 animate-pulse"></span>
-          <span>CONSULTING · 2026</span>
-        </div>
+          <polygon
+            points="120,40 280,160 180,320 20,240"
+            stroke="#0a4a8f"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            fill="none"
+          />
+          <polygon
+            points="1180,80 1380,240 1260,420 1060,260"
+            stroke="#eebe11"
+            stroke-width="1.5"
+            stroke-dasharray="6 6"
+            fill="none"
+          />
+          <path
+            d="M 0,550 Q 360,450 720,550 T 1440,550"
+            stroke="#0a4a8f"
+            stroke-width="1"
+            fill="none"
+          />
+        </svg>
+      </div>
 
-        <h1
-          class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
-        >
-          Turn a 48-Hour Monthly HR Bottleneck Into
-          <span class="text-excel-600">Zero-Touch Automation.</span>
-        </h1>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Column (Strategy & Architecture) -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="prism-pill">
+              <span class="pulse-node"></span>
+              <span>CONSULTING · 2026</span>
+            </div>
 
-        <p
-          class="text-base sm:text-lg lg:text-xl text-secondary-custom max-w-3xl mx-auto leading-relaxed"
-        >
-          Your HR team spends
-          <strong class="text-slate-900 font-bold">48 manual hours</strong>
-          every month verifying attendance for
-          <strong class="text-slate-900 font-bold">4,800+ employees</strong>. I
-          architect and install custom Power Query & AI-driven data pipelines
-          that automate your attendance, payroll reconciliation, and HRIS
-          reporting down to zero-touch execution.
-        </p>
+            <h1 class="heading-hero">
+              Turn a 48-Hour Monthly HR Bottleneck Into
+              <span
+                class="text-gold-gradient underline decoration-gold-400/40 decoration-wavy decoration-2"
+                >Zero-Touch Automation.</span
+              >
+            </h1>
 
-        <div
-          class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-excel-500/10 border border-excel-500/20 text-excel-600 text-xs sm:text-sm font-semibold tracking-wide uppercase mx-auto"
-        >
-          <span>By Federico Dumagpi</span>
-        </div>
+            <p
+              class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed font-normal max-w-2xl"
+            >
+              Your HR team spends
+              <strong
+                class="font-extrabold text-navy-900 bg-white px-2 py-0.5 rounded-lg border border-navy-200 shadow-sm"
+                >48 manual hours</strong
+              >
+              every month verifying attendance for
+              <strong
+                class="font-extrabold text-navy-900 bg-white px-2 py-0.5 rounded-lg border border-navy-200 shadow-sm"
+                >4,800+ employees</strong
+              >. I architect and install custom Power Query & AI-driven data
+              pipelines that automate your attendance, payroll reconciliation,
+              and HRIS reporting down to zero-touch execution.
+            </p>
 
-        <div
-          class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4"
-        >
-          <a
-            href="#contact"
-            class="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all text-center flex items-center justify-center space-x-2"
-          >
-            <span>INQUIRE</span>
-            <i class="fa-solid fa-play text-[10px] ml-1.5"></i>
-          </a>
-          <a
-            href="#system"
-            class="w-full sm:w-auto px-8 py-3.5 text-sm sm:text-base font-semibold border border-slate-300 hover:border-excel-600 rounded-xl transition-all text-center flex items-center justify-center space-x-2"
-          >
-            <span>Explore Process</span>
-            <i class="fa-solid fa-chevron-down text-xs"></i>
-          </a>
+            <div class="prism-pill prism-pill-accent">
+              <span>By Federico Dumagpi</span>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start"
+            >
+              <a href="#contact" class="btn-gold text-base">
+                <span>INQUIRE</span>
+                <i class="fa-solid fa-play text-xs"></i>
+              </a>
+              <a href="#system" class="btn-glass text-base">
+                <span>Explore Process</span>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column (Liquid Crystal Real-Time Telemetry Capsule) -->
+          <div class="lg:col-span-5 relative">
+            <div class="crystal-panel crystal-sheen p-8 rounded-[2.5rem]">
+              <div
+                class="flex items-center justify-between pb-6 border-b border-navy-100"
+              >
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 rounded-full bg-gold-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-navy-600"></div>
+                  <div class="w-3 h-3 rounded-full bg-brown-400"></div>
+                </div>
+                <span
+                  class="text-xs uppercase tracking-wider text-navy-800 font-bold"
+                  >ZERO-TOUCH PIPELINE</span
+                >
+              </div>
+
+              <div class="py-6 space-y-4 text-xs">
+                <div
+                  class="p-4 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-between"
+                >
+                  <div>
+                    <span
+                      class="text-slate-500 block text-[10px] uppercase font-bold"
+                      >VERIFICATION TIME</span
+                    >
+                    <span class="text-lg font-bold text-tomato-500 line-through"
+                      >48 Hours / mo</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-gold-500 text-base"
+                  ></i>
+                  <div class="text-right">
+                    <span
+                      class="text-navy-700 block text-[10px] font-bold uppercase"
+                      >AUTOMATED</span
+                    >
+                    <span class="text-xl font-bold text-navy-600"
+                      >0.00 Mins</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="p-4 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-between"
+                >
+                  <div>
+                    <span
+                      class="text-slate-500 block text-[10px] uppercase font-bold"
+                      >EMPLOYEE SCALE</span
+                    >
+                    <span class="text-lg font-bold text-navy-950"
+                      >4,800+ Headcount</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-gold-100 text-gold-800 font-bold text-[11px] border border-gold-300"
+                    >100% Ingested</span
+                  >
+                </div>
+
+                <div
+                  class="p-4 rounded-2xl bg-gradient-to-r from-navy-700 to-navy-900 text-white shadow-lg"
+                >
+                  <span
+                    class="text-[10px] tracking-wider uppercase opacity-80 block"
+                    >CORE ARCHITECTURE</span
+                  >
+                  <div
+                    class="font-bold text-sm flex items-center justify-between mt-1"
+                  >
+                    <span>Power Query M + Applied AI</span>
+                    <i class="fa-solid fa-bolt text-gold-400"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="text-center pt-2 text-[11px] text-slate-500 font-medium"
+              >
+                Live Enterprise ETL Architecture & Reporting Automation
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. The Promise Section -->
-    <section id="promise" class="py-8 sm:py-12 surface-card border-y">
+    <!-- 4. The Promise Section: Floating Prismatic Card -->
+    <section id="promise" class="py-16 relative">
       <div
         class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll"
       >
-        <span
-          class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold tracking-wider uppercase"
-          >THE PROMISE</span
-        >
-        <h2
-          class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 mb-2"
-        >
-          Maximum Operational Leverage
-        </h2>
+        <div class="prism-pill mb-4">THE PROMISE</div>
+        <h2 class="heading-section mt-2 mb-2">Maximum Operational Leverage</h2>
         <p
-          class="text-xs sm:text-sm font-bold uppercase tracking-widest text-excel-600 mb-8"
+          class="text-xs sm:text-sm font-bold uppercase tracking-widest text-navy-700 mb-10"
         >
           Outsized Team Multiplier
         </p>
-        <div class="p-8 sm:p-12 rounded-3xl bg-white border shadow-xl relative">
+
+        <div
+          class="crystal-panel crystal-sheen p-8 sm:p-14 relative text-center"
+        >
           <i
-            class="fa-solid fa-quote-left text-4xl text-excel-600/20 absolute top-6 left-8"
+            class="fa-solid fa-quote-left text-5xl text-navy-300 mb-6 block"
           ></i>
           <p
-            class="text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed text-slate-800 italic relative z-10"
+            class="text-2xl sm:text-3xl lg:text-4xl font-medium leading-relaxed text-slate-800 italic relative z-10"
           >
             "Run the output of a
-            <span class="text-excel-600 font-bold not-italic"
+            <span
+              class="text-navy-700 font-bold not-italic border-b-2 border-gold-400"
               >4-person HR data team</span
             >
             with 1 specialist—using Power Query M Language as your engine for
@@ -245,82 +371,70 @@
       </div>
     </section>
 
-    <!-- 5. System Architecture ("What Gets Installed") -->
-    <section
-      id="system"
-      class="py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-    >
-      <div
-        class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-on-scroll"
-      >
-        <span
-          class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold tracking-wider uppercase"
-          >SYSTEM ARCHITECTURE</span
-        >
-        <h2
-          class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 mb-3"
-        >
-          WHAT GETS INSTALLED
-        </h2>
-        <p class="text-base sm:text-lg text-secondary-custom">
+    <!-- 5. System Architecture: 3-Stage Technical Framework -->
+    <section id="system" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <div class="prism-pill mb-4">SYSTEM ARCHITECTURE</div>
+        <h2 class="heading-section mt-2 mb-3">WHAT GETS INSTALLED</h2>
+        <p class="text-base sm:text-lg text-slate-600">
           A 3-stage technical framework built to eliminate manual HR data
           overhead with zero-touch automation.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
         <!-- Stage 01 -->
         <div
-          class="surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between"
+          class="crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-                >STAGE 01</span
-              >
-              <i class="fa-solid fa-database text-excel-600 text-xl"></i>
+            <div class="flex items-center justify-between mb-6">
+              <span class="prism-pill">STAGE 01</span>
+              <div class="crystal-icon-box">
+                <i class="fa-solid fa-database"></i>
+              </div>
             </div>
             <span
-              class="text-xs uppercase font-bold text-excel-600 tracking-wider"
+              class="text-xs uppercase font-bold text-navy-700 tracking-wider block mb-1"
               >Automated Data & HRIS Ingestion</span
             >
-            <h3 class="text-xl font-bold mt-1 mb-3">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">
               Intake (The Strategy Layer)
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed"
-            >
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
               Automated data ingestion from your HRIS, attendance, and biometric
               systems. We transform complex approval workflows and raw
               attendance logs into clean, structured source tables.
             </p>
           </div>
+          <div
+            class="mt-6 pt-4 border-t border-navy-100 flex items-center gap-2 text-xs font-semibold text-navy-800"
+          >
+            <i class="fa-solid fa-circle-check text-gold-500"></i> Seamless
+            Source Binding
+          </div>
         </div>
 
         <!-- Stage 02 -->
         <div
-          class="surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between border-excel-600/50 shadow-excel-600/5"
+          class="crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll border-navy-200 shadow-xl bg-white"
         >
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-                >STAGE 02</span
-              >
-              <i class="fa-solid fa-gears text-excel-600 text-xl"></i>
+            <div class="flex items-center justify-between mb-6">
+              <span class="prism-pill prism-pill-accent">STAGE 02</span>
+              <div class="crystal-icon-box crystal-icon-box-accent">
+                <i class="fa-solid fa-gears"></i>
+              </div>
             </div>
             <span
-              class="text-xs uppercase font-bold text-excel-600 tracking-wider"
+              class="text-xs uppercase font-bold text-navy-700 tracking-wider block mb-1"
               >Automated Generation & Processing</span
             >
-            <h3 class="text-xl font-bold mt-1 mb-3">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">
               Production (The Execution Pipeline)
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed"
-            >
-              <strong class="text-slate-900 font-bold"
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              <strong class="text-slate-950 font-bold"
                 >Power Query M Language Engine.</strong
               >
               Deploy custom M Language scripts to automatically clean, merge,
@@ -328,84 +442,77 @@
               manual overhead down to zero-touch execution.
             </p>
           </div>
+          <div
+            class="mt-6 pt-4 border-t border-navy-100 flex items-center gap-2 text-xs font-semibold text-navy-800"
+          >
+            <i class="fa-solid fa-microchip text-gold-500"></i> Zero-Touch Power
+            Query M
+          </div>
         </div>
 
         <!-- Stage 03 -->
         <div
-          class="surface-card border p-6 sm:p-8 rounded-3xl shadow-lg reveal-on-scroll flex flex-col justify-between"
+          class="crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
         >
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span
-                class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-mono font-bold"
-                >STAGE 03</span
-              >
-              <i class="fa-solid fa-chart-line text-excel-600 text-xl"></i>
+            <div class="flex items-center justify-between mb-6">
+              <span class="prism-pill">STAGE 03</span>
+              <div class="crystal-icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
             </div>
             <span
-              class="text-xs uppercase font-bold text-excel-600 tracking-wider"
+              class="text-xs uppercase font-bold text-navy-700 tracking-wider block mb-1"
               >Scaling & Continuous Reporting</span
             >
-            <h3 class="text-xl font-bold mt-1 mb-3">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">
               Iteration (The Compounding Engine)
             </h3>
-            <p
-              class="text-sm sm:text-base text-secondary-custom leading-relaxed"
-            >
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
               Deploy interactive Power BI dashboards that deliver real-time
               workforce visibility, regulatory compliance, and continuous
               quality management internal audit support.
             </p>
           </div>
+          <div
+            class="mt-6 pt-4 border-t border-navy-100 flex items-center gap-2 text-xs font-semibold text-navy-800"
+          >
+            <i class="fa-solid fa-eye text-gold-500"></i> Real-Time Audit
+            Compliance
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 5.5 Digital Store & Solutions Callout Banner (Highlighted Variant) -->
+    <!-- 5.5 Digital Store & Solutions Highlight Banner -->
     <section
       class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll"
     >
       <div
-        class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-excel-50/80 via-white to-excel-100/50 border-2 border-excel-600/40 shadow-2xl shadow-excel-600/10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
+        class="crystal-panel crystal-sheen p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-white via-beige-50 to-navy-50 border-2 border-navy-200 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8"
       >
-        <!-- Background Radial Accent Grid -->
-        <div
-          class="absolute inset-0 opacity-15 bg-[radial-gradient(#107c41_1.5px,transparent_1.5px)] [background-size:20px_20px] pointer-events-none"
-        ></div>
-
-        <!-- Copy Area -->
         <div class="space-y-3 text-center md:text-left relative z-10 max-w-2xl">
-          <div
-            class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-excel-600/10 border border-excel-600/25 text-excel-700 text-xs font-mono font-bold uppercase shadow-sm"
-          >
-            <span
-              class="w-2 h-2 rounded-full bg-excel-600 animate-pulse"
-            ></span>
+          <div class="prism-pill">
+            <span class="pulse-node"></span>
             <i class="fa-solid fa-store text-xs"></i>
             <span>Digital Assets & Templates</span>
           </div>
 
           <h3
-            class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 leading-snug"
+            class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-snug"
           >
             Need ready-to-use AI tools or automated Excel templates for your
             team?
           </h3>
 
-          <p
-            class="text-sm sm:text-base text-slate-600 font-medium leading-relaxed"
-          >
+          <p class="text-base text-slate-600 font-medium leading-relaxed">
             Explore pre-formatted AI prompts, biometric attendance ETL scripts,
             and setup services in my digital store.
           </p>
         </div>
 
-        <!-- Highlighted Action Button -->
         <div class="relative z-10 flex-shrink-0">
-          <a
-            href="store.html"
-            class="inline-flex items-center justify-center px-7 py-4 text-sm font-bold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-xl shadow-excel-600/30 transition-all transform hover:scale-105 space-x-2.5"
-          >
+          <a href="store.html" class="btn-gold text-base">
             <span>Browse Store & Solutions</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
@@ -414,47 +521,36 @@
     </section>
 
     <!-- 6. Technical Proficiencies (Expertise) -->
-    <section id="skills" class="py-8 sm:py-12 surface-card border-y">
+    <section id="skills" class="py-16 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-on-scroll"
-        >
-          <span
-            class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold tracking-wider uppercase"
-            >EXPERTISE</span
-          >
-          <h2
-            class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 mb-3"
-          >
-            Technical Proficiencies
-          </h2>
-          <p class="text-base sm:text-lg text-secondary-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <div class="prism-pill mb-4">EXPERTISE</div>
+          <h2 class="heading-section mt-2 mb-3">Technical Proficiencies</h2>
+          <p class="text-base sm:text-lg text-slate-600">
             Filtering through analytics engines, HRIS infrastructure, and
             process management tools.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Skill 1 -->
           <div
-            class="surface-card border p-6 rounded-2xl shadow-lg reveal-on-scroll"
+            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
           >
             <div class="flex items-center space-x-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-excel-500/10 text-excel-600 flex items-center justify-center text-xl font-bold shrink-0"
-              >
+              <div class="crystal-icon-box">
                 <i class="fa-solid fa-file-excel"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg">
+                <h3 class="font-extrabold text-slate-900 text-lg">
                   Excel Power Query & Power Pivot
                 </h3>
-                <span class="text-xs text-excel-600 font-semibold uppercase"
+                <span class="text-xs text-navy-700 font-bold uppercase"
                   >M Language Automation</span
                 >
               </div>
             </div>
-            <p class="text-sm sm:text-base text-secondary-custom">
+            <p class="text-sm text-slate-600 leading-relaxed">
               Automated data pipelines, custom M script development, and
               multi-source data model consolidation.
             </p>
@@ -462,24 +558,22 @@
 
           <!-- Skill 2 -->
           <div
-            class="surface-card border p-6 rounded-2xl shadow-lg reveal-on-scroll"
+            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
           >
             <div class="flex items-center space-x-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-excel-500/10 text-excel-600 flex items-center justify-center text-xl font-bold shrink-0"
-              >
+              <div class="crystal-icon-box">
                 <i class="fa-solid fa-chart-pie"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg">
+                <h3 class="font-extrabold text-slate-900 text-lg">
                   Power BI Executive Dashboards
                 </h3>
-                <span class="text-xs text-excel-600 font-semibold uppercase"
+                <span class="text-xs text-navy-700 font-bold uppercase"
                   >Business Intelligence</span
                 >
               </div>
             </div>
-            <p class="text-sm sm:text-base text-secondary-custom">
+            <p class="text-sm text-slate-600 leading-relaxed">
               C-Suite visual analytics, automated compliance reporting, and
               executive workforce dashboards.
             </p>
@@ -487,24 +581,22 @@
 
           <!-- Skill 3 -->
           <div
-            class="surface-card border p-6 rounded-2xl shadow-lg reveal-on-scroll"
+            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
           >
             <div class="flex items-center space-x-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-excel-500/10 text-excel-600 flex items-center justify-center text-xl font-bold shrink-0"
-              >
+              <div class="crystal-icon-box">
                 <i class="fa-solid fa-network-wired"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg">
+                <h3 class="font-extrabold text-slate-900 text-lg">
                   HRIS Workflow Configuration
                 </h3>
-                <span class="text-xs text-excel-600 font-semibold uppercase"
+                <span class="text-xs text-navy-700 font-bold uppercase"
                   >Enterprise Systems</span
                 >
               </div>
             </div>
-            <p class="text-sm sm:text-base text-secondary-custom">
+            <p class="text-sm text-slate-600 leading-relaxed">
               Multi-tier approval workflows, User Acceptance Testing (UAT)
               execution, and HRIS logic optimization.
             </p>
@@ -512,24 +604,22 @@
 
           <!-- Skill 4 -->
           <div
-            class="surface-card border p-6 rounded-2xl shadow-lg reveal-on-scroll"
+            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
           >
             <div class="flex items-center space-x-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-excel-500/10 text-excel-600 flex items-center justify-center text-xl font-bold shrink-0"
-              >
+              <div class="crystal-icon-box">
                 <i class="fa-solid fa-fingerprint"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg">
+                <h3 class="font-extrabold text-slate-900 text-lg">
                   Biometric Attendance Ecosystems
                 </h3>
-                <span class="text-xs text-excel-600 font-semibold uppercase"
+                <span class="text-xs text-navy-700 font-bold uppercase"
                   >RAMs & Unis Software</span
                 >
               </div>
             </div>
-            <p class="text-sm sm:text-base text-secondary-custom">
+            <p class="text-sm text-slate-600 leading-relaxed">
               Bridging RAMs and Unis biometric software with HRIS platforms to
               transform raw access logs into zero-error payroll inputs.
             </p>
@@ -537,24 +627,22 @@
 
           <!-- Skill 5 -->
           <div
-            class="surface-card border p-6 rounded-2xl shadow-lg reveal-on-scroll"
+            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
           >
             <div class="flex items-center space-x-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-excel-500/10 text-excel-600 flex items-center justify-center text-xl font-bold shrink-0"
-              >
+              <div class="crystal-icon-box">
                 <i class="fa-solid fa-diagram-project"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg">
+                <h3 class="font-extrabold text-slate-900 text-lg">
                   Process Mapping & Project Mgmt
                 </h3>
-                <span class="text-xs text-excel-600 font-semibold uppercase"
+                <span class="text-xs text-navy-700 font-bold uppercase"
                   >MS Planner, Visio, Jira</span
                 >
               </div>
             </div>
-            <p class="text-sm sm:text-base text-secondary-custom">
+            <p class="text-sm text-slate-600 leading-relaxed">
               End-to-end HR workflow architecture, process mapping, and
               cross-functional implementation.
             </p>
@@ -562,24 +650,22 @@
 
           <!-- Skill 6 -->
           <div
-            class="surface-card border p-6 rounded-2xl shadow-lg reveal-on-scroll"
+            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
           >
             <div class="flex items-center space-x-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-excel-500/10 text-excel-600 flex items-center justify-center text-xl font-bold shrink-0"
-              >
+              <div class="crystal-icon-box">
                 <i class="fa-solid fa-robot"></i>
               </div>
               <div>
-                <h3 class="font-bold text-base sm:text-lg">
+                <h3 class="font-extrabold text-slate-900 text-lg">
                   Applied AI & Data Scripting
                 </h3>
-                <span class="text-xs text-excel-600 font-semibold uppercase"
+                <span class="text-xs text-navy-700 font-bold uppercase"
                   >AI & Automation</span
                 >
               </div>
             </div>
-            <p class="text-sm sm:text-base text-secondary-custom">
+            <p class="text-sm text-slate-600 leading-relaxed">
               Leveraging Generative AI prompts and targeted Python/SQL scripts
               to automate routine tasks and extend standard Power Query
               capabilities.
@@ -592,56 +678,44 @@
     <!-- 7. Track Record (Experience) -->
     <section
       id="experience"
-      class="py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
     >
-      <div
-        class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-on-scroll"
-      >
-        <span
-          class="px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold tracking-wider uppercase"
-          >TRACK RECORD</span
-        >
-        <h2
-          class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 mb-3"
-        >
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <div class="prism-pill mb-4">TRACK RECORD</div>
+        <h2 class="heading-section mt-2 mb-3">
           18 Years UAE HR Systems Expertise
         </h2>
-        <p class="text-base sm:text-lg text-secondary-custom">
+        <p class="text-base sm:text-lg text-slate-600">
           Driving digital transformation, HR automation, and compensation
           architecture at Al Ansari Financial Services.
         </p>
       </div>
 
-      <div
-        class="relative border-l border-excel-600/30 ml-2 sm:ml-6 md:ml-32 space-y-8 sm:space-y-12"
-      >
+      <div class="timeline-track space-y-12">
         <!-- Role 1 -->
-        <div class="relative pl-6 sm:pl-8 md:pl-12 reveal-on-scroll">
-          <div
-            class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-excel-600 flex items-center justify-center text-white shadow-md shadow-excel-600/30"
-          >
-            <i class="fa-solid fa-briefcase text-xs"></i>
+        <div class="relative pl-6 sm:pl-10 reveal-on-scroll">
+          <div class="timeline-node">
+            <i class="fa-solid fa-briefcase text-[10px]"></i>
           </div>
-          <div class="surface-card border p-5 sm:p-8 rounded-2xl shadow-lg">
+          <div class="crystal-panel crystal-sheen p-6 sm:p-8 rounded-3xl">
             <div
               class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2"
             >
               <div>
-                <h3 class="text-lg sm:text-xl font-bold">
+                <h3 class="text-xl font-extrabold text-slate-900">
                   Senior Officer – Compensation and Benefits
                 </h3>
-                <p class="text-excel-600 font-medium text-xs sm:text-base">
+                <p class="text-navy-700 font-semibold text-sm">
                   Al Ansari Financial Services PJSC | Dubai, UAE
                 </p>
               </div>
-              <span
-                class="inline-block self-start sm:self-auto px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold"
+              <span class="prism-pill self-start sm:self-auto"
                 >2023 – Present</span
               >
             </div>
-            <ul class="space-y-3 text-sm sm:text-base text-secondary-custom">
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   >Designed and implemented multi-level
                   <strong class="text-slate-900 font-semibold"
@@ -653,8 +727,8 @@
                   >, eliminating administrative bottlenecks.</span
                 >
               </li>
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   >Facilitated enterprise-wide salary benchmarking by
                   engineering data architecture for
@@ -664,8 +738,8 @@
                   methodologies.</span
                 >
               </li>
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   >Delivered high-integrity cross-functional analytics and
                   <strong class="text-slate-900 font-semibold"
@@ -679,32 +753,29 @@
         </div>
 
         <!-- Role 2 -->
-        <div class="relative pl-6 sm:pl-8 md:pl-12 reveal-on-scroll">
-          <div
-            class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-excel-600 flex items-center justify-center text-white shadow-md shadow-excel-600/30"
-          >
-            <i class="fa-solid fa-laptop-code text-xs"></i>
+        <div class="relative pl-6 sm:pl-10 reveal-on-scroll">
+          <div class="timeline-node">
+            <i class="fa-solid fa-laptop-code text-[10px]"></i>
           </div>
-          <div class="surface-card border p-5 sm:p-8 rounded-2xl shadow-lg">
+          <div class="crystal-panel crystal-sheen p-6 sm:p-8 rounded-3xl">
             <div
               class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2"
             >
               <div>
-                <h3 class="text-lg sm:text-xl font-bold">
+                <h3 class="text-xl font-extrabold text-slate-900">
                   HR Officer – MIS / Shared Services
                 </h3>
-                <p class="text-excel-600 font-medium text-xs sm:text-base">
+                <p class="text-navy-700 font-semibold text-sm">
                   Al Ansari Financial Services PJSC | Dubai, UAE
                 </p>
               </div>
-              <span
-                class="inline-block self-start sm:self-auto px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold"
+              <span class="prism-pill self-start sm:self-auto"
                 >2015 – 2023</span
               >
             </div>
-            <ul class="space-y-3 text-sm sm:text-base text-secondary-custom">
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   >Managed
                   <strong class="text-slate-900 font-semibold"
@@ -714,8 +785,8 @@
                   automated system logic.</span
                 >
               </li>
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   >Re-engineered legacy paper-based HR processes into
                   streamlined, zero-friction digital workflows.</span
@@ -726,32 +797,29 @@
         </div>
 
         <!-- Role 3 -->
-        <div class="relative pl-6 sm:pl-8 md:pl-12 reveal-on-scroll">
-          <div
-            class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-excel-600 flex items-center justify-center text-white shadow-md shadow-excel-600/30"
-          >
-            <i class="fa-solid fa-award text-xs"></i>
+        <div class="relative pl-6 sm:pl-10 reveal-on-scroll">
+          <div class="timeline-node">
+            <i class="fa-solid fa-award text-[10px]"></i>
           </div>
-          <div class="surface-card border p-5 sm:p-8 rounded-2xl shadow-lg">
+          <div class="crystal-panel crystal-sheen p-6 sm:p-8 rounded-3xl">
             <div
               class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2"
             >
               <div>
-                <h3 class="text-lg sm:text-xl font-bold">
+                <h3 class="text-xl font-extrabold text-slate-900">
                   ISO Internal Auditor / Quality Coordinator
                 </h3>
-                <p class="text-excel-600 font-medium text-xs sm:text-base">
+                <p class="text-navy-700 font-semibold text-sm">
                   Al Ansari Financial Services PJSC | Dubai, UAE
                 </p>
               </div>
-              <span
-                class="inline-block self-start sm:self-auto px-3 py-1 rounded-full bg-excel-500/10 text-excel-600 text-xs font-semibold"
+              <span class="prism-pill self-start sm:self-auto"
                 >2008 – 2015</span
               >
             </div>
-            <ul class="space-y-3 text-sm sm:text-base text-secondary-custom">
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   ><strong class="text-slate-900 font-semibold"
                     >Executed internal Quality Management System (QMS)
@@ -764,8 +832,8 @@
                   cross-functional compliance across enterprise branches.</span
                 >
               </li>
-              <li class="flex items-start space-x-2">
-                <i class="fa-solid fa-check text-excel-600 mt-1 shrink-0"></i>
+              <li class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
                 <span
                   >Facilitated process gap analyses and coached operational
                   stakeholders to streamline workflow efficiency and maintain
@@ -778,17 +846,16 @@
       </div>
     </section>
 
-    <!-- 8. Start Here Section -->
-    <section id="contact" class="py-8 sm:py-12 surface-card border-y">
+    <!-- 8. Start Here Section: Consultation Intake -->
+    <section id="contact" class="py-16">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="surface-card border p-6 sm:p-12 rounded-3xl shadow-2xl reveal-on-scroll"
+          class="crystal-panel crystal-sheen p-8 sm:p-12 rounded-[2.5rem] shadow-2xl relative"
         >
-          <div class="text-center mb-8 sm:mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-              Start Here
-            </h2>
-            <p class="text-sm sm:text-lg text-secondary-custom">
+          <div class="text-center mb-10">
+            <div class="prism-pill mb-3">CONSULTATION INTAKE</div>
+            <h2 class="heading-section mb-2">Start Here</h2>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
               Share a few details about your employee scale and current
               reporting bottleneck. I'll review your setup and reply within 24
               hours with a recommended automation roadmap.
@@ -812,7 +879,7 @@
               <div>
                 <label
                   for="name"
-                  class="block text-xs sm:text-sm font-semibold uppercase mb-2 text-secondary-custom"
+                  class="block text-xs font-bold uppercase mb-2 text-navy-900"
                   >Your Name</label
                 >
                 <input
@@ -821,14 +888,14 @@
                   name="name"
                   autocomplete="name"
                   required
-                  class="w-full px-4 py-3 rounded-xl border bg-white text-sm sm:text-base focus:outline-none focus:border-excel-600 transition-colors"
+                  class="crystal-input"
                   placeholder="John Doe"
                 />
               </div>
               <div>
                 <label
                   for="email"
-                  class="block text-xs sm:text-sm font-semibold uppercase mb-2 text-secondary-custom"
+                  class="block text-xs font-bold uppercase mb-2 text-navy-900"
                   >Email Address</label
                 >
                 <input
@@ -837,15 +904,16 @@
                   name="email"
                   autocomplete="email"
                   required
-                  class="w-full px-4 py-3 rounded-xl border bg-white text-sm sm:text-base focus:outline-none focus:border-excel-600 transition-colors"
+                  class="crystal-input"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
+
             <div>
               <label
                 for="message"
-                class="block text-xs sm:text-sm font-semibold uppercase mb-2 text-secondary-custom"
+                class="block text-xs font-bold uppercase mb-2 text-navy-900"
                 >Message / Project Details</label
               >
               <textarea
@@ -853,28 +921,27 @@
                 name="message"
                 rows="4"
                 required
-                class="w-full px-4 py-3 rounded-xl border bg-white text-sm sm:text-base focus:outline-none focus:border-excel-600 transition-colors"
+                class="crystal-input"
                 placeholder="Describe your employee scale and reporting bottleneck..."
               ></textarea>
             </div>
-            <button
-              type="submit"
-              class="w-full py-4 text-sm sm:text-base font-semibold text-white bg-excel-600 hover:bg-excel-700 rounded-xl shadow-lg shadow-excel-600/30 transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2"
-            >
+
+            <button type="submit" class="btn-gold w-full py-4 text-base">
               <span>Send Message</span>
               <i class="fa-solid fa-play text-xs"></i>
             </button>
           </form>
+
           <div
-            class="mt-6 text-center text-xs sm:text-sm text-secondary-custom space-x-4"
+            class="mt-8 text-center text-xs font-medium text-slate-500 flex flex-wrap items-center justify-center gap-4"
           >
-            <span
-              ><i class="fa-solid fa-envelope text-excel-600 mr-1"></i>
+            <span class="flex items-center"
+              ><i class="fa-solid fa-envelope text-navy-700 mr-2"></i>
               federico.dumagpi.jr@gmail.com</span
             >
             <span>•</span>
-            <span
-              ><i class="fa-solid fa-location-dot text-excel-600 mr-1"></i>
+            <span class="flex items-center"
+              ><i class="fa-solid fa-location-dot text-navy-700 mr-2"></i>
               Dubai, UAE</span
             >
           </div>
@@ -882,61 +949,62 @@
       </div>
     </section>
 
-    <!-- 9. Footer -->
-    <footer class="py-8 sm:py-12 bg-white border-t">
+    <!-- 9. Crystalline Footer -->
+    <footer class="py-10 border-t border-navy-100 bg-white/70 backdrop-blur-md">
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-base text-secondary-custom gap-4 text-center sm:text-left"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-slate-600 gap-4 text-center sm:text-left"
       >
         <p>&copy; 2026 Federico Dumagpi. All rights reserved.</p>
         <nav
-          class="flex flex-wrap items-center justify-center space-x-4 sm:space-x-6 font-medium"
+          class="flex flex-wrap items-center justify-center space-x-6 font-semibold"
         >
-          <a href="#system" class="hover:text-excel-600 transition-colors"
+          <a href="#system" class="hover:text-navy-700 transition-colors"
             >Process</a
           >
-          <a href="#promise" class="hover:text-excel-600 transition-colors"
+          <a href="#promise" class="hover:text-navy-700 transition-colors"
             >The Promise</a
           >
-          <a href="#skills" class="hover:text-excel-600 transition-colors"
+          <a href="#skills" class="hover:text-navy-700 transition-colors"
             >Expertise</a
           >
-          <a href="#experience" class="hover:text-excel-600 transition-colors"
+          <a href="#experience" class="hover:text-navy-700 transition-colors"
             >Experience</a
           >
-          <a href="store.html" class="hover:text-excel-600 transition-colors"
+          <a
+            href="store.html"
+            class="text-navy-700 hover:text-gold-600 transition-colors"
             >Store & Solutions</a
           >
           <a
             href="https://www.linkedin.com/in/federico-dumagpi-097305354"
             target="_blank"
-            class="hover:text-excel-600 transition-colors"
-            ><i class="fa-brands fa-linkedin text-lg"></i
-          ></a>
+            class="text-navy-700 hover:text-gold-600 transition-colors text-base"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </nav>
       </div>
     </footer>
 
     <!-- Toast Notification -->
-    <div
-      id="toast"
-      class="fixed bottom-6 right-6 surface-card border p-4 sm:p-6 rounded-2xl shadow-2xl transform translate-y-32 transition-transform duration-300 z-50 flex items-center space-x-3 max-w-xs sm:max-w-md"
-    >
+    <div id="toast" class="crystal-toast">
       <div
-        class="w-8 h-8 rounded-full bg-excel-500/10 text-excel-600 flex items-center justify-center font-bold shrink-0"
+        class="w-10 h-10 rounded-xl bg-navy-100 text-navy-700 flex items-center justify-center font-bold shrink-0 text-lg"
       >
         <i class="fa-solid fa-check"></i>
       </div>
       <div>
-        <h4 class="font-bold text-xs sm:text-base">
+        <h4 class="font-bold text-sm text-slate-900">
           Message Sent Successfully!
         </h4>
-        <p class="text-xs sm:text-sm text-secondary-custom">
+        <p class="text-xs text-slate-500">
           Federico will review your setup and reply within 24 hours.
         </p>
       </div>
     </div>
 
-    <!-- External JavaScript -->
-    <script src="script.js" defer></script>
+    <!-- Liquid Crystal JavaScript Engine -->
+    <script src="script.js"></script>
   </body>
 </html>
