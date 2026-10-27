@@ -1,13 +1,14 @@
 /* ==========================================================================
-   LIQUID CRYSTAL DESIGN SYSTEM - REGAL OPAL EDITION
-   Palette: Regal Navy, Beige, Royal Gold, Sandy Brown, Tomato
+   LIQUID CRYSTAL DESIGN SYSTEM - GLASSMORPHISM EDITION
+   Palette: Regal Navy, Warm Beige, Royal Gold, Sandy Brown, Tomato
+   Style: Translucent Glassmorphism with blurred backgrounds & soft subtle shadows
+   Backdrop: Sampling Liquid Crystal Architectural Landscape
    Typography: Plus Jakarta Sans & Inter
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap");
 
 :root {
-  --font-sans:
-    "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Palette Mapping */
   --navy-50: #e7f2fd;
@@ -59,23 +60,44 @@
   --tomato-500: #f73008;
   --tomato-600: #c62606;
 
-  /* Surfaces & Refraction */
+  /* Glassmorphism Refractive Surfaces */
   --lc-canvas: var(--beige-50);
-  --lc-surface-glass: rgba(255, 255, 255, 0.76);
-  --lc-surface-card: rgba(255, 255, 255, 0.88);
+  --lc-surface-glass: rgba(255, 255, 255, 0.45);
+  --lc-surface-glass-subtle: rgba(255, 255, 255, 0.32);
+  --lc-surface-card: rgba(255, 255, 255, 0.58);
+  --lc-surface-hover: rgba(255, 255, 255, 0.68);
+
   --lc-text-primary: var(--navy-950);
   --lc-text-secondary: var(--navy-800);
-  --lc-text-muted: #4e6379;
+  --lc-text-muted: #3a4f65;
 
-  --lc-glass-border: rgba(13, 99, 191, 0.16);
+  /* Glass Borders & Inner Highlights */
+  --lc-glass-border: rgba(255, 255, 255, 0.75);
+  --lc-glass-border-subtle: rgba(13, 99, 191, 0.15);
   --lc-glass-border-hover: rgba(238, 190, 17, 0.6);
+
+  /* Soft, Subtle Crystalline Shadows */
   --lc-shadow-crystal:
-    0 20px 48px -14px rgba(3, 25, 48, 0.09),
-    0 0 1px 1px rgba(255, 255, 255, 0.95) inset;
+    0 16px 36px -6px rgba(10, 74, 143, 0.09),
+    0 4px 12px -2px rgba(3, 25, 48, 0.04),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px 0 rgba(13, 99, 191, 0.04);
+
   --lc-shadow-float:
-    0 32px 64px -16px rgba(13, 99, 191, 0.18),
-    0 0 0 1px rgba(255, 255, 255, 0.9) inset;
-  --lc-shadow-gold: 0 14px 30px -6px rgba(238, 190, 17, 0.45);
+    0 24px 48px -8px rgba(10, 74, 143, 0.14),
+    0 6px 18px -3px rgba(238, 190, 17, 0.12),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 1px 0 rgba(238, 190, 17, 0.2);
+
+  --lc-shadow-gold:
+    0 10px 28px -6px rgba(238, 190, 17, 0.42),
+    0 3px 8px -2px rgba(143, 114, 10, 0.2),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.9);
+
+  --lc-shadow-subtle:
+    0 4px 16px -2px rgba(10, 74, 143, 0.06),
+    0 1px 4px 0 rgba(3, 25, 48, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
 }
 
 *,
@@ -96,56 +118,40 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--beige-50);
-  /* Liquid Crystal Prismatic Caustic Field */
+  /* Liquid Crystal Prismatic Backdrop Image with Gentle Light Overlay */
   background-image:
-    radial-gradient(
-      circle at 14% 16%,
-      rgba(238, 190, 17, 0.12) 0px,
-      transparent 42%
+    linear-gradient(
+      135deg,
+      rgba(247, 247, 238, 0.38) 0%,
+      rgba(239, 239, 220, 0.3) 50%,
+      rgba(231, 242, 253, 0.35) 100%
     ),
-    radial-gradient(
-      circle at 86% 14%,
-      rgba(17, 124, 238, 0.12) 0px,
-      transparent 48%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(233, 120, 22, 0.06) 0px,
-      transparent 65%
-    ),
-    radial-gradient(
-      circle at 82% 86%,
-      rgba(238, 190, 17, 0.1) 0px,
-      transparent 48%
-    ),
-    radial-gradient(
-      circle at 18% 88%,
-      rgba(13, 99, 191, 0.11) 0px,
-      transparent 52%
-    );
+    url("polygreenbg.jpeg");
+  background-size: cover;
+  background-position: center bottom;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
 }
 
-/* Geometric Birefringent Crystal Lattice */
+/* Subtle Geometric Birefringent Crystal Lattice */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   background-image:
-    url("data:image/svg+xml,%3Csvg width='72' height='124' viewBox='0 0 72 124' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0l36 20.78v41.56L36 83.12 0 62.34V20.78L36 0zm0 124.68L0 103.9V62.34l36 20.78 36-20.78v41.56l-36 20.78z' fill='%230a4a8f' fill-opacity='0.025' fill-rule='evenodd'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='72' height='124' viewBox='0 0 72 124' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0l36 20.78v41.56L36 83.12 0 62.34V20.78L36 0zm0 124.68L0 103.9V62.34l36 20.78 36-20.78v41.56l-36 20.78z' fill='%230a4a8f' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"),
     repeating-linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.45) 0px,
-      rgba(255, 255, 255, 0.45) 1.5px,
+      rgba(255, 255, 255, 0.28) 0px,
+      rgba(255, 255, 255, 0.28) 1.5px,
       transparent 1.5px,
-      transparent 20px
+      transparent 22px
     );
-  opacity: 0.85;
+  opacity: 0.8;
   z-index: -1;
 }
 
@@ -159,14 +165,14 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  height: 3.5px;
+  height: 3px;
   background: linear-gradient(
     90deg,
     var(--navy-600) 0%,
     var(--gold-500) 50%,
     var(--brown-500) 100%
   );
-  box-shadow: 0 0 14px rgba(238, 190, 17, 0.7);
+  box-shadow: 0 0 12px rgba(238, 190, 17, 0.6);
   width: 0%;
   z-index: 9999;
   transition: width 0.1s ease-out;
@@ -178,11 +184,12 @@ body::before {
   z-index: 50;
   background: linear-gradient(
     90deg,
-    var(--navy-950) 0%,
-    var(--navy-900) 50%,
-    var(--navy-800) 100%
+    rgba(2, 17, 33, 0.88) 0%,
+    rgba(3, 25, 48, 0.85) 50%,
+    rgba(7, 50, 95, 0.82) 100%
   );
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   color: var(--navy-50);
   font-size: 0.8125rem;
   padding: 0.65rem 1rem;
@@ -190,7 +197,7 @@ body::before {
   font-weight: 600;
   letter-spacing: 0.04em;
   border-bottom: 1px solid rgba(238, 190, 17, 0.35);
-  box-shadow: 0 4px 16px rgba(2, 17, 33, 0.25);
+  box-shadow: 0 4px 16px rgba(2, 17, 33, 0.18);
 }
 
 .announcement-link {
@@ -232,10 +239,11 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(247, 247, 238, 0.82);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(13, 99, 191, 0.12);
+  background: rgba(247, 247, 238, 0.62) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 6px 24px -2px rgba(3, 25, 48, 0.06) !important;
   transition: all 0.3s ease;
 }
 
@@ -253,13 +261,17 @@ body::before {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 1rem;
-  background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
+  background: linear-gradient(135deg, rgba(10, 74, 143, 0.92), rgba(3, 25, 48, 0.95));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--gold-400);
-  border: 1px solid rgba(238, 190, 17, 0.35);
-  box-shadow: 0 6px 18px -2px rgba(10, 74, 143, 0.35);
+  border: 1px solid rgba(238, 190, 17, 0.4);
+  box-shadow:
+    0 4px 14px -2px rgba(10, 74, 143, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -281,7 +293,7 @@ body::before {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--navy-600);
+  color: var(--navy-700);
   display: block;
 }
 
@@ -289,13 +301,15 @@ body::before {
   display: none;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.375rem;
+  padding: 0.35rem 0.45rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(13, 99, 191, 0.14);
+  background: rgba(255, 255, 255, 0.48) !important;
+  backdrop-filter: blur(20px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
   box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.9),
-    0 4px 12px rgba(3, 25, 48, 0.04);
+    0 4px 16px -2px rgba(3, 25, 48, 0.05),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95) !important;
 }
 
 @media (min-width: 768px) {
@@ -309,37 +323,44 @@ body::before {
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--navy-800);
+  color: var(--navy-900);
   text-decoration: none;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .nav-crystal-link:hover {
-  background: rgba(17, 124, 238, 0.1);
+  background: rgba(255, 255, 255, 0.65);
   color: var(--navy-600);
+  border-color: rgba(13, 99, 191, 0.15);
+  box-shadow: 0 2px 8px rgba(3, 25, 48, 0.04);
 }
 
 .nav-crystal-link.active,
 .nav-crystal-link.highlight {
   background: linear-gradient(
     135deg,
-    rgba(238, 190, 17, 0.2),
-    rgba(233, 120, 22, 0.15)
-  );
-  color: var(--navy-900);
-  border: 1px solid rgba(238, 190, 17, 0.35);
+    rgba(238, 190, 17, 0.25),
+    rgba(233, 120, 22, 0.18)
+  ) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  color: var(--navy-950) !important;
+  border: 1px solid rgba(238, 190, 17, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(238, 190, 17, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.85) !important;
   font-weight: 700;
 }
 
 /* Mobile Drawer */
 .mobile-drawer {
   padding: 1.25rem 1.5rem;
-  border-top: 1px solid var(--lc-glass-border);
-  background: rgba(247, 247, 238, 0.98);
-  backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(247, 247, 238, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  box-shadow: 0 14px 36px rgba(3, 25, 48, 0.1) !important;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -356,19 +377,29 @@ body::before {
   cursor: pointer;
 }
 
-/* Liquid Crystal Panels & Specular Sheen */
-.crystal-panel {
+/* ==========================================================================
+   TRANSLUCENT GLASSMORPHISM CARDS (CRYSTAL PANELS)
+   Distinctly translucent surfaces, blurred backdrops & soft, subtle shadows
+   ========================================================================== */
+.crystal-panel,
+.crystal-panel.bg-white,
+[class*="crystal-panel"] {
   position: relative;
-  background: var(--lc-surface-glass);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 255, 255, 0.24) 100%
+  ) !important;
+  backdrop-filter: blur(22px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
   border-radius: 1.75rem;
-  box-shadow: var(--lc-shadow-crystal);
+  box-shadow: var(--lc-shadow-crystal) !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
+/* Prismatic Bevel Highlight Border */
 .crystal-panel::before {
   content: "";
   position: absolute;
@@ -377,10 +408,10 @@ body::before {
   padding: 1px;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(13, 99, 191, 0.25),
-    rgba(238, 190, 17, 0.3),
-    rgba(255, 255, 255, 0.9)
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(13, 99, 191, 0.22) 35%,
+    rgba(238, 190, 17, 0.3) 70%,
+    rgba(255, 255, 255, 0.9) 100%
   );
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -388,16 +419,26 @@ body::before {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
 .crystal-panel:hover {
   transform: translateY(-4px);
-  background: var(--lc-surface-card);
-  box-shadow: var(--lc-shadow-float);
-  border-color: var(--lc-glass-border-hover);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.62) 0%,
+    rgba(255, 255, 255, 0.38) 100%
+  ) !important;
+  box-shadow: var(--lc-shadow-float) !important;
+  border-color: rgba(238, 190, 17, 0.5) !important;
 }
 
-/* Mouse Reactive Liquid Caustic Refraction */
+.crystal-panel:hover::before {
+  opacity: 1;
+}
+
+/* Mouse-Reactive Specular Caustic Highlight */
 .crystal-sheen {
   position: relative;
   overflow: hidden;
@@ -408,28 +449,121 @@ body::before {
   position: absolute;
   top: var(--mouse-y, -100%);
   left: var(--mouse-x, -100%);
-  width: 340px;
-  height: 340px;
+  width: 400px;
+  height: 400px;
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(238, 190, 17, 0.22) 32%,
-    rgba(17, 124, 238, 0.1) 58%,
-    transparent 75%
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(238, 190, 17, 0.22) 30%,
+    rgba(17, 124, 238, 0.12) 55%,
+    transparent 72%
   );
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.35s ease;
   mix-blend-mode: overlay;
   border-radius: 50%;
+  z-index: 2;
 }
 
 .crystal-sheen:hover::after {
   opacity: 1;
 }
 
-/* Crystalline Badges */
+/* Nested Glass Cards (Sub-cards in telemetry, metrics, etc.) */
+.crystal-panel div.bg-white,
+.crystal-panel .bg-white {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  ) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: var(--lc-shadow-subtle) !important;
+  transition: all 0.3s ease;
+}
+
+.crystal-panel div.bg-white:hover,
+.crystal-panel .bg-white:hover {
+  background: rgba(255, 255, 255, 0.68) !important;
+  box-shadow:
+    0 8px 24px -4px rgba(10, 74, 143, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+/* Deep Sapphire Translucent Telemetry Card */
+.crystal-panel .bg-gradient-to-r.from-navy-700.to-navy-900 {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 74, 143, 0.86) 0%,
+    rgba(3, 25, 48, 0.92) 100%
+  ) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow:
+    0 10px 28px -6px rgba(3, 25, 48, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Hero Badge / Strong Text Highlights */
+strong.bg-white {
+  background: rgba(255, 255, 255, 0.58) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow:
+    0 2px 8px rgba(3, 25, 48, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Stage 02 Active Featured Card */
+.crystal-panel.border-navy-200 {
+  border-color: rgba(238, 190, 17, 0.45) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.58) 0%,
+    rgba(255, 255, 255, 0.32) 100%
+  ) !important;
+  box-shadow:
+    0 20px 44px -6px rgba(10, 74, 143, 0.12),
+    0 4px 14px -2px rgba(3, 25, 48, 0.04),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
+}
+
+/* Digital Store Highlight Banner */
+.crystal-panel.bg-gradient-to-r.from-white.via-beige-50.to-navy-50 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.58) 0%,
+    rgba(247, 247, 238, 0.42) 50%,
+    rgba(231, 242, 253, 0.46) 100%
+  ) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow:
+    0 18px 46px -8px rgba(10, 74, 143, 0.1),
+    0 4px 14px -2px rgba(3, 25, 48, 0.04),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Digital Store Disabled / Coming Soon Card */
+.store-item.bg-white\/40,
+.store-item.opacity-60 {
+  background: rgba(255, 255, 255, 0.28) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px dashed rgba(13, 99, 191, 0.22) !important;
+  box-shadow:
+    0 4px 16px rgba(3, 25, 48, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Prismatic Pills & Badges */
 .prism-pill {
   display: inline-flex;
   align-items: center;
@@ -440,22 +574,33 @@ body::before {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--navy-800);
-  border: 1px solid rgba(13, 99, 191, 0.18);
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  color: var(--navy-900);
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
   box-shadow:
-    0 4px 14px -3px rgba(3, 25, 48, 0.08),
-    inset 0 1px 0 #ffffff;
+    0 2px 8px -2px rgba(3, 25, 48, 0.04),
+    inset 0 1px 0 #ffffff !important;
+  transition: all 0.25s ease;
+}
+
+.prism-pill:hover {
+  background: rgba(255, 255, 255, 0.75) !important;
+  transform: translateY(-1px);
 }
 
 .prism-pill-accent {
   background: linear-gradient(
     135deg,
-    rgba(238, 190, 17, 0.18),
-    rgba(233, 120, 22, 0.12)
-  );
-  border-color: rgba(238, 190, 17, 0.45);
-  color: var(--navy-900);
+    rgba(238, 190, 17, 0.26),
+    rgba(233, 120, 22, 0.18)
+  ) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-color: rgba(238, 190, 17, 0.5) !important;
+  color: var(--navy-950) !important;
+  box-shadow: 0 2px 8px rgba(238, 190, 17, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.85) !important;
 }
 
 .pulse-node {
@@ -486,10 +631,8 @@ body::before {
     var(--gold-500) 50%,
     var(--brown-400) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow:
-    var(--lc-shadow-gold),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: var(--lc-shadow-gold);
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
@@ -512,7 +655,9 @@ body::before {
 
 .btn-gold:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 16px 36px -6px rgba(238, 190, 17, 0.6);
+  box-shadow:
+    0 14px 34px -4px rgba(238, 190, 17, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
 }
 
 .btn-gold:hover::before {
@@ -531,9 +676,17 @@ body::before {
   font-size: 0.875rem;
   letter-spacing: 0.02em;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-900) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 12px 28px -6px rgba(10, 74, 143, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(10, 74, 143, 0.94) 0%,
+    rgba(3, 25, 48, 0.98) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 10px 24px -4px rgba(10, 74, 143, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -542,9 +695,12 @@ body::before {
 .btn-navy:hover {
   transform: translateY(-2px);
   background: var(--navy-950);
-  box-shadow: 0 16px 32px -4px rgba(3, 25, 48, 0.45);
+  box-shadow:
+    0 14px 30px -4px rgba(3, 25, 48, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+/* Translucent Glass Buttons */
 .btn-glass {
   display: inline-flex;
   align-items: center;
@@ -554,21 +710,31 @@ body::before {
   border-radius: 1rem;
   font-weight: 700;
   font-size: 0.875rem;
-  color: var(--navy-800);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--lc-glass-border);
-  box-shadow: 0 4px 14px -3px rgba(3, 25, 48, 0.08);
+  color: var(--navy-900);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.58) 0%,
+    rgba(255, 255, 255, 0.32) 100%
+  ) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow:
+    0 4px 16px -2px rgba(3, 25, 48, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95) !important;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn-glass:hover {
-  background: #ffffff;
-  border-color: var(--navy-600);
-  color: var(--navy-900);
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(13, 99, 191, 0.35) !important;
+  color: var(--navy-950);
   transform: translateY(-2px);
+  box-shadow:
+    0 8px 24px -4px rgba(10, 74, 143, 0.12),
+    inset 0 1px 1px #ffffff !important;
 }
 
 /* Store Filter Pills */
@@ -577,24 +743,32 @@ body::before {
   border-radius: 9999px;
   font-size: 0.8125rem;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--navy-800);
-  border: 1px solid var(--lc-glass-border);
+  background: rgba(255, 255, 255, 0.52) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  color: var(--navy-900);
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow:
+    0 2px 8px rgba(3, 25, 48, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .filter-btn:hover {
-  border-color: var(--gold-500);
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: var(--gold-500) !important;
   color: var(--navy-950);
   transform: translateY(-1px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
-  color: #ffffff;
-  border-color: var(--navy-800);
-  box-shadow: 0 6px 18px -4px rgba(10, 74, 143, 0.35);
+  background: linear-gradient(135deg, var(--navy-700), var(--navy-900)) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  box-shadow:
+    0 6px 18px -4px rgba(10, 74, 143, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Headings Typography */
@@ -648,36 +822,45 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
-/* Icon Containers */
+/* Translucent Icon Containers */
 .crystal-icon-box {
   width: 3.25rem;
   height: 3.25rem;
   border-radius: 1.25rem;
   background: linear-gradient(
     135deg,
-    rgba(17, 124, 238, 0.12),
-    rgba(238, 190, 17, 0.15)
-  );
+    rgba(17, 124, 238, 0.16),
+    rgba(238, 190, 17, 0.18)
+  ) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
   color: var(--navy-700);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
   box-shadow:
     inset 0 1px 1px #ffffff,
-    0 4px 12px rgba(10, 74, 143, 0.08);
+    0 4px 12px rgba(10, 74, 143, 0.08) !important;
+  transition: transform 0.3s ease;
+}
+
+.crystal-panel:hover .crystal-icon-box {
+  transform: scale(1.06);
 }
 
 .crystal-icon-box-accent {
-  background: linear-gradient(135deg, var(--gold-400), var(--brown-400));
-  color: var(--navy-950);
-  box-shadow: var(--lc-shadow-gold);
+  background: linear-gradient(135deg, var(--gold-400), var(--brown-400)) !important;
+  color: var(--navy-950) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  box-shadow: var(--lc-shadow-gold) !important;
 }
 
 /* Timeline & Structure Nodes */
 .timeline-track {
   position: relative;
-  border-left: 2px solid rgba(13, 99, 191, 0.25);
+  border-left: 2px solid rgba(13, 99, 191, 0.28);
   margin-left: 1rem;
 }
 
@@ -695,32 +878,38 @@ body::before {
   height: 2rem;
   border-radius: 9999px;
   background-color: var(--navy-700);
-  border: 4px solid var(--beige-50);
+  border: 4px solid rgba(247, 247, 238, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--gold-400);
-  box-shadow: 0 4px 14px rgba(10, 74, 143, 0.35);
+  box-shadow: 0 4px 12px rgba(10, 74, 143, 0.3);
 }
 
-/* Form Elements */
+/* Translucent Glass Form Elements */
 .crystal-input {
   width: 100%;
   padding: 0.875rem 1.15rem;
   border-radius: 1rem;
-  border: 1px solid var(--lc-glass-border);
-  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.42) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
   color: var(--navy-950);
   font-size: 0.9375rem;
   outline: none;
   transition: all 0.25s ease;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+  box-shadow:
+    inset 0 1px 2px rgba(3, 25, 48, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85) !important;
 }
 
 .crystal-input:focus {
-  border-color: var(--navy-600);
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(17, 124, 238, 0.18);
+  border-color: rgba(17, 124, 238, 0.6) !important;
+  background: rgba(255, 255, 255, 0.68) !important;
+  box-shadow:
+    0 0 0 3px rgba(17, 124, 238, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
 }
 
 /* Scroll Reveal */
@@ -745,16 +934,21 @@ body::before {
   }
 }
 
-/* Toast Notification */
+/* Translucent Glass Toast Notification */
 .crystal-toast {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid var(--navy-600);
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
   padding: 1.25rem;
   border-radius: 1.25rem;
-  box-shadow: 0 20px 45px -10px rgba(3, 25, 48, 0.25);
+  box-shadow:
+    0 16px 40px -8px rgba(3, 25, 48, 0.16),
+    0 4px 12px -2px rgba(10, 74, 143, 0.08),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
   transform: translateY(160px);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 100;
@@ -766,6 +960,15 @@ body::before {
 
 .crystal-toast.toast-active {
   transform: translateY(0);
+}
+
+/* Footer Glass Treatment */
+footer {
+  background: rgba(255, 255, 255, 0.42) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 -4px 20px rgba(3, 25, 48, 0.03) !important;
 }
 
 /* Geometric Decorative Layers */
