@@ -118,7 +118,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--beige-50);
-  /* Liquid Crystal Prismatic Backdrop Image with Gentle Light Overlay */
   background-image:
     linear-gradient(
       135deg,
@@ -136,7 +135,6 @@ body {
   min-height: 100vh;
 }
 
-/* Subtle Geometric Birefringent Crystal Lattice */
 body::before {
   content: "";
   position: fixed;
@@ -160,7 +158,6 @@ body::before {
   color: #ffffff;
 }
 
-/* Liquid Crystal Prismatic Scroll Progress Bar */
 #scroll-progress {
   position: fixed;
   top: 0;
@@ -178,7 +175,6 @@ body::before {
   transition: width 0.1s ease-out;
 }
 
-/* Announcement Top Bar */
 .announcement-bar {
   position: relative;
   z-index: 50;
@@ -234,7 +230,6 @@ body::before {
   }
 }
 
-/* Header & Glass Navigation */
 .header-glass {
   position: sticky;
   top: 0;
@@ -353,7 +348,6 @@ body::before {
   font-weight: 700;
 }
 
-/* Mobile Drawer */
 .mobile-drawer {
   padding: 1.25rem 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.8);
@@ -377,10 +371,6 @@ body::before {
   cursor: pointer;
 }
 
-/* ==========================================================================
-   TRANSLUCENT GLASSMORPHISM CARDS (CRYSTAL PANELS)
-   Distinctly translucent surfaces, blurred backdrops & soft, subtle shadows
-   ========================================================================== */
 .crystal-panel,
 .crystal-panel.bg-white,
 [class*="crystal-panel"] {
@@ -399,7 +389,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Prismatic Bevel Highlight Border */
 .crystal-panel::before {
   content: "";
   position: absolute;
@@ -438,7 +427,6 @@ body::before {
   opacity: 1;
 }
 
-/* Mouse-Reactive Specular Caustic Highlight */
 .crystal-sheen {
   position: relative;
   overflow: hidden;
@@ -471,7 +459,6 @@ body::before {
   opacity: 1;
 }
 
-/* Nested Glass Cards (Sub-cards in telemetry, metrics, etc.) */
 .crystal-panel div.bg-white,
 .crystal-panel .bg-white {
   background: linear-gradient(
@@ -494,7 +481,6 @@ body::before {
     inset 0 1px 0 rgba(255, 255, 255, 1) !important;
 }
 
-/* Deep Sapphire Translucent Telemetry Card */
 .crystal-panel .bg-gradient-to-r.from-navy-700.to-navy-900 {
   background: linear-gradient(
     135deg,
@@ -509,7 +495,6 @@ body::before {
     inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
 }
 
-/* Hero Badge / Strong Text Highlights */
 strong.bg-white {
   background: rgba(255, 255, 255, 0.58) !important;
   backdrop-filter: blur(10px) !important;
@@ -520,7 +505,6 @@ strong.bg-white {
     inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
 }
 
-/* Stage 02 Active Featured Card */
 .crystal-panel.border-navy-200 {
   border-color: rgba(238, 190, 17, 0.45) !important;
   background: linear-gradient(
@@ -534,7 +518,6 @@ strong.bg-white {
     inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
 }
 
-/* Digital Store Highlight Banner */
 .crystal-panel.bg-gradient-to-r.from-white.via-beige-50.to-navy-50 {
   background: linear-gradient(
     135deg,
@@ -551,7 +534,6 @@ strong.bg-white {
     inset 0 1px 1.5px rgba(255, 255, 255, 0.95) !important;
 }
 
-/* Digital Store Disabled / Coming Soon Card */
 .store-item.bg-white\/40,
 .store-item.opacity-60 {
   background: rgba(255, 255, 255, 0.28) !important;
@@ -563,7 +545,6 @@ strong.bg-white {
     inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
 }
 
-/* Prismatic Pills & Badges */
 .prism-pill {
   display: inline-flex;
   align-items: center;
@@ -612,7 +593,6 @@ strong.bg-white {
   animation: pulse-glow 2s infinite;
 }
 
-/* Golden Liquid Crystal Action Buttons */
 .btn-gold {
   position: relative;
   display: inline-flex;
@@ -664,7 +644,6 @@ strong.bg-white {
   transform: translateX(100%);
 }
 
-/* Regal Navy Structural Buttons */
 .btn-navy {
   display: inline-flex;
   align-items: center;
@@ -700,7 +679,6 @@ strong.bg-white {
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* Translucent Glass Buttons */
 .btn-glass {
   display: inline-flex;
   align-items: center;
@@ -737,7 +715,6 @@ strong.bg-white {
     inset 0 1px 1px #ffffff !important;
 }
 
-/* Store Filter Pills */
 .filter-btn {
   padding: 0.6rem 1.25rem;
   border-radius: 9999px;
@@ -771,7 +748,6 @@ strong.bg-white {
     inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
 }
 
-/* Headings Typography */
 .heading-hero {
   font-size: 2.5rem;
   line-height: 1.08;
@@ -822,7 +798,6 @@ strong.bg-white {
   -webkit-text-fill-color: transparent;
 }
 
-/* Translucent Icon Containers */
 .crystal-icon-box {
   width: 3.25rem;
   height: 3.25rem;
@@ -857,7 +832,6 @@ strong.bg-white {
   box-shadow: var(--lc-shadow-gold) !important;
 }
 
-/* Timeline & Structure Nodes */
 .timeline-track {
   position: relative;
   border-left: 2px solid rgba(13, 99, 191, 0.28);
@@ -886,7 +860,6 @@ strong.bg-white {
   box-shadow: 0 4px 12px rgba(10, 74, 143, 0.3);
 }
 
-/* Translucent Glass Form Elements */
 .crystal-input {
   width: 100%;
   padding: 0.875rem 1.15rem;
@@ -912,7 +885,6 @@ strong.bg-white {
     inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
 }
 
-/* Scroll Reveal */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(24px) scale(0.99);
@@ -934,7 +906,6 @@ strong.bg-white {
   }
 }
 
-/* Translucent Glass Toast Notification */
 .crystal-toast {
   position: fixed;
   bottom: 1.5rem;
@@ -962,7 +933,6 @@ strong.bg-white {
   transform: translateY(0);
 }
 
-/* Footer Glass Treatment */
 footer {
   background: rgba(255, 255, 255, 0.42) !important;
   backdrop-filter: blur(24px) saturate(180%) !important;
@@ -971,7 +941,6 @@ footer {
   box-shadow: 0 -4px 20px rgba(3, 25, 48, 0.03) !important;
 }
 
-/* Geometric Decorative Layers */
 .geometric-facet-backdrop {
   position: absolute;
   inset: 0;

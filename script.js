@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const storeItems = document.querySelectorAll(".store-item");
 
   function applyCategoryFilter(selectedCategory) {
-    // Synchronize both hero filter pills and header navbar links
     filterButtons.forEach((btn) => {
       if (btn.getAttribute("data-filter-category") === selectedCategory) {
         btn.classList.add("active");
@@ -84,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Display / Filter items
     storeItems.forEach((item) => {
       if (
         selectedCategory === "all" ||
@@ -96,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Close mobile menu if triggered from mobile drawer
     if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
       mobileMenu.classList.add("hidden");
     }
