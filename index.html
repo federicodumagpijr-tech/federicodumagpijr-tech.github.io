@@ -1,1010 +1,1049 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Federico Dumagpi | Power Query Automation & AI Applied</title>
-    <!-- Tailwind CSS Engine -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: {
-                50: "#e7f2fd",
-                100: "#cfe5fc",
-                200: "#a0cbf8",
-                300: "#70b0f5",
-                400: "#4096f2",
-                500: "#117cee",
-                600: "#0d63bf",
-                700: "#0a4a8f",
-                800: "#07325f",
-                900: "#031930",
-                950: "#021121",
-              },
-              beige: {
-                50: "#f7f7ee",
-                100: "#efefdc",
-                200: "#dfdfb9",
-                300: "#cfcf96",
-                400: "#bfbf73",
-                500: "#afaf50",
-                600: "#8c8c40",
-                700: "#696930",
-                800: "#464620",
-                900: "#232310",
-                950: "#18180b",
-              },
-              gold: {
-                50: "#fdf9e7",
-                100: "#fcf2cf",
-                200: "#f8e5a0",
-                300: "#f5d870",
-                400: "#f2cb40",
-                500: "#eebe11",
-                600: "#bf980d",
-                700: "#8f720a",
-                800: "#5f4c07",
-                900: "#302603",
-                950: "#211b02",
-              },
-              brown: {
-                50: "#fdf2e8",
-                100: "#fbe4d0",
-                200: "#f6c9a2",
-                300: "#f2ae73",
-                400: "#ee9344",
-                500: "#e97816",
-                600: "#bb6011",
-                700: "#8c480d",
-                800: "#5d3009",
-                900: "#2f1804",
-                950: "#211103",
-              },
-              tomato: {
-                50: "#feeae6",
-                100: "#fdd6ce",
-                200: "#fcac9c",
-                300: "#fa836b",
-                400: "#f95939",
-                500: "#f73008",
-                600: "#c62606",
-                700: "#941d05",
-                800: "#631303",
-                900: "#310a02",
-                950: "#230701",
-              },
-            },
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', "Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Unified Liquid Crystal Stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Prismatic Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federico Dumagpi — Systems &amp; HR Automation Architect | Dubai, UAE</title>
+  <meta name="description" content="18 years experience in UAE attendance automation and HR systems. Practical spreadsheets, digital tools, and smart workflows that save hours every week.">
+  <link rel="canonical" href="https://federicodumagpi.com/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Design System -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-paper text-slate antialiased">
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- 1. Crystalline Announcement Top Bar -->
-    <div class="announcement-bar">
-      <a href="#contact" class="announcement-link">
-        <span class="announcement-dot"></span>
-        <span>⚡ AVAILABLE FOR SELECT CONSULTING PROJECTS — INQUIRE TODAY</span>
-        <i class="fa-solid fa-play text-[10px]"></i>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="progress-track" aria-hidden="true" style="position:fixed; top:0; left:0; width:100%; height:3px; z-index:100; border:none; background:transparent;">
+    <span style="height:100%; width:0%; background:var(--red); display:block; transition:width 0.1s linear;"></span>
+  </div>
+
+  <!-- Utility Bar (GST Clock & Status) -->
+  <div class="utility">
+    <div class="frame utility-in">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="mono flex items-center gap-1.5"><i class="fa-solid fa-location-dot" style="color:var(--red);"></i> DUBAI<span class="hidden sm:inline">, UAE</span></span>
+        <span class="text-line-2">|</span>
+        <span id="dubai-clock" class="mono text-slate-2 font-bold">--:-- GST</span>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener" class="hidden sm:inline text-slate-3 hover:text-slate">Payhip Store ↗</a>
+        <a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener" class="hidden sm:inline text-slate-3 hover:text-slate">Gumroad ↗</a>
+        <a href="mailto:federico.dumagpi.jr@gmail.com" class="hidden md:inline text-slate-3 hover:text-slate">federico.dumagpi.jr@gmail.com</a>
+        <a href="store.html" class="mono font-bold" style="color:var(--red-ink);">STORE &amp; SOLUTIONS →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="frame header-in">
+      <a href="index.html" class="brand" aria-label="Federico Dumagpi Home">
+        <span class="brand-mark" aria-hidden="true">FD</span>
+        <div>
+          <span class="brand-name">Federico Dumagpi</span>
+          <span class="brand-role">Systems &amp; HR Automation Architect</span>
+        </div>
       </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="#system" class="nav-link"><span class="nav-no">01</span> Architecture</a>
+        <a href="#capabilities" class="nav-link"><span class="nav-no">02</span> Capabilities</a>
+        <a href="#track-record" class="nav-link"><span class="nav-no">03</span> Experience</a>
+        <a href="#contact" class="nav-link"><span class="nav-no">04</span> Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="store.html" class="btn btn-sm btn-red hidden sm:inline-flex">Explore Store &amp; Solutions <span class="arrow">→</span></a>
+        <button type="button" class="menu-btn lg:hidden" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- 2. Regal Navy / Beige Glass Navigation Header -->
-    <header class="header-glass">
-      <div class="header-inner">
-        <a href="#" class="flex items-center space-x-3 brand-link">
-          <div class="brand-badge">
-            <i class="fa-solid fa-chart-simple text-lg"></i>
-          </div>
-          <div>
-            <span class="brand-title">Federico Dumagpi</span>
-            <span class="brand-sub">Power Query & Applied AI</span>
-          </div>
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="drawer" hidden>
+      <div class="flex flex-col">
+        <a href="#system" class="drawer-link">
+          <span class="text-base font-bold">01 // System Architecture</span>
+          <small class="meta text-xs text-slate-4">How Attendance &amp; Payroll Sync</small>
         </a>
-
-        <nav class="nav-crystal-bar">
-          <a href="#system" class="nav-crystal-link">Process</a>
-          <a href="#promise" class="nav-crystal-link">The Promise</a>
-          <a href="#skills" class="nav-crystal-link">Expertise</a>
-          <a href="#experience" class="nav-crystal-link">Experience</a>
-          <a href="store.html" class="nav-crystal-link highlight"
-            >Store & Solutions</a
-          >
-        </nav>
-
-        <div class="flex items-center space-x-3">
-          <a
-            href="#contact"
-            class="btn-gold text-xs sm:text-sm py-2 px-4 sm:px-6"
-          >
-            <span>INQUIRE</span>
-            <i class="fa-solid fa-play text-[10px]"></i>
-          </a>
-          <button
-            id="mobile-menu-btn"
-            class="md:hidden p-2 rounded-xl bg-white border border-navy-200 text-navy-900"
-            aria-label="Toggle Mobile Menu"
-          >
-            <i class="fa-solid fa-bars text-xl"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Navigation Drawer -->
-      <div id="mobile-menu" class="hidden md:hidden mobile-drawer">
-        <a href="#system" class="mobile-nav-item mobile-link">Process</a>
-        <a href="#promise" class="mobile-nav-item mobile-link">The Promise</a>
-        <a href="#skills" class="mobile-nav-item mobile-link">Expertise</a>
-        <a href="#experience" class="mobile-nav-item mobile-link">Experience</a>
-        <a href="store.html" class="mobile-nav-item mobile-link font-bold"
-          >Store & Solutions</a
-        >
-        <a href="#contact" class="btn-navy text-center mt-2 mobile-link"
-          >INQUIRE</a
-        >
-      </div>
-    </header>
-
-    <!-- 3. Liquid Crystal Hero: Asymmetric Refraction Layout -->
-    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-      <div class="geometric-facet-backdrop">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 1440 800"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="opacity-25"
-        >
-          <polygon
-            points="120,40 280,160 180,320 20,240"
-            stroke="#0a4a8f"
-            stroke-width="1.5"
-            stroke-dasharray="4 4"
-            fill="none"
-          />
-          <polygon
-            points="1180,80 1380,240 1260,420 1060,260"
-            stroke="#eebe11"
-            stroke-width="1.5"
-            stroke-dasharray="6 6"
-            fill="none"
-          />
-          <path
-            d="M 0,550 Q 360,450 720,550 T 1440,550"
-            stroke="#0a4a8f"
-            stroke-width="1"
-            fill="none"
-          />
-        </svg>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <!-- Left Column -->
-          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div class="prism-pill">
-              <span class="pulse-node"></span>
-              <span>CONSULTING · 2026</span>
-            </div>
-
-            <h1 class="heading-hero">
-              Turn a 48-Hour Monthly HR Bottleneck Into
-              <span
-                class="text-gold-gradient underline decoration-gold-400/40 decoration-wavy decoration-2"
-                >Zero-Touch Automation.</span
-              >
-            </h1>
-
-            <p
-              class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed font-normal max-w-2xl"
-            >
-              Your HR team spends
-              <strong
-                class="font-extrabold text-navy-900 bg-white px-2 py-0.5 rounded-lg border border-navy-200 shadow-sm"
-                >48 manual hours</strong
-              >
-              every month verifying attendance for
-              <strong
-                class="font-extrabold text-navy-900 bg-white px-2 py-0.5 rounded-lg border border-navy-200 shadow-sm"
-                >4,800+ employees</strong
-              >. I architect and install custom Power Query & AI-driven data
-              pipelines that automate your attendance, payroll reconciliation,
-              and HRIS reporting down to zero-touch execution.
-            </p>
-
-            <div class="prism-pill prism-pill-accent">
-              <span>By Federico Dumagpi</span>
-            </div>
-
-            <div
-              class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start"
-            >
-              <a href="#contact" class="btn-gold text-base">
-                <span>INQUIRE</span>
-                <i class="fa-solid fa-play text-xs"></i>
-              </a>
-              <a href="#system" class="btn-glass text-base">
-                <span>Explore Process</span>
-                <i class="fa-solid fa-chevron-down text-xs"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Column -->
-          <div class="lg:col-span-5 relative">
-            <div class="crystal-panel crystal-sheen p-8 rounded-[2.5rem]">
-              <div
-                class="flex items-center justify-between pb-6 border-b border-navy-100"
-              >
-                <div class="flex items-center space-x-2">
-                  <div class="w-3 h-3 rounded-full bg-gold-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-navy-600"></div>
-                  <div class="w-3 h-3 rounded-full bg-brown-400"></div>
-                </div>
-                <span
-                  class="text-xs uppercase tracking-wider text-navy-800 font-bold"
-                  >ZERO-TOUCH PIPELINE</span
-                >
-              </div>
-
-              <div class="py-6 space-y-4 text-xs">
-                <div
-                  class="p-4 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-between"
-                >
-                  <div>
-                    <span
-                      class="text-slate-500 block text-[10px] uppercase font-bold"
-                      >VERIFICATION TIME</span
-                    >
-                    <span class="text-lg font-bold text-tomato-500 line-through"
-                      >48 Hours / mo</span
-                    >
-                  </div>
-                  <i
-                    class="fa-solid fa-arrow-right text-gold-500 text-base"
-                  ></i>
-                  <div class="text-right">
-                    <span
-                      class="text-navy-700 block text-[10px] font-bold uppercase"
-                      >AUTOMATED</span
-                    >
-                    <span class="text-xl font-bold text-navy-600"
-                      >0.00 Mins</span
-                    >
-                  </div>
-                </div>
-
-                <div
-                  class="p-4 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-between"
-                >
-                  <div>
-                    <span
-                      class="text-slate-500 block text-[10px] uppercase font-bold"
-                      >EMPLOYEE SCALE</span
-                    >
-                    <span class="text-lg font-bold text-navy-950"
-                      >4,800+ Headcount</span
-                    >
-                  </div>
-                  <span
-                    class="px-3 py-1 rounded-full bg-gold-100 text-gold-800 font-bold text-[11px] border border-gold-300"
-                    >100% Ingested</span
-                  >
-                </div>
-
-                <div
-                  class="p-4 rounded-2xl bg-gradient-to-r from-navy-700 to-navy-900 text-white shadow-lg"
-                >
-                  <span
-                    class="text-[10px] tracking-wider uppercase opacity-80 block"
-                    >CORE ARCHITECTURE</span
-                  >
-                  <div
-                    class="font-bold text-sm flex items-center justify-between mt-1"
-                  >
-                    <span>Power Query M + Applied AI</span>
-                    <i class="fa-solid fa-bolt text-gold-400"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="text-center pt-2 text-[11px] text-slate-500 font-medium"
-              >
-                Live Enterprise ETL Architecture & Reporting Automation
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. The Promise Section -->
-    <section id="promise" class="py-16 relative">
-      <div
-        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll"
-      >
-        <div class="prism-pill mb-4">THE PROMISE</div>
-        <h2 class="heading-section mt-2 mb-2">Maximum Operational Leverage</h2>
-        <p
-          class="text-xs sm:text-sm font-bold uppercase tracking-widest text-navy-700 mb-10"
-        >
-          Outsized Team Multiplier
-        </p>
-
-        <div
-          class="crystal-panel crystal-sheen p-8 sm:p-14 relative text-center"
-        >
-          <i
-            class="fa-solid fa-quote-left text-5xl text-navy-300 mb-6 block"
-          ></i>
-          <p
-            class="text-2xl sm:text-3xl lg:text-4xl font-medium leading-relaxed text-slate-800 italic relative z-10"
-          >
-            "Run the output of a
-            <span
-              class="text-navy-700 font-bold not-italic border-b-2 border-gold-400"
-              >4-person HR data team</span
-            >
-            with 1 specialist—using Power Query M Language as your engine for
-            consolidation, cleanup, and automated reporting."
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. System Architecture -->
-    <section id="system" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-        <div class="prism-pill mb-4">SYSTEM ARCHITECTURE</div>
-        <h2 class="heading-section mt-2 mb-3">WHAT GETS INSTALLED</h2>
-        <p class="text-base sm:text-lg text-slate-600">
-          A 3-stage technical framework built to eliminate manual HR data
-          overhead with zero-touch automation.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-        <!-- Stage 01 -->
-        <div
-          class="crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="prism-pill">STAGE 01</span>
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-database"></i>
-              </div>
-            </div>
-            <span
-              class="text-xs uppercase font-bold text-navy-700 tracking-wider block mb-1"
-              >Automated Data & HRIS Ingestion</span
-            >
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">
-              Intake (The Strategy Layer)
-            </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Automated data ingestion from your HRIS, attendance, and biometric
-              systems. We transform complex approval workflows and raw
-              attendance logs into clean, structured source tables.
-            </p>
-          </div>
-          <div
-            class="mt-6 pt-4 border-t border-navy-100 flex items-center gap-2 text-xs font-semibold text-navy-800"
-          >
-            <i class="fa-solid fa-circle-check text-gold-500"></i> Seamless
-            Source Binding
-          </div>
-        </div>
-
-        <!-- Stage 02 -->
-        <div
-          class="crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll border-navy-200 shadow-xl bg-white"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="prism-pill prism-pill-accent">STAGE 02</span>
-              <div class="crystal-icon-box crystal-icon-box-accent">
-                <i class="fa-solid fa-gears"></i>
-              </div>
-            </div>
-            <span
-              class="text-xs uppercase font-bold text-navy-700 tracking-wider block mb-1"
-              >Automated Generation & Processing</span
-            >
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">
-              Production (The Execution Pipeline)
-            </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-              <strong class="text-slate-950 font-bold"
-                >Power Query M Language Engine.</strong
-              >
-              Deploy custom M Language scripts to automatically clean, merge,
-              and reconcile complex payroll and attendance datasets—reducing
-              manual overhead down to zero-touch execution.
-            </p>
-          </div>
-          <div
-            class="mt-6 pt-4 border-t border-navy-100 flex items-center gap-2 text-xs font-semibold text-navy-800"
-          >
-            <i class="fa-solid fa-microchip text-gold-500"></i> Zero-Touch Power
-            Query M
-          </div>
-        </div>
-
-        <!-- Stage 03 -->
-        <div
-          class="crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="prism-pill">STAGE 03</span>
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-            </div>
-            <span
-              class="text-xs uppercase font-bold text-navy-700 tracking-wider block mb-1"
-              >Scaling & Continuous Reporting</span
-            >
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">
-              Iteration (The Compounding Engine)
-            </h3>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Deploy interactive Power BI dashboards that deliver real-time
-              workforce visibility, regulatory compliance, and continuous
-              quality management internal audit support.
-            </p>
-          </div>
-          <div
-            class="mt-6 pt-4 border-t border-navy-100 flex items-center gap-2 text-xs font-semibold text-navy-800"
-          >
-            <i class="fa-solid fa-eye text-gold-500"></i> Real-Time Audit
-            Compliance
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5.5 Store Highlight Banner -->
-    <section
-      class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll"
-    >
-      <div
-        class="crystal-panel crystal-sheen p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-white via-beige-50 to-navy-50 border-2 border-navy-200 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8"
-      >
-        <div class="space-y-3 text-center md:text-left relative z-10 max-w-2xl">
-          <div class="prism-pill">
-            <span class="pulse-node"></span>
-            <i class="fa-solid fa-store text-xs"></i>
-            <span>Digital Assets & Templates</span>
-          </div>
-
-          <h3
-            class="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-snug"
-          >
-            Need ready-to-use AI tools or automated Excel templates for your
-            team?
-          </h3>
-
-          <p class="text-base text-slate-600 font-medium leading-relaxed">
-            Explore pre-formatted AI prompts, biometric attendance ETL scripts,
-            and setup services in my digital store.
-          </p>
-        </div>
-
-        <div class="relative z-10 flex-shrink-0">
-          <a href="store.html" class="btn-gold text-base">
-            <span>Browse Store & Solutions</span>
-            <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Technical Proficiencies -->
-    <section id="skills" class="py-16 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-          <div class="prism-pill mb-4">EXPERTISE</div>
-          <h2 class="heading-section mt-2 mb-3">Technical Proficiencies</h2>
-          <p class="text-base sm:text-lg text-slate-600">
-            Filtering through analytics engines, HRIS infrastructure, and
-            process management tools.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
-          >
-            <div class="flex items-center space-x-4 mb-4">
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-file-excel"></i>
-              </div>
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-lg">
-                  Excel Power Query & Power Pivot
-                </h3>
-                <span class="text-xs text-navy-700 font-bold uppercase"
-                  >M Language Automation</span
-                >
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Automated data pipelines, custom M script development, and
-              multi-source data model consolidation.
-            </p>
-          </div>
-
-          <div
-            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
-          >
-            <div class="flex items-center space-x-4 mb-4">
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-chart-pie"></i>
-              </div>
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-lg">
-                  Power BI Executive Dashboards
-                </h3>
-                <span class="text-xs text-navy-700 font-bold uppercase"
-                  >Business Intelligence</span
-                >
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              C-Suite visual analytics, automated compliance reporting, and
-              executive workforce dashboards.
-            </p>
-          </div>
-
-          <div
-            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
-          >
-            <div class="flex items-center space-x-4 mb-4">
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-network-wired"></i>
-              </div>
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-lg">
-                  HRIS Workflow Configuration
-                </h3>
-                <span class="text-xs text-navy-700 font-bold uppercase"
-                  >Enterprise Systems</span
-                >
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Multi-tier approval workflows, User Acceptance Testing (UAT)
-              execution, and HRIS logic optimization.
-            </p>
-          </div>
-
-          <div
-            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
-          >
-            <div class="flex items-center space-x-4 mb-4">
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-fingerprint"></i>
-              </div>
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-lg">
-                  Biometric Attendance Ecosystems
-                </h3>
-                <span class="text-xs text-navy-700 font-bold uppercase"
-                  >RAMs & Unis Software</span
-                >
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Bridging RAMs and Unis biometric software with HRIS platforms to
-              transform raw access logs into zero-error payroll inputs.
-            </p>
-          </div>
-
-          <div
-            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
-          >
-            <div class="flex items-center space-x-4 mb-4">
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-diagram-project"></i>
-              </div>
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-lg">
-                  Process Mapping & Project Mgmt
-                </h3>
-                <span class="text-xs text-navy-700 font-bold uppercase"
-                  >MS Planner, Visio, Jira</span
-                >
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              End-to-end HR workflow architecture, process mapping, and
-              cross-functional implementation.
-            </p>
-          </div>
-
-          <div
-            class="crystal-panel crystal-sheen p-7 rounded-3xl reveal-on-scroll"
-          >
-            <div class="flex items-center space-x-4 mb-4">
-              <div class="crystal-icon-box">
-                <i class="fa-solid fa-robot"></i>
-              </div>
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-lg">
-                  Applied AI & Data Scripting
-                </h3>
-                <span class="text-xs text-navy-700 font-bold uppercase"
-                  >AI & Automation</span
-                >
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Leveraging Generative AI prompts and targeted Python/SQL scripts
-              to automate routine tasks and extend standard Power Query
-              capabilities.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Track Record -->
-    <section
-      id="experience"
-      class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-    >
-      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-        <div class="prism-pill mb-4">TRACK RECORD</div>
-        <h2 class="heading-section mt-2 mb-3">
-          18 Years UAE HR Systems Expertise
-        </h2>
-        <p class="text-base sm:text-lg text-slate-600">
-          Driving digital transformation, HR automation, and compensation
-          architecture at Al Ansari Financial Services.
-        </p>
-      </div>
-
-      <div class="timeline-track space-y-12">
-        <div class="relative pl-6 sm:pl-10 reveal-on-scroll">
-          <div class="timeline-node">
-            <i class="fa-solid fa-briefcase text-[10px]"></i>
-          </div>
-          <div class="crystal-panel crystal-sheen p-6 sm:p-8 rounded-3xl">
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2"
-            >
-              <div>
-                <h3 class="text-xl font-extrabold text-slate-900">
-                  Senior Officer – Compensation and Benefits
-                </h3>
-                <p class="text-navy-700 font-semibold text-sm">
-                  Al Ansari Financial Services PJSC | Dubai, UAE
-                </p>
-              </div>
-              <span class="prism-pill self-start sm:self-auto"
-                >2023 – Present</span
-              >
-            </div>
-            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  >Designed and implemented multi-level
-                  <strong class="text-slate-900 font-semibold"
-                    >HRIS workflow configurations</strong
-                  >
-                  and approval hierarchies for
-                  <strong class="text-slate-900 font-semibold"
-                    >4,500+ employees</strong
-                  >, eliminating administrative bottlenecks.</span
-                >
-              </li>
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  >Facilitated enterprise-wide salary benchmarking by
-                  engineering data architecture for
-                  <strong class="text-slate-900 font-semibold"
-                    >Korn Ferry and Aon</strong
-                  >
-                  methodologies.</span
-                >
-              </li>
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  >Delivered high-integrity cross-functional analytics and
-                  <strong class="text-slate-900 font-semibold"
-                    >regulatory compliance reporting</strong
-                  >
-                  through automated Power BI dashboards.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative pl-6 sm:pl-10 reveal-on-scroll">
-          <div class="timeline-node">
-            <i class="fa-solid fa-laptop-code text-[10px]"></i>
-          </div>
-          <div class="crystal-panel crystal-sheen p-6 sm:p-8 rounded-3xl">
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2"
-            >
-              <div>
-                <h3 class="text-xl font-extrabold text-slate-900">
-                  HR Officer – MIS / Shared Services
-                </h3>
-                <p class="text-navy-700 font-semibold text-sm">
-                  Al Ansari Financial Services PJSC | Dubai, UAE
-                </p>
-              </div>
-              <span class="prism-pill self-start sm:self-auto"
-                >2015 – 2023</span
-              >
-            </div>
-            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  >Managed
-                  <strong class="text-slate-900 font-semibold"
-                    >UAT and deployment phases</strong
-                  >
-                  of in-house HRIS, translating complex business rules into
-                  automated system logic.</span
-                >
-              </li>
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  >Re-engineered legacy paper-based HR processes into
-                  streamlined, zero-friction digital workflows.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative pl-6 sm:pl-10 reveal-on-scroll">
-          <div class="timeline-node">
-            <i class="fa-solid fa-award text-[10px]"></i>
-          </div>
-          <div class="crystal-panel crystal-sheen p-6 sm:p-8 rounded-3xl">
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2"
-            >
-              <div>
-                <h3 class="text-xl font-extrabold text-slate-900">
-                  ISO Internal Auditor / Quality Coordinator
-                </h3>
-                <p class="text-navy-700 font-semibold text-sm">
-                  Al Ansari Financial Services PJSC | Dubai, UAE
-                </p>
-              </div>
-              <span class="prism-pill self-start sm:self-auto"
-                >2008 – 2015</span
-              >
-            </div>
-            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  ><strong class="text-slate-900 font-semibold"
-                    >Executed internal Quality Management System (QMS)
-                    audits</strong
-                  >
-                  under
-                  <strong class="text-slate-900 font-semibold"
-                    >ISO 9001 standards</strong
-                  >, identifying operational bottlenecks and ensuring
-                  cross-functional compliance across enterprise branches.</span
-                >
-              </li>
-              <li class="flex items-start space-x-3">
-                <i class="fa-solid fa-check text-gold-500 mt-1 shrink-0"></i>
-                <span
-                  >Facilitated process gap analyses and coached operational
-                  stakeholders to streamline workflow efficiency and maintain
-                  audit readiness.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. Start Here Section -->
-    <section id="contact" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-      <div
-        class="crystal-panel crystal-sheen p-8 sm:p-12 rounded-[2.5rem] shadow-2xl relative"
-      >
-        <div class="max-w-3xl mx-auto">
-          <div class="text-center mb-10">
-            <div class="prism-pill mb-3">CONSULTATION INTAKE</div>
-            <h2 class="heading-section mb-2">Start Here</h2>
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Share a few details about your employee scale and current
-              reporting bottleneck. I'll review your setup and reply within 24
-              hours with a recommended automation roadmap.
-            </p>
-          </div>
-
-          <form
-            id="contact-form"
-            action="https://formsubmit.co/5b45344a6c274bef042d9e5d48424720"
-            method="POST"
-            class="space-y-6"
-          >
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Consulting Project Inquiry from Website"
-            />
-            <input type="hidden" name="_captcha" value="false" />
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label
-                  for="name"
-                  class="block text-xs font-bold uppercase mb-2 text-navy-900"
-                  >Your Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  autocomplete="name"
-                  required
-                  class="crystal-input"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-xs font-bold uppercase mb-2 text-navy-900"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  autocomplete="email"
-                  required
-                  class="crystal-input"
-                  placeholder="john@example.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                for="message"
-                class="block text-xs font-bold uppercase mb-2 text-navy-900"
-                >Message / Project Details</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                class="crystal-input"
-                placeholder="Describe your employee scale and reporting bottleneck..."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-gold w-full py-4 text-base">
-              <span>Send Message</span>
-              <i class="fa-solid fa-play text-xs"></i>
-            </button>
-          </form>
-
-          <div
-            class="mt-8 text-center text-xs font-medium text-slate-500 flex flex-wrap items-center justify-center gap-4"
-          >
-            <span class="flex items-center"
-              ><i class="fa-solid fa-envelope text-navy-700 mr-2"></i>
-              federico.dumagpi.jr@gmail.com</span
-            >
+        <a href="#capabilities" class="drawer-link">
+          <span class="text-base font-bold">02 // Technical Capabilities</span>
+          <small class="meta text-xs text-slate-4">Biometric, Excel &amp; AI Tools</small>
+        </a>
+        <a href="#track-record" class="drawer-link">
+          <span class="text-base font-bold">03 // Proven Track Record</span>
+          <small class="meta text-xs text-slate-4">18 Years UAE Institutional Experience</small>
+        </a>
+        <a href="#contact" class="drawer-link">
+          <span class="text-base font-bold">04 // Contact &amp; Inquiries</span>
+          <small class="meta text-xs text-slate-4">Send a Message or Project Request</small>
+        </a>
+        <div class="p-4 bg-paper-2 border-t border-line mt-2 space-y-2">
+          <a href="store.html" class="btn btn-red w-full text-center justify-center">Browse Store &amp; Solutions →</a>
+          <div class="flex justify-center gap-4 text-xs font-bold text-slate-3 pt-2">
+            <a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener" class="hover:underline">Payhip Store ↗</a>
             <span>•</span>
-            <span class="flex items-center"
-              ><i class="fa-solid fa-location-dot text-navy-700 mr-2"></i>
-              Dubai, UAE</span
-            >
+            <a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener" class="hover:underline">Gumroad ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero frame">
+      <div class="hero-meta">
+        <span class="chip chip-ochre">SYSTEM SPEC // HR AUTOMATION &amp; WORKFLOW TOOLS</span>
+        <span class="meta font-semibold"><i class="fa-solid fa-location-dot text-red-600 mr-1"></i> DUBAI, UAE // FREELANCE &amp; CONSULTING</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- Hero Left -->
+        <div>
+          <h1 class="display display-xl tracking-tight text-slate">
+            HR Systems &amp; Workflow Automation.
+            <span class="line-red block">Built on 18 Years Practical Experience.</span>
+          </h1>
+
+          <p class="lead">
+            I build clean, automated spreadsheets, attendance reconcilers, and AI workflow guides designed to save time. Backed by 18 years verifying daily attendance for <strong>4,800+ employees</strong> in UAE financial operations.
+          </p>
+
+          <div class="hero-actions">
+            <a href="store.html" class="btn btn-red">
+              Explore Store &amp; Solutions <span class="arrow">→</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Send a Message / Inquire
+            </a>
+          </div>
+
+          <div class="stack-line">
+            <span class="meta font-bold">CORE TOOLS</span>
+            <ul>
+              <li>Power Query &amp; M-Code</li>
+              <li>Microsoft Power BI</li>
+              <li>Microsoft Power Automate</li>
+              <li>Google Gemini</li>
+              <li>Google Firebase</li>
+              <li>Google Antigravity</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hero Right: Interactive Attendance Audit Simulator -->
+        <div>
+          <div class="monitor" id="pipeline-console" data-state="idle">
+            <div class="monitor-bar">
+              <span class="meta font-bold">ATTENDANCE VERIFICATION SIMULATOR</span>
+              <span class="pill pill-emerald" id="console-state">READY</span>
+            </div>
+
+            <div class="monitor-body">
+              <div class="field-row">
+                <span class="meta font-bold">EMPLOYEE HEADCOUNT AUDIT SCOPE</span>
+                <output id="hc-value" class="mono font-bold text-slate">4,800</output> <span class="meta font-semibold">EMPLOYEES</span>
+              </div>
+
+              <input type="range" class="range" id="hc-range" min="500" max="10000" step="100" value="4800" aria-label="Headcount scope">
+
+              <div class="range-scale">
+                <span>500 MIN</span>
+                <span class="font-bold text-slate">4,800 UAE BENCHMARK</span>
+                <span>10,000 SCALE</span>
+              </div>
+
+              <div class="kpis">
+                <div class="kpi">
+                  <span class="meta">MANUAL AUDIT TIME</span>
+                  <strong class="struck" id="manual-hours">48.0 hrs</strong>
+                </div>
+                <div class="kpi">
+                  <span class="meta">AUTOMATED TIME</span>
+                  <strong class="good" id="auto-time">0.00 min</strong>
+                </div>
+                <div class="kpi">
+                  <span class="meta">ANNUAL TIME SAVED</span>
+                  <strong id="annual-hours">576 hrs</strong>
+                </div>
+                <div class="kpi">
+                  <span class="meta">DEDUCTION ACCURACY</span>
+                  <strong class="good">100%</strong>
+                </div>
+              </div>
+
+              <div class="progress-track" aria-hidden="true">
+                <span id="run-progress" style="width: 0%;"></span>
+              </div>
+
+              <table class="log" aria-label="Audit verification steps">
+                <thead>
+                  <tr>
+                    <th scope="col">STEP</th>
+                    <th scope="col">OPERATIONAL CHECK</th>
+                    <th scope="col">RESULT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="log-row">
+                    <td class="mono font-semibold">01</td>
+                    <td>Biometric punch aggregation &amp; shift mapping</td>
+                    <td><span class="pill pill-emerald">PASS</span></td>
+                  </tr>
+                  <tr class="log-row">
+                    <td class="mono font-semibold">02</td>
+                    <td>Irregular attendance audit (lates, early out, missed punches)</td>
+                    <td><span class="pill pill-emerald">IDENTIFIED</span></td>
+                  </tr>
+                  <tr class="log-row">
+                    <td class="mono font-semibold">03</td>
+                    <td>Cross-check approved leaves in HRMS</td>
+                    <td><span class="pill pill-emerald">TALLIED</span></td>
+                  </tr>
+                  <tr class="log-row">
+                    <td class="mono font-semibold">04</td>
+                    <td>Net attendance payroll deduction calculation</td>
+                    <td><span class="pill pill-emerald">VERIFIED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="monitor-foot">
+                <button type="button" class="btn btn-sm btn-slate" id="run-pipeline">
+                  <i class="fa-solid fa-play" style="color:var(--emerald); margin-right:0.4rem;"></i> Run Verification Simulation
+                </button>
+                <p class="monitor-note">
+                  Automated verification that flags missing clock-outs, unapproved absences, and tallies leave deductions accurately. Tested on 4,800+ employee records.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-<!-- Centered Single-Line Footer (Matching Slate Text Border Color & Transparent Backgrounds) -->
-    <footer
-      class="mt-auto border-t border-navy-100 bg-white/70 backdrop-blur-md py-6"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center text-xs sm:text-sm text-slate-600 gap-3 text-center"
-      >
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <span>Powered by</span>
-
-          <div
-            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-transparent border border-slate-300 hover:border-slate-400 font-bold text-navy-950 shadow-sm transition-all"
-          >
-            <img
-              src="firebaselogo.svg"
-              alt="Firebase Logo"
-              class="w-3.5 h-3.5 object-contain"
-            />
-            <span>Firebase</span>
-          </div>
-
-          <div
-            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-transparent border border-slate-300 hover:border-slate-400 font-bold text-navy-950 shadow-sm transition-all"
-          >
-            <img
-              src="antigravitylogo.svg"
-              alt="Firebase Logo"
-              class="w-3.5 h-3.5 object-contain"
-            />
-            <span>Antigravity</span>
-          </div>
-
-          <div
-            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-transparent border border-slate-300 hover:border-slate-400 font-bold text-navy-950 shadow-sm transition-all"
-          >
-            <img
-              src="aistudiologo.svg"
-              alt="Google AI Studio Logo"
-              class="w-3.5 h-3.5 object-contain"
-            />
-            <span>AI Studio</span>
-          </div>
-        </div>
-        <span class="hidden sm:inline">•</span>
-        <p>&copy; 2026 Federico Dumagpi Jr. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="crystal-toast">
-      <div
-        class="w-10 h-10 rounded-xl bg-navy-100 text-navy-700 flex items-center justify-center font-bold shrink-0 text-lg"
-      >
-        <i class="fa-solid fa-check"></i>
+    <!-- Proof Strip -->
+    <section class="proof frame rule-top">
+      <div>
+        <span class="proof-num">18 <small>YRS</small></span>
+        <p class="meta font-bold">UAE FINANCIAL SERVICES</p>
+        <p class="text-sm text-slate-3">Institutional tenure at Al Ansari Financial Services PJSC.</p>
       </div>
       <div>
-        <h4 class="font-bold text-sm text-slate-900">
-          Message Sent Successfully!
-        </h4>
-        <p class="text-xs text-slate-500">
-          Federico will review your setup and reply within 24 hours.
+        <span class="proof-num">4,800+</span>
+        <p class="meta font-bold">DAILY HEADCOUNT AUDITED</p>
+        <p class="text-sm text-slate-3">Automated multi-branch biometric attendance records.</p>
+      </div>
+      <div>
+        <span class="proof-num">48h → 0</span>
+        <p class="meta font-bold">COMPRESSED VERIFICATION</p>
+        <p class="text-sm text-slate-3">Month-end attendance checks reduced to automated minutes.</p>
+      </div>
+      <div>
+        <span class="proof-num">ISO 9001</span>
+        <p class="meta font-bold">INTERNAL AUDITOR</p>
+        <p class="text-sm text-slate-3">Certified quality auditor ensuring disciplined accuracy.</p>
+      </div>
+    </section>
+
+    <!-- Section 01: The Promise / Core Equation -->
+    <section class="sec frame rule-top surface-2">
+      <div class="sheet-head">
+        <div>
+          <span class="sheet-no">SECTION <b>01</b> // HOW IT WORKS</span>
+          <h2 class="display display-lg">Turning 4 Days of Manual Work into Minutes.</h2>
+        </div>
+        <p class="lead">
+          Manual attendance checking is slow and prone to errors. When employees forget to clock out or take leave, manual formulas break. Here is how clean automation solves it.
         </p>
       </div>
-    </div>
 
-    <!-- Liquid Crystal JavaScript Engine -->
-    <script src="script.js"></script>
-  </body>
+      <div class="promise-grid">
+        <!-- Left: Equation & Quote -->
+        <div>
+          <div class="equation">
+            <div class="eq-box is-from">
+              <span class="meta font-bold">MANUAL CHECKING</span>
+              <b>4 Days</b>
+              <p class="text-sm text-slate-3 mt-1">Manual CSV sorting, copy-pasting VLOOKUPs, checking leaves by hand, and risking missed punches going unnoticed.</p>
+            </div>
+            <div class="eq-op" aria-hidden="true">→</div>
+            <div class="eq-box is-to">
+              <span class="meta font-bold">AUTOMATED SPREADSHEET</span>
+              <b>0-Touch</b>
+              <p class="text-sm mt-1">Power Query cleans raw machine punches, matches shift rosters, tallies approved leaves, and calculates exact payroll deductions in seconds.</p>
+            </div>
+          </div>
+
+          <div class="promise-quote mt-6">
+            <p>
+              <em>"When managing thousands of employee punches across hundreds of branches, a single missed formula error in shift deductions adds up quickly. A well-designed automated sheet makes sure every punch, absence, and leave is accounted for accurately."</em>
+            </p>
+            <p class="meta font-bold mt-2" style="color:var(--red-ink);">— FEDERICO DUMAGPI // SYSTEMS &amp; HR AUTOMATION ARCHITECT</p>
+          </div>
+        </div>
+
+        <!-- Right: What Gets Audited Checklist Card -->
+        <div>
+          <div class="border-2 border-slate p-6 bg-paper shadow-hard">
+            <div class="flex items-center justify-between pb-3 border-b border-line">
+              <span class="meta font-bold text-slate-2">ATTENDANCE AUDIT CHECKLIST</span>
+              <span class="pill pill-emerald">100% AUTOMATED</span>
+            </div>
+            <p class="text-sm text-slate-3 mt-3">
+              The automated model systematically checks every daily record against five essential rules:
+            </p>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                <div>
+                  <strong>Late Clock-Ins:</strong> Identifies punches past shift start time and calculates late minutes based on grace period rules.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                <div>
+                  <strong>Early Clock-Outs:</strong> Flags any employee departing before their scheduled shift conclusion.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                <div>
+                  <strong>Missed Punches (One-Punch Only):</strong> Catches instances where an employee clocked in but forgot to clock out (or vice versa).
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                <div>
+                  <strong>HRMS Leave Tallying:</strong> Automatically compares daily absence flags against approved sick, annual, and casual leaves in your HR system.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                <div>
+                  <strong>Net Payroll Deductions:</strong> Calculates clean hour and salary deduction figures ready for payroll entry.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: System Architecture / Process Timeline -->
+    <section class="sec frame rule-top" id="system">
+      <div class="sheet-head">
+        <div>
+          <span class="sheet-no">SECTION <b>02</b> // PROCESS</span>
+          <h2 class="display display-lg">How We Build or Fix Your Workflow.</h2>
+        </div>
+        <p class="lead">
+          Whether you need a custom attendance template, a streamlined spreadsheet, or an AI prompt setup, here is how we get it done smoothly.
+        </p>
+      </div>
+
+      <!-- ARIA Timeline Tabs -->
+      <div class="timeline" role="region" aria-label="Workflow implementation stages">
+        <ol class="track" role="tablist">
+          <li role="presentation">
+            <button type="button" class="step" id="tab-stage-1" role="tab" aria-selected="true" aria-controls="panel-stage-1" tabindex="0">
+              <span class="step-node" aria-hidden="true">1</span>
+              <div>
+                <span class="step-title">Review &amp; Requirements</span>
+                <span class="step-tag">STAGE 01 // DISCOVERY</span>
+              </div>
+            </button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="step" id="tab-stage-2" role="tab" aria-selected="false" aria-controls="panel-stage-2" tabindex="-1">
+              <span class="step-node" aria-hidden="true">2</span>
+              <div>
+                <span class="step-title">Build &amp; Automate</span>
+                <span class="step-tag">STAGE 02 // SETUP</span>
+              </div>
+            </button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="step" id="tab-stage-3" role="tab" aria-selected="false" aria-controls="panel-stage-3" tabindex="-1">
+              <span class="step-node" aria-hidden="true">3</span>
+              <div>
+                <span class="step-title">Handover &amp; Video Guide</span>
+                <span class="step-tag">STAGE 03 // DELIVERY</span>
+              </div>
+            </button>
+          </li>
+        </ol>
+
+        <!-- Panel 1 -->
+        <div class="stage" id="panel-stage-1" role="tabpanel" aria-labelledby="tab-stage-1">
+          <div>
+            <div class="stage-head">
+              <span class="pill pill-ochre">STAGE 01 // DISCOVERY &amp; REVIEW</span>
+              <span class="meta font-bold">STEP 1</span>
+            </div>
+            <h3 class="stage-title">Reviewing Your Current Files &amp; Rules</h3>
+            <div class="stage-text">
+              <p>
+                We look at your raw machine exports, current Excel sheets, shift schedules, and how leave applications are recorded in your HRMS. We identify where formulas break, where manual work is taking up too much time, and how irregular attendances should be treated.
+              </p>
+              <p>
+                <strong>What you get:</strong> Clear summary of your rules, edge-case checklist (grace periods, night shifts), and recommended spreadsheet layout.
+              </p>
+            </div>
+            <dl class="specs mt-4">
+              <div class="spec">
+                <dt class="meta">TOOLS USED</dt>
+                <dd>Microsoft Excel, Power Query, Google Sheets</dd>
+              </div>
+              <div class="spec">
+                <dt class="meta">CONFIDENTIALITY</dt>
+                <dd>All client sample files handled with strict confidentiality</dd>
+              </div>
+            </dl>
+          </div>
+          <div>
+            <div class="border-2 border-slate p-6 bg-paper-2">
+              <span class="meta font-bold text-slate-2">KEY REVIEW ITEMS</span>
+              <ul class="mt-3 text-sm text-slate-3 space-y-2">
+                <li>✓ Punch machine export columns (Date, Time, Device, User ID)</li>
+                <li>✓ Shift start, end, and grace period rules</li>
+                <li>✓ Overnight shift handling and Ramadan schedules</li>
+                <li>✓ HRMS leave format (Annual, Sick, Unpaid, Casual)</li>
+                <li>✓ Deduction formula rules for payroll</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="stage" id="panel-stage-2" role="tabpanel" aria-labelledby="tab-stage-2" hidden>
+          <div>
+            <div class="stage-head">
+              <span class="pill pill-red">STAGE 02 // SPREADSHEET &amp; PIPELINE BUILD</span>
+              <span class="meta font-bold">STEP 2</span>
+            </div>
+            <h3 class="stage-title">Building the Automated Solution</h3>
+            <div class="stage-text">
+              <p>
+                We set up automated Power Query transformations or structured Excel formulas that pair clock-ins with clock-outs automatically. The sheet highlights missing punches, tallies unapproved absences against approved leaves, and prepares deduction totals with one click.
+              </p>
+              <p>
+                <strong>What you get:</strong> Fully unlocked Excel or Google Sheet with clean formulas and zero dependency on complicated third-party software.
+              </p>
+            </div>
+            <dl class="specs mt-4">
+              <div class="spec">
+                <dt class="meta">ARCHITECTURE</dt>
+                <dd>Power Query M-Code, Standard Excel Formulas, Clean Views</dd>
+              </div>
+              <div class="spec">
+                <dt class="meta">MAINTAINABILITY</dt>
+                <dd>Easy for anyone on your team to refresh with new data</dd>
+              </div>
+            </dl>
+          </div>
+          <div>
+            <div class="border-2 border-slate p-6 bg-paper-2">
+              <span class="meta font-bold text-slate-2">AUTOMATION ADVANTAGES</span>
+              <ul class="mt-3 text-sm text-slate-3 space-y-2">
+                <li>✓ No more manual copy-pasting of machine logs</li>
+                <li>✓ One-click refresh imports all branch punches</li>
+                <li>✓ Colors flag missed punches and late arrivals automatically</li>
+                <li>✓ Clean deduction table ready for payroll input</li>
+                <li>✓ 100% unlocked formulas that you own forever</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="stage" id="panel-stage-3" role="tabpanel" aria-labelledby="tab-stage-3" hidden>
+          <div>
+            <div class="stage-head">
+              <span class="pill pill-emerald">STAGE 03 // HANDOVER &amp; SUPPORT</span>
+              <span class="meta font-bold">STEP 3</span>
+            </div>
+            <h3 class="stage-title">Simple Handover &amp; Video Walkthrough</h3>
+            <div class="stage-text">
+              <p>
+                You receive the complete workbook along with a clear video walkthrough and a step-by-step PDF guide showing you exactly how to import your monthly attendance logs. If you ever have a question or need an adjustment, I am available to help.
+              </p>
+              <p>
+                <strong>What you get:</strong> Complete template files, video guide, reference PDF, and direct email support.
+              </p>
+            </div>
+            <dl class="specs mt-4">
+              <div class="spec">
+                <dt class="meta">DOCUMENTATION</dt>
+                <dd>Clear video walkthrough + PDF setup notes</dd>
+              </div>
+              <div class="spec">
+                <dt class="meta">SUPPORT</dt>
+                <dd>Direct email support for questions and guidance</dd>
+              </div>
+            </dl>
+          </div>
+          <div>
+            <div class="border-2 border-slate p-6 bg-paper-2">
+              <span class="meta font-bold text-slate-2">WHAT'S INCLUDED</span>
+              <ul class="mt-3 text-sm text-slate-3 space-y-2">
+                <li>✓ Fully unlocked Excel template (.xlsx)</li>
+                <li>✓ Step-by-step video tutorial</li>
+                <li>✓ PDF quick-reference guide</li>
+                <li>✓ Direct email support for any questions</li>
+                <li>✓ Free updates to template fixes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03: Technical Capabilities / Solution Explorer -->
+    <section class="sec frame rule-top surface-2" id="capabilities">
+      <div class="sheet-head">
+        <div>
+          <span class="sheet-no">SECTION <b>03</b> // WHAT I DO</span>
+          <h2 class="display display-lg">Capabilities &amp; Areas of Expertise.</h2>
+        </div>
+        <p class="lead">
+          Explore the areas where I can help you save time, eliminate manual spreadsheet mistakes, or set up clean AI prompts.
+        </p>
+      </div>
+
+      <!-- Capability Filters -->
+      <div class="cap-filters">
+        <span class="meta font-bold">FILTER BY TOPIC:</span>
+        <button type="button" class="toggle-chip" data-cap-filter="all" aria-pressed="true">
+          All Topics <span class="count">6</span>
+        </button>
+        <button type="button" class="toggle-chip" data-cap-filter="hr" aria-pressed="false">
+          Attendance &amp; Payroll <span class="count">3</span>
+        </button>
+        <button type="button" class="toggle-chip" data-cap-filter="excel" aria-pressed="false">
+          Excel &amp; Power Query <span class="count">2</span>
+        </button>
+        <button type="button" class="toggle-chip" data-cap-filter="ai" aria-pressed="false">
+          AI &amp; Workflows <span class="count">1</span>
+        </button>
+      </div>
+
+      <!-- Capability Accordion List -->
+      <ul class="cap-list" id="capList">
+        <!-- 01 -->
+        <li class="cap-row" data-domain="hr">
+          <button type="button" class="cap-toggle" aria-expanded="false" aria-controls="cap-panel-1">
+            <span class="cap-n">01</span>
+            <span class="cap-title">Biometric Attendance &amp; Irregular Punch Verification</span>
+            <span class="cap-tag"><span class="chip chip-ochre">Lates // Early Out // Missed Clock-outs</span></span>
+            <span class="cap-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="cap-panel" id="cap-panel-1" hidden>
+            <div>
+              <p>
+                Handling raw biometric punch logs from branch terminals. The model pairs daily clock-ins and clock-outs, highlights missing entries (one-punch only), identifies late arrivals with grace period rules, and flags early departures across multiple shifts.
+              </p>
+            </div>
+            <div class="cap-domain">TOPIC: ATTENDANCE &amp; PAYROLL</div>
+          </div>
+        </li>
+
+        <!-- 02 -->
+        <li class="cap-row" data-domain="hr">
+          <button type="button" class="cap-toggle" aria-expanded="false" aria-controls="cap-panel-2">
+            <span class="cap-n">02</span>
+            <span class="cap-title">HRMS Leave Tallying &amp; Daily Absence Cross-Checking</span>
+            <span class="cap-tag"><span class="chip chip-ochre">Sick // Annual // Casual Leaves</span></span>
+            <span class="cap-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="cap-panel" id="cap-panel-2" hidden>
+            <div>
+              <p>
+                Compares daily unrecorded attendances with official approved leaves exported from your HRMS. Differentiates approved sick, annual, and casual leaves from unapproved absences to ensure employees are never deducted incorrectly.
+              </p>
+            </div>
+            <div class="cap-domain">TOPIC: ATTENDANCE &amp; PAYROLL</div>
+          </div>
+        </li>
+
+        <!-- 03 -->
+        <li class="cap-row" data-domain="hr">
+          <button type="button" class="cap-toggle" aria-expanded="false" aria-controls="cap-panel-3">
+            <span class="cap-n">03</span>
+            <span class="cap-title">Net Attendance Payroll Deduction Calculation</span>
+            <span class="cap-tag"><span class="chip chip-ochre">Hourly &amp; Daily Deductions</span></span>
+            <span class="cap-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="cap-panel" id="cap-panel-3" hidden>
+            <div>
+              <p>
+                Converts total late hours, unapproved absence days, and half-day penalties into clean payroll deduction figures. Generates a clear summary report ready for payroll processing.
+              </p>
+            </div>
+            <div class="cap-domain">TOPIC: ATTENDANCE &amp; PAYROLL</div>
+          </div>
+        </li>
+
+        <!-- 04 -->
+        <li class="cap-row" data-domain="excel">
+          <button type="button" class="cap-toggle" aria-expanded="false" aria-controls="cap-panel-4">
+            <span class="cap-n">04</span>
+            <span class="cap-title">Power Query &amp; M-Code Automated Data Cleansing</span>
+            <span class="cap-tag"><span class="chip chip-ochre">One-Click Refresh // No SaaS</span></span>
+            <span class="cap-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="cap-panel" id="cap-panel-4" hidden>
+            <div>
+              <p>
+                Building Power Query scripts that automatically clean messy CSV exports, combine multi-branch files into one table, remove duplicates, and update all calculations with a single click.
+              </p>
+            </div>
+            <div class="cap-domain">TOPIC: EXCEL &amp; POWER QUERY</div>
+          </div>
+        </li>
+
+        <!-- 05 -->
+        <li class="cap-row" data-domain="excel">
+          <button type="button" class="cap-toggle" aria-expanded="false" aria-controls="cap-panel-5">
+            <span class="cap-n">05</span>
+            <span class="cap-title">Salary Banding &amp; Employee Compensation Models</span>
+            <span class="cap-tag"><span class="chip chip-ochre">Salary Ranges // Compa-Ratios</span></span>
+            <span class="cap-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="cap-panel" id="cap-panel-5" hidden>
+            <div>
+              <p>
+                Structured compensation spreadsheets with min, midpoint, and max salary ranges. Helps businesses set fair pay, audit compa-ratios, and model annual merit increases.
+              </p>
+            </div>
+            <div class="cap-domain">TOPIC: EXCEL &amp; POWER QUERY</div>
+          </div>
+        </li>
+
+        <!-- 06 -->
+        <li class="cap-row" data-domain="ai">
+          <button type="button" class="cap-toggle" aria-expanded="false" aria-controls="cap-panel-6">
+            <span class="cap-n">06</span>
+            <span class="cap-title">AI Prompts &amp; Workflow Systems (Gemini 2.5 &amp; Antigravity)</span>
+            <span class="cap-tag"><span class="chip chip-ochre">Gemini 2.5 // Antigravity</span></span>
+            <span class="cap-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="cap-panel" id="cap-panel-6" hidden>
+            <div>
+              <p>
+                Designing reliable, structured prompts for Google Gemini 2.5 and Antigravity. Ideal for drafting performance appraisals, extracting documentation, or summarizing operational notes without hallucination.
+              </p>
+            </div>
+            <div class="cap-domain">TOPIC: AI &amp; WORKFLOWS</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 04: Track Record & Experience -->
+    <section class="sec frame rule-top" id="track-record">
+      <div class="sheet-head">
+        <div>
+          <span class="sheet-no">SECTION <b>04</b> // BACKGROUND</span>
+          <h2 class="display display-lg">18 Years Practical Experience.</h2>
+        </div>
+        <p class="lead">
+          A continuous, unbroken career in HR systems, attendance verification, and operations at Al Ansari Financial Services PJSC in Dubai, UAE.
+        </p>
+      </div>
+
+      <div class="xp-grid">
+        <!-- Left: Verified Credentials Card -->
+        <div>
+          <div class="border-2 border-slate p-6 bg-paper shadow-hard">
+            <span class="pill pill-emerald">VERIFIED BACKGROUND</span>
+            <h3 class="text-xl font-extrabold mt-3 tracking-tight">Institutional HR &amp; Quality Rigor</h3>
+            <p class="text-sm text-slate-3 mt-2">
+              My tools and templates are rooted in real-world daily practice, not theoretical tutorials.
+            </p>
+            <ul class="points mt-4 text-sm text-slate-3 space-y-2.5">
+              <li><strong>18 Years Institutional Tenure</strong> at Al Ansari Financial Services PJSC</li>
+              <li><strong>4,800+ Headcount</strong> daily attendance verified across 250+ branches</li>
+              <li><strong>ISO 9001:2015</strong> Certified Internal Quality Auditor</li>
+              <li><strong>Direct Architect Experience</strong> in biometric devices and HRMS software</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Career Milestones -->
+        <div>
+          <div class="xp-list">
+            <!-- Role 1 -->
+            <div class="xp is-current">
+              <span class="xp-period">2018 — PRESENT // ACTIVE TENURE</span>
+              <h3 class="text-2xl font-extrabold tracking-tight">HR Systems &amp; Automation Specialist</h3>
+              <p class="org">Al Ansari Financial Services PJSC &bull; Dubai, UAE</p>
+              <ul class="points">
+                <li>Manage the daily attendance verification for <strong>4,800+ branch employees</strong> across UAE branches.</li>
+                <li>Reduced month-end payroll attendance verification time from <strong>48 hours to automated minutes</strong> using Power Query and custom verification models.</li>
+                <li>Audit irregular attendances (lates, early outs, missed punches) and cross-check against HRMS approved leave records.</li>
+              </ul>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="xp">
+              <span class="xp-period">2010 — 2018 // 8 YEARS</span>
+              <h3 class="text-xl font-extrabold tracking-tight">HR Operations &amp; Systems Officer</h3>
+              <p class="org">Al Ansari Exchange &bull; Dubai, UAE</p>
+              <ul class="points">
+                <li>Managed biometric attendance machine logs and consolidated multi-branch attendance records.</li>
+                <li>Conducted bi-annual internal quality audits as an accredited ISO 9001 auditor.</li>
+                <li>Maintained salary structures and compensation data sheets.</li>
+              </ul>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="xp">
+              <span class="xp-period">2006 — 2010 // 4 YEARS</span>
+              <h3 class="text-xl font-extrabold tracking-tight">Systems &amp; Attendance Specialist</h3>
+              <p class="org">Al Ansari Exchange &bull; Dubai, UAE</p>
+              <ul class="points">
+                <li>Audited electronic timecards, shift rosters, and branch attendance registers.</li>
+                <li>Automated initial attendance tracking spreadsheets using advanced Excel formulas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: Featured Store & Solutions Preview -->
+    <section class="sec frame rule-top surface-2" id="catalog">
+      <div class="sheet-head">
+        <div>
+          <span class="sheet-no">SECTION <b>05</b> // DIGITAL SOLUTIONS</span>
+          <h2 class="display display-lg">Featured Store Products &amp; Templates.</h2>
+        </div>
+        <p class="lead">
+          Field-tested attendance sheets, salary calculators, and AI prompt systems available for instant download.
+        </p>
+      </div>
+
+      <div class="border-2 border-slate bg-paper shadow-hard p-6">
+        <div class="idx-head pb-3 border-b border-line">
+          <span class="font-bold text-slate">FEATURED DIGITAL PRODUCTS</span>
+          <a href="store.html" class="text-link font-bold text-sm">View All in Store &amp; Solutions →</a>
+        </div>
+
+        <ul class="idx-table">
+          <li class="idx-row">
+            <div class="flex items-center gap-4">
+              <span class="mono font-bold text-red-600">01</span>
+              <div>
+                <strong>Automated Payroll Attendance &amp; Discrepancy Reconciler</strong>
+                <div class="chips-inline mt-1">
+                  <span class="chip chip-ochre">ATTENDANCE &amp; PAYROLL</span>
+                  <span class="meta text-xs">.MD / .XLSX / .PDF</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="idx-price">$15.00 <small>USD</small></span>
+              <a href="https://payhip.com/b/iyPZ2" target="_blank" rel="noopener" class="text-link block text-xs mt-1">Buy on Payhip ↗</a>
+            </div>
+          </li>
+
+          <li class="idx-row">
+            <div class="flex items-center gap-4">
+              <span class="mono font-bold text-red-600">02</span>
+              <div>
+                <strong>Employee Compensation &amp; Salary Banding Calculator</strong>
+                <div class="chips-inline mt-1">
+                  <span class="chip chip-ochre">SALARY &amp; COMPENSATION</span>
+                  <span class="meta text-xs">.MD / .XLSX</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="idx-price">$15.00 <small>USD</small></span>
+              <a href="https://payhip.com/b/ogcAM" target="_blank" rel="noopener" class="text-link block text-xs mt-1">Buy on Payhip ↗</a>
+            </div>
+          </li>
+
+          <li class="idx-row">
+            <div class="flex items-center gap-4">
+              <span class="mono font-bold text-red-600">03</span>
+              <div>
+                <strong>AI Knowledge Base Extractor (Desktop Tool)</strong>
+                <div class="chips-inline mt-1">
+                  <span class="chip chip-ochre">DESKTOP APP</span>
+                  <span class="meta text-xs">.PY / .EXE / .MD</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="idx-price">$39.00 <small>USD</small></span>
+              <a href="https://payhip.com/b/zHoCq" target="_blank" rel="noopener" class="text-link block text-xs mt-1">Buy on Payhip ↗</a>
+            </div>
+          </li>
+
+          <li class="idx-row">
+            <div class="flex items-center gap-4">
+              <span class="mono font-bold text-red-600">04</span>
+              <div>
+                <strong>TalentPulse — Employee Review &amp; Feedback Generator</strong>
+                <div class="chips-inline mt-1">
+                  <span class="chip chip-ochre">PERFORMANCE AI</span>
+                  <span class="meta text-xs">.MD / .TXT</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="idx-price">$15.00 <small>USD</small></span>
+              <a href="https://payhip.com/b/p0gNH" target="_blank" rel="noopener" class="text-link block text-xs mt-1">Buy on Payhip ↗</a>
+            </div>
+          </li>
+
+          <li class="idx-row">
+            <div class="flex items-center gap-4">
+              <span class="mono font-bold text-red-600">05</span>
+              <div>
+                <strong>FinStack-360 — Cash Flow &amp; Financial Consolidator</strong>
+                <div class="chips-inline mt-1">
+                  <span class="chip chip-ochre">CASH FLOW</span>
+                  <span class="meta text-xs">.MD / .XLSX</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="idx-price">$15.00 <small>USD</small></span>
+              <a href="https://payhip.com/b/Px3yB" target="_blank" rel="noopener" class="text-link block text-xs mt-1">Buy on Payhip ↗</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-6 flex flex-wrap gap-4 items-center justify-between pt-4 border-t border-line">
+          <a href="store.html" class="btn btn-red">
+            Browse All Store &amp; Solutions <span class="arrow">→</span>
+          </a>
+          <span class="meta text-slate-4">Instant downloads available on Payhip &amp; Gumroad. Unlocked and easy to customize.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 06: Contact & Inquiries -->
+    <section class="sec frame rule-top" id="contact">
+      <div class="sheet-head">
+        <div>
+          <span class="sheet-no">SECTION <b>06</b> // CONTACT</span>
+          <h2 class="display display-lg">Send a Message or Inquire.</h2>
+        </div>
+        <p class="lead">
+          Have questions about attendance verification, automated spreadsheets, or custom AI prompt setups? Send a message through the form below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Inquiry Info -->
+        <div>
+          <span class="pill pill-slate">DIRECT CONTACT</span>
+          <h3 class="text-2xl font-extrabold tracking-tight mt-3">Let's Connect</h3>
+          <p class="text-sm text-slate-3 mt-2">
+            Whether you are an individual freelancer, a small business, or an HR professional, feel free to reach out. I am open to freelance projects and template questions.
+          </p>
+
+          <ol class="steps mt-6">
+            <li>
+              <span class="n">1</span>
+              <div>
+                <b>Tell Me What You Need</b>
+                <p class="text-sm text-slate-3 mt-0.5">Share what spreadsheet, attendance file, or AI setup you need help with.</p>
+              </div>
+            </li>
+            <li>
+              <span class="n">2</span>
+              <div>
+                <b>Quick Assessment</b>
+                <p class="text-sm text-slate-3 mt-0.5">I will review your requirements and provide practical feedback.</p>
+              </div>
+            </li>
+            <li>
+              <span class="n">3</span>
+              <div>
+                <b>Simple Solution</b>
+                <p class="text-sm text-slate-3 mt-0.5">Get a ready-to-use template, video walkthrough, or customized solution.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="contact-lines">
+            <span><i class="fa-solid fa-envelope"></i> <a href="mailto:federico.dumagpi.jr@gmail.com" class="hover:underline">federico.dumagpi.jr@gmail.com</a></span>
+            <span><i class="fa-solid fa-store"></i> <a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener" class="hover:underline">Payhip Store (FDigitalFlow) ↗</a></span>
+            <span><i class="fa-solid fa-bag-shopping"></i> <a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener" class="hover:underline">Gumroad Store (dumagpi8) ↗</a></span>
+            <span><i class="fa-solid fa-location-dot"></i> Dubai, United Arab Emirates (GST UTC+4)</span>
+          </div>
+        </div>
+
+        <!-- Right: Simple Contact Form -->
+        <div>
+          <div class="form-sheet">
+            <div class="form-sheet-head">
+              <span class="meta font-bold">SEND AN INQUIRY</span>
+              <span class="pill pill-emerald">DIRECT EMAIL</span>
+            </div>
+
+            <form id="contact-form" action="https://formsubmit.co/federico.dumagpi.jr@gmail.com" method="POST">
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_subject" value="New Inquiry from federicodumagpi.com">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="field">
+                  <label for="name">YOUR NAME *</label>
+                  <input type="text" id="name" name="name" class="input" placeholder="e.g. Alex Morgan" required>
+                </div>
+                <div class="field">
+                  <label for="company">COMPANY / FREELANCE (OPTIONAL)</label>
+                  <input type="text" id="company" name="company" class="input" placeholder="e.g. Personal / Studio Name">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="field">
+                  <label for="email">EMAIL *</label>
+                  <input type="email" id="email" name="email" class="input" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="headcount">TEAM SIZE / HEADCOUNT (OPTIONAL)</label>
+                  <select id="headcount" name="headcount" class="select w-full">
+                    <option value="" selected>Select team size (optional)</option>
+                    <option value="1-50">&lt; 50 (Individual / Small Business)</option>
+                    <option value="51-250">50 — 250 Employees</option>
+                    <option value="251-1000">251 — 1,000 Employees</option>
+                    <option value="1000+">1,000+ Employees</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="topic">TOPIC OF INTEREST *</label>
+                <select id="topic" name="topic" class="select w-full" required>
+                  <option value="" disabled selected>Select topic</option>
+                  <option value="Biometric Attendance & Leave Reconciliation">Biometric Attendance &amp; Leave Reconciliation</option>
+                  <option value="Payroll Attendance Deduction Calculations">Payroll Attendance Deduction Calculations</option>
+                  <option value="Excel & Power Query Automation">Excel &amp; Power Query Automation</option>
+                  <option value="Salary Banding & Compensation Sheet">Salary Banding &amp; Compensation Sheet</option>
+                  <option value="Custom AI Prompt Setup">Custom AI Prompt Setup (Gemini / Antigravity)</option>
+                  <option value="General Question or Feedback">General Question or Feedback</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="message">MESSAGE / WHAT DO YOU NEED HELP WITH? *</label>
+                <textarea id="message" name="message" rows="4" class="input" style="height:auto; min-height:6.5rem;" placeholder="Briefly describe what you are looking for..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-red w-full justify-center">
+                Send Message <span class="arrow">→</span>
+              </button>
+
+              <p class="form-note">
+                <i class="fa-solid fa-lock text-slate-4 mr-1"></i> Messages go straight to federico.dumagpi.jr@gmail.com. No spam, ever.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer (Compact, Dark, Professional) -->
+  <footer class="site-footer">
+    <div class="frame">
+      <div class="foot-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div>
+          <a href="index.html" class="wordmark">
+            <span>FD</span> FEDERICO DUMAGPI
+          </a>
+          <p>
+            Systems &amp; HR Automation Architect with 18 years experience at Al Ansari Financial Services PJSC. Practical spreadsheets, attendance automation, and AI workflows.
+          </p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="pill pill-emerald" style="background:#064e3b; color:#a7f3d0; border-color:#059669;">DUBAI, UAE</span>
+            <span class="pill pill-slate" style="background:#1f2937; color:#e5e7eb; border-color:#374151;">ISO 9001 AUDITOR</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h2>NAVIGATION</h2>
+          <ul>
+            <li><a href="#system">01 // Architecture</a></li>
+            <li><a href="#capabilities">02 // Capabilities</a></li>
+            <li><a href="#track-record">03 // Experience</a></li>
+            <li><a href="store.html">04 // Store &amp; Solutions</a></li>
+            <li><a href="#contact">05 // Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Online Stores -->
+        <div>
+          <h2>ONLINE STORES</h2>
+          <ul>
+            <li><a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener">Payhip Store (FDigitalFlow) ↗</a></li>
+            <li><a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener">Gumroad (dumagpi8) ↗</a></li>
+            <li><a href="https://payhip.com/b/iyPZ2" target="_blank" rel="noopener">Payroll Attendance Sheet ↗</a></li>
+            <li><a href="https://payhip.com/b/zHoCq" target="_blank" rel="noopener">AI Knowledge Base Extractor ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Access -->
+        <div>
+          <h2>DIRECT ACCESS</h2>
+          <ul>
+            <li><a href="mailto:federico.dumagpi.jr@gmail.com">federico.dumagpi.jr@gmail.com</a></li>
+            <li><span class="text-xs text-gray-400 block mt-1">HOURS: 08:00 - 18:00 GST</span></li>
+            <li><span class="text-xs text-gray-400 block">LOCATION: DUBAI, UAE</span></li>
+            <li><span class="text-xs text-gray-400 block mt-1">Freelance &amp; template inquiries welcome</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-bar">
+        <div>
+          <p class="meta m-0">&copy; 2026 FEDERICO DUMAGPI. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div>
+          <span class="tech-badge">
+            <i class="fa-solid fa-bolt text-red-500"></i> Powered by Firebase • Antigravity
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Submission Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <div>
+      <strong>Message Sent!</strong>
+      <p class="meta" style="margin:0;">Thank you. Federico will reply to your email soon.</p>
+    </div>
+  </div>
+
+  <!-- Vanilla Interaction Script -->
+  <script src="script.js"></script>
+</body>
 </html>

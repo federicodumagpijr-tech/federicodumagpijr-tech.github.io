@@ -1,774 +1,1052 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solutions & Digital Store | Federico Dumagpi Jr.</title>
-    <meta
-      name="description"
-      content="Ready-to-use AI Skills, Power Query Templates, and Automated Data Solutions for professionals, business owners, and analysts."
-    />
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store &amp; Solutions — Federico Dumagpi</title>
+  <meta name="description" content="Production-tested Excel templates, attendance reconcilers, salary calculators, and AI prompts. Instant digital download via Payhip & Gumroad.">
+  <link rel="canonical" href="https://federicodumagpi.com/store.html">
 
-    <!-- Tailwind CSS Engine -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: {
-                50: "#e7f2fd",
-                100: "#cfe5fc",
-                200: "#a0cbf8",
-                300: "#70b0f5",
-                400: "#4096f2",
-                500: "#117cee",
-                600: "#0d63bf",
-                700: "#0a4a8f",
-                800: "#07325f",
-                900: "#031930",
-                950: "#021121",
-              },
-              beige: {
-                50: "#f7f7ee",
-                100: "#efefdc",
-                200: "#dfdfb9",
-                300: "#cfcf96",
-                400: "#bfbf73",
-                500: "#afaf50",
-                600: "#8c8c40",
-                700: "#696930",
-                800: "#464620",
-                900: "#232310",
-                950: "#18180b",
-              },
-              gold: {
-                50: "#fdf9e7",
-                100: "#fcf2cf",
-                200: "#f8e5a0",
-                300: "#f5d870",
-                400: "#f2cb40",
-                500: "#eebe11",
-                600: "#bf980d",
-                700: "#8f720a",
-                800: "#5f4c07",
-                900: "#302603",
-                950: "#211b02",
-              },
-              brown: {
-                50: "#fdf2e8",
-                100: "#fbe4d0",
-                200: "#f6c9a2",
-                300: "#f2ae73",
-                400: "#ee9344",
-                500: "#e97816",
-                600: "#bb6011",
-                700: "#8c480d",
-                800: "#5d3009",
-                900: "#2f1804",
-                950: "#211103",
-              },
-              tomato: {
-                50: "#feeae6",
-                100: "#fdd6ce",
-                200: "#fcac9c",
-                300: "#fa836b",
-                400: "#f95939",
-                500: "#f73008",
-                600: "#c62606",
-                700: "#941d05",
-                800: "#631303",
-                900: "#310a02",
-                950: "#230701",
-              },
-            },
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', "Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Unified Liquid Crystal Stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="flex flex-col min-h-screen">
-    <!-- Prismatic Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Design System -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-paper text-slate antialiased">
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- 1. Global Announcement Top Bar -->
-    <div class="announcement-bar">
-      <a href="index.html#contact" class="announcement-link">
-        <span class="announcement-dot"></span>
-        <span>⚡ AVAILABLE FOR CONSULTING PROJECTS — GET IN TOUCH TODAY</span>
-        <i class="fa-solid fa-play text-[10px]"></i>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="progress-track" aria-hidden="true" style="position:fixed; top:0; left:0; width:100%; height:3px; z-index:100; border:none; background:transparent;">
+    <span style="height:100%; width:0%; background:var(--red); display:block; transition:width 0.1s linear;"></span>
+  </div>
+
+  <!-- Utility Bar -->
+  <div class="utility">
+    <div class="frame utility-in">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="mono flex items-center gap-1.5"><i class="fa-solid fa-location-dot" style="color:var(--red);"></i> DUBAI<span class="hidden sm:inline">, UAE</span></span>
+        <span class="text-line-2">|</span>
+        <span id="dubai-clock" class="mono text-slate-2 font-bold">--:-- GST</span>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener" class="hidden sm:inline text-slate-3 hover:text-slate">Payhip Store ↗</a>
+        <a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener" class="hidden sm:inline text-slate-3 hover:text-slate">Gumroad ↗</a>
+        <a href="mailto:federico.dumagpi.jr@gmail.com" class="hidden md:inline text-slate-3 hover:text-slate">federico.dumagpi.jr@gmail.com</a>
+        <a href="index.html" class="mono font-bold" style="color:var(--slate);">← RETURN TO HOME</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="frame header-in">
+      <a href="index.html" class="brand" aria-label="Federico Dumagpi Home">
+        <span class="brand-mark" aria-hidden="true">FD</span>
+        <div>
+          <span class="brand-name">Federico Dumagpi</span>
+          <span class="brand-role">Systems &amp; HR Automation Architect</span>
+        </div>
       </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html#system" class="nav-link"><span class="nav-no">01</span> Architecture</a>
+        <a href="index.html#capabilities" class="nav-link"><span class="nav-no">02</span> Capabilities</a>
+        <a href="index.html#track-record" class="nav-link"><span class="nav-no">03</span> Experience</a>
+        <a href="store.html" class="nav-link" aria-current="true"><span class="nav-no">04</span> Store &amp; Solutions</a>
+        <a href="index.html#contact" class="nav-link"><span class="nav-no">05</span> Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html#contact" class="btn btn-sm btn-outline hidden sm:inline-flex">Send a Message <span class="arrow">→</span></a>
+        <button type="button" class="menu-btn lg:hidden" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- 2. Sticky Header Navigation -->
-    <header class="header-glass">
-      <div class="header-inner">
-        <a href="index.html" class="flex items-center space-x-3 brand-link">
-          <div class="brand-badge">
-            <i class="fa-solid fa-chart-simple text-lg"></i>
-          </div>
-          <div>
-            <span class="brand-title">Federico Dumagpi</span>
-            <span class="brand-sub">Store & Solutions</span>
-          </div>
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="drawer" hidden>
+      <div class="flex flex-col">
+        <a href="index.html#system" class="drawer-link">
+          <span class="text-base font-bold">01 // System Architecture</span>
+          <small class="meta text-xs text-slate-4">How Attendance &amp; Payroll Sync</small>
         </a>
-
-        <nav class="nav-crystal-bar">
-          <button
-            data-filter-category="all"
-            class="nav-crystal-link category-nav-btn active"
-          >
-            All Assets
-          </button>
-          <button
-            data-filter-category="ai-skills"
-            class="nav-crystal-link category-nav-btn"
-          >
-            AI Prompts
-          </button>
-          <button
-            data-filter-category="power-query"
-            class="nav-crystal-link category-nav-btn"
-          >
-            Excel Templates
-          </button>
-          <button
-            data-filter-category="services"
-            class="nav-crystal-link category-nav-btn"
-          >
-            Setup Services
-          </button>
-          <a href="index.html" class="nav-crystal-link text-slate-500"
-            >← Back to Portfolio</a
-          >
-        </nav>
-
-        <div class="flex items-center space-x-3">
-          <a
-            href="index.html#contact"
-            class="btn-gold text-xs sm:text-sm py-2 px-4 sm:px-6"
-          >
-            <span>INQUIRE</span>
-            <i class="fa-solid fa-play text-[10px]"></i>
-          </a>
-          <button
-            id="mobile-menu-btn"
-            class="md:hidden p-2 rounded-xl bg-white border border-navy-200 text-navy-900"
-            aria-label="Toggle Mobile Menu"
-          >
-            <i class="fa-solid fa-bars text-xl"></i>
-          </button>
+        <a href="index.html#capabilities" class="drawer-link">
+          <span class="text-base font-bold">02 // Technical Capabilities</span>
+          <small class="meta text-xs text-slate-4">Biometric, Excel &amp; AI Tools</small>
+        </a>
+        <a href="index.html#track-record" class="drawer-link">
+          <span class="text-base font-bold">03 // Proven Track Record</span>
+          <small class="meta text-xs text-slate-4">18 Years UAE Institutional Experience</small>
+        </a>
+        <a href="store.html" class="drawer-link">
+          <span class="text-base font-bold text-red-600">04 // Store &amp; Solutions</span>
+          <small class="meta text-xs text-slate-4">Ready Spreadsheets &amp; Digital Tools</small>
+        </a>
+        <a href="index.html#contact" class="drawer-link">
+          <span class="text-base font-bold">05 // Contact &amp; Inquiries</span>
+          <small class="meta text-xs text-slate-4">Send a Message or Project Request</small>
+        </a>
+        <div class="p-4 bg-paper-2 border-t border-line mt-2 space-y-2">
+          <a href="index.html#contact" class="btn btn-red w-full text-center justify-center">Contact Federico →</a>
+          <div class="flex justify-center gap-4 text-xs font-bold text-slate-3 pt-2">
+            <a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener" class="hover:underline">Payhip Store ↗</a>
+            <span>•</span>
+            <a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener" class="hover:underline">Gumroad ↗</a>
+          </div>
         </div>
       </div>
+    </div>
+  </header>
 
-      <!-- Mobile Navigation Drawer -->
-      <div id="mobile-menu" class="hidden md:hidden mobile-drawer">
-        <button
-          data-filter-category="all"
-          class="text-left mobile-nav-item category-nav-btn"
-        >
-          All Assets
-        </button>
-        <button
-          data-filter-category="ai-skills"
-          class="text-left mobile-nav-item category-nav-btn"
-        >
-          AI Prompts
-        </button>
-        <button
-          data-filter-category="power-query"
-          class="text-left mobile-nav-item category-nav-btn"
-        >
-          Excel Templates
-        </button>
-        <button
-          data-filter-category="services"
-          class="text-left mobile-nav-item category-nav-btn"
-        >
-          Setup Services
-        </button>
-        <a href="index.html" class="mobile-nav-item font-bold text-navy-800"
-          >← Back to Portfolio</a
-        >
-        <a
-          href="index.html#contact"
-          class="btn-navy text-center mt-2 mobile-link"
-          >INQUIRE</a
-        >
-      </div>
-    </header>
+  <main id="main">
+    <!-- Breadcrumbs -->
+    <div class="frame">
+      <nav class="crumbs meta font-semibold" aria-label="Breadcrumb">
+        <a href="index.html">HOME</a>
+        <span class="text-line-2">/</span>
+        <span class="text-slate font-bold">STORE &amp; SOLUTIONS</span>
+        <span class="text-line-2">/</span>
+        <span class="chip chip-ochre">DIGITAL PRODUCTS</span>
+      </nav>
+    </div>
 
-    <!-- 3. Store Hero Section -->
-    <section class="relative pt-14 pb-12 lg:pt-20 lg:pb-16 text-center">
-      <div class="geometric-facet-backdrop">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 1440 600"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="opacity-25"
-        >
-          <polygon
-            points="680,20 840,140 760,280 600,200"
-            stroke="#0a4a8f"
-            stroke-width="1.5"
-            stroke-dasharray="4 4"
-            fill="none"
-          />
-          <circle
-            cx="200"
-            cy="180"
-            r="120"
-            stroke="#eebe11"
-            stroke-width="1"
-            stroke-dasharray="6 6"
-            fill="none"
-          />
-        </svg>
-      </div>
-
-      <div
-        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6"
-      >
-        <div class="prism-pill">
-          <span class="pulse-node"></span>
-          <span>READY-TO-USE DIGITAL TOOLS</span>
-        </div>
-
-        <h1 class="heading-hero">
-          AI Tools, Excel Templates &
-          <span class="text-gold-gradient">Data Services.</span>
+    <!-- Store Hero with Title Block -->
+    <section class="frame store-hero">
+      <div>
+        <h1 class="display display-xl tracking-tight text-slate">
+          Store &amp; Solutions.
         </h1>
-
-        <p
-          class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
-        >
-          Simple, ready-to-use AI prompts, automated Excel templates, and setup
-          services to save you time and eliminate repetitive work.
+        <p class="lead">
+          Production-tested workflows, spreadsheets, and digital tools. Practical templates designed to save you hours of manual work every week with simple setup and zero ongoing subscription fees.
         </p>
+        <div class="mt-4 flex flex-wrap gap-3 items-center">
+          <a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener" class="btn btn-sm btn-red">
+            Visit Official Payhip Store (FDigitalFlow) <span class="arrow">↗</span>
+          </a>
+          <a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+            Visit Gumroad Store (dumagpi8) <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
 
-        <!-- Category Filters -->
-        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
-          <button data-filter-category="all" class="filter-btn active">
-            All Solutions
-          </button>
-          <button data-filter-category="ai-skills" class="filter-btn">
-            AI Skills (.md)
-          </button>
-          <button data-filter-category="power-query" class="filter-btn">
-            Excel & Power Query
-          </button>
-          <button data-filter-category="services" class="filter-btn">
-            Setup Services
-          </button>
+      <!-- Title Block -->
+      <div>
+        <div class="titleblock">
+          <div class="titleblock-head">
+            <span class="meta font-bold">DIGITAL STORE DIRECTORY</span>
+            <span class="pill pill-emerald">13 READY SOLUTIONS</span>
+          </div>
+          <dl>
+            <div>
+              <dt>DISTRIBUTION</dt>
+              <dd>Instant Download via Payhip &amp; Gumroad</dd>
+            </div>
+            <div>
+              <dt>LICENSING</dt>
+              <dd><i class="fa-solid fa-check"></i> Commercial &amp; Personal Use</dd>
+            </div>
+            <div>
+              <dt>FORMATS</dt>
+              <dd>.XLSX, .MD, .PY, .PDF</dd>
+            </div>
+            <div>
+              <dt>SUPPORT</dt>
+              <dd><i class="fa-solid fa-envelope"></i> Direct Email Support</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- 4. Main Catalog Grid (Liquid Crystal Capsules) -->
-    <main class="flex-grow py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div
-        id="catalogGrid"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <!-- Item 1: Payhip Product -->
-        <div
-          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-robot mr-1"></i> DIGITAL ASSET / FILE
-              </span>
-              <span class="text-xs text-slate-400">.zip / .md File</span>
-            </div>
-
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              Webpage Generator: AI Agent Skill & Landing Page Engine
-            </h3>
-
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              An advanced AI prompt engine (FDDFlow) that turns ChatGPT, Claude,
-              or Gemini into a production-ready front-end engineering
-              powerhouse.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Universal
-                Aesthetic Freedom: SaaS, Bento, Corporate, Cyberpunk
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Smart Reference
-                URL Emulation: Auto-samples colors & theme spacing
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Instant
-                Deployment Ready: Outputs clean HTML5, Tailwind CSS & JS
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
-              <span class="text-xs text-slate-500 block">~$55 AED</span>
-            </div>
-            <a
-              href="https://payhip.com/b/A2iZC"
-              target="_blank"
-              class="btn-gold text-sm py-2 px-5"
-            >
-              <span>BUY FILE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
+    <!-- Category Navigation Directory -->
+    <section class="frame">
+      <div class="cat-nav-wrap">
+        <div class="cat-nav-tabs" role="tablist" aria-label="Filter products by category">
+          <button type="button" class="cat-nav-tab active" data-cat-tab="all" role="tab" aria-selected="true">
+            All Solutions <span class="badge">13</span>
+          </button>
+          <button type="button" class="cat-nav-tab" data-cat-tab="spreadsheets" role="tab" aria-selected="false">
+            Spreadsheets &amp; Calculators <span class="badge">5</span>
+          </button>
+          <button type="button" class="cat-nav-tab" data-cat-tab="ai-prompts" role="tab" aria-selected="false">
+            AI Prompts &amp; Guides <span class="badge">7</span>
+          </button>
+          <button type="button" class="cat-nav-tab" data-cat-tab="software" role="tab" aria-selected="false">
+            Software &amp; Tools <span class="badge">1</span>
+          </button>
         </div>
 
-        <!-- Item 2: B2B Business Model Strategist -->
-        <div
-          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-robot mr-1"></i> DIGITAL ASSET / FILE
-              </span>
-              <span class="text-xs text-slate-400">.zip / .md File</span>
-            </div>
-
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              B2B Sales & GTM Strategy Coach for Freelancers & Consultants
-            </h3>
-
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              An interactive GTM framework that guides solopreneurs and
-              specialists through building, pricing, and selling a high-value
-              B2B service to land their first client.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Turn any
-                background into a B2B service
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Complete pricing
-                & retainer frameworks
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Verbatim sales &
-                discovery scripts
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> 4-Week client
-                acquisition roadmap
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
-              <span class="text-xs text-slate-500 block">~$55 AED</span>
-            </div>
-            <a
-              href="https://payhip.com/b/9Psap"
-              target="_blank"
-              class="btn-gold text-sm py-2 px-5"
-            >
-              <span>BUY FILE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
+        <!-- Quick Jump Panels for Each Category -->
+        <div class="p-3 bg-paper-2 border-b border-line flex items-center justify-between text-xs font-bold text-slate-3">
+          <span><i class="fa-solid fa-list-check text-red-600 mr-1.5"></i> CLICK ANY PRODUCT TO JUMP DIRECTLY TO IT:</span>
+          <span id="catJumpCount" class="meta">Showing 13 products</span>
         </div>
 
-        <!-- Item 3: Clinical Health & Fitness AI Coach -->
-        <div
-          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-robot mr-1"></i> DIGITAL ASSET / FILE
-              </span>
-              <span class="text-xs text-slate-400">.zip / .md File</span>
-            </div>
-
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              Clinical Health & Fitness AI Coach
-            </h3>
-
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Turnkey AI system prompt with AHA/ACC, DASH nutrition, ACSM
-              exercise, and clinical safety protocols.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> AHA/ACC & ACSM
-                Guideline Compliant
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Interactive
-                Cooking & Grocery Protocols
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Includes Prompt
-                Library & User Manual
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
-              <span class="text-xs text-slate-500 block">~$55 AED</span>
-            </div>
-            <a
-              href="https://payhip.com/b/G5Lzm"
-              target="_blank"
-              class="btn-gold text-sm py-2 px-5"
-            >
-              <span>BUY FILE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
+        <!-- Jump List Panels -->
+        <div class="cat-jump-list" id="jumpList-all">
+          <a href="#payroll-audit-reconciler-advisor" class="cat-jump-link"><span>01. Automated Payroll Attendance & Discrepancy Reconciler</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#compensation-banding-advisor" class="cat-jump-link"><span>02. Employee Compensation & Salary Banding Calculator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#ai-knowledge-base-extractor" class="cat-jump-link"><span>03. AI Knowledge Base Extractor (Desktop Tool)</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#talentpulse" class="cat-jump-link"><span>04. TalentPulse — Employee Review & Feedback Generator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#finstack-360" class="cat-jump-link"><span>05. FinStack-360 — Cash Flow & Financial Consolidator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#opspulse" class="cat-jump-link"><span>06. OpsPulse — Inventory & Reorder Point Forecaster</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#proposalcraft" class="cat-jump-link"><span>07. ProposalCraft — Client Proposal & Contract Creator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#clientonboard-os" class="cat-jump-link"><span>08. ClientOnboard-OS — Client Onboarding & Kickoff Kit</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#b2b-strategist" class="cat-jump-link"><span>09. B2B Strategist — Service Offer & Launch System</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#webpage-generator-fddflow" class="cat-jump-link"><span>10. Webpage Generator FDDFlow — Landing Page Creator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#instant-lesson-planner" class="cat-jump-link"><span>11. Instant Lesson Planner — Unit & Lesson Creator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#health-coach" class="cat-jump-link"><span>12. Personal Health, Nutrition & Habit Tracker</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#payroll-attendance-template" class="cat-jump-link"><span>13. Payroll Attendance Verification Template (Excel + Power Query)</span> <i class="fa-solid fa-arrow-down"></i></a>
         </div>
 
-        <!-- Item 4: PROPOSALCRAFT: LIQUID CRYSTAL STOREFRONT PRODUCT CARD -->
-        <div
-          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-robot mr-1"></i> ANTIGRAVITY AI SKILL
-              </span>
-              <span class="text-xs text-slate-400">.zip / .md File</span>
-            </div>
-
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              ProposalCraft
-            </h3>
-
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Autonomous B2B agency proposal and Statement of Work (SOW)
-              architect with built-in scope guardrails and 3-tier value pricing.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Generates
-                complete 8-part B2B proposals in under 120 seconds
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Automated
-                out-of-scope boundaries to stop agency scope creep
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Includes 5
-                real-world launch prompts for web dev, marketing & RFPs
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Commercial
-                License included for unlimited paying client work
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
-              <span class="text-xs text-slate-500 block">~$55 AED</span>
-            </div>
-            <a
-              href="https://payhip.com/b/fA0px"
-              target="_blank"
-              class="btn-gold text-sm py-2 px-5"
-            >
-              <span>BUY FILE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
+        <div class="cat-jump-list" id="jumpList-spreadsheets" hidden>
+          <a href="#payroll-audit-reconciler-advisor" class="cat-jump-link"><span>01. Automated Payroll Attendance & Discrepancy Reconciler</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#compensation-banding-advisor" class="cat-jump-link"><span>02. Employee Compensation & Salary Banding Calculator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#finstack-360" class="cat-jump-link"><span>05. FinStack-360 — Cash Flow & Financial Consolidator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#opspulse" class="cat-jump-link"><span>06. OpsPulse — Inventory & Reorder Point Forecaster</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#payroll-attendance-template" class="cat-jump-link"><span>13. Payroll Attendance Verification Template (Excel + Power Query)</span> <i class="fa-solid fa-arrow-down"></i></a>
         </div>
 
-        <!-- Item 5: TALENTPULSE: PAYHIP COMMERCIAL PUBLISHING & LISTING KIT -->
-        <div
-          class="store-item category-ai-skills crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-robot mr-1"></i> POWER AUTOMATE & AI
-              </span>
-              <span class="text-xs text-slate-400">.zip / .md File</span>
-            </div>
-
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              TalentPulse
-            </h3>
-
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Automated 360 review synthesizer with bias-detection safeguards
-              and 90-day employee development roadmaps.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Synthesizes 10+
-                peer reviews into 1-page scorecards in seconds
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Built-in checks
-                for recency bias & halo/horns effect
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Includes Power
-                Automate cloud flow & intake CSV survey
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Commercial
-                License included for internal HR or client consulting
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900">USD 15</span>
-              <span class="text-xs text-slate-500 block">~$55 AED</span>
-            </div>
-            <a
-              href="https://payhip.com/b/p0gNH"
-              target="_blank"
-              class="btn-gold text-sm py-2 px-5"
-            >
-              <span>BUY FILE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
+        <div class="cat-jump-list" id="jumpList-ai-prompts" hidden>
+          <a href="#talentpulse" class="cat-jump-link"><span>04. TalentPulse — Employee Review & Feedback Generator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#proposalcraft" class="cat-jump-link"><span>07. ProposalCraft — Client Proposal & Contract Creator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#clientonboard-os" class="cat-jump-link"><span>08. ClientOnboard-OS — Client Onboarding & Kickoff Kit</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#b2b-strategist" class="cat-jump-link"><span>09. B2B Strategist — Service Offer & Launch System</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#webpage-generator-fddflow" class="cat-jump-link"><span>10. Webpage Generator FDDFlow — Landing Page Creator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#instant-lesson-planner" class="cat-jump-link"><span>11. Instant Lesson Planner — Unit & Lesson Creator</span> <i class="fa-solid fa-arrow-down"></i></a>
+<a href="#health-coach" class="cat-jump-link"><span>12. Personal Health, Nutrition & Habit Tracker</span> <i class="fa-solid fa-arrow-down"></i></a>
         </div>
 
-        <!-- Item 4: Automated Attendance Verification ETL -->
-        <div
-          class="store-item category-power-query crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-file-excel mr-1"></i> EXCEL TEMPLATE
-              </span>
-              <span class="text-xs text-slate-400">Excel / Power BI</span>
-            </div>
-
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              Payroll Attendance Verification Template
-            </h3>
-
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              Automatically cleans raw biometric punch logs, flags missed
-              entries, calculates late arrivals, and generates ready-to-use
-              payroll reports.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Pre-built Power
-                Query M-Code script
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Power BI
-                dashboard formulas included
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Works with any
-                biometric system log
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <div>
-              <span class="text-2xl font-extrabold text-slate-900"
-                >AED 250</span
-              >
-              <span class="text-xs text-slate-500 block">~$68 USD</span>
-            </div>
-            <a
-              href="https://gumroad.com"
-              target="_blank"
-              class="btn-gold text-sm py-2 px-5"
-            >
-              <span>GET TEMPLATE</span>
-              <i class="fa-solid fa-play text-[10px]"></i>
-            </a>
-          </div>
+        <div class="cat-jump-list" id="jumpList-software" hidden>
+          <a href="#ai-knowledge-base-extractor" class="cat-jump-link"><span>03. AI Knowledge Base Extractor (Desktop Tool)</span> <i class="fa-solid fa-arrow-down"></i></a>
         </div>
+      </div>
+    </section>
 
-        <!-- Item 5: Done-For-You Service -->
-        <div
-          class="store-item category-services crystal-panel crystal-sheen p-8 rounded-3xl flex flex-col justify-between reveal-on-scroll"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill">
-                <i class="fa-solid fa-handshake mr-1"></i> SETUP SERVICE
-              </span>
-              <span class="text-xs text-slate-400">1-on-1 Service</span>
+    <!-- Main Products Register Section -->
+    <section class="frame sec pt-4">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-4 pb-2 border-b border-line">
+        <p class="meta font-bold text-slate-3" id="storeStatus">
+          Showing all 13 ready digital products &amp; templates
+        </p>
+        <span class="meta text-slate-4">CLICK "INSPECT INCLUDED FILES" TO VIEW DELIVERABLES</span>
+      </div>
+
+      <!-- Table Header (Desktop) -->
+      <div class="sku-head meta font-bold">
+        <span>ITEM</span>
+        <span>PRODUCT &amp; WHAT IT DOES</span>
+        <span>PRICE</span>
+        <span>GET ACCESS</span>
+      </div>
+
+      <!-- Products List -->
+      <ul class="sku-list" id="productList">
+        <!-- 01 -->
+        <li class="sku" data-category="spreadsheets" id="payroll-audit-reconciler-advisor">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">ATTENDANCE & PAYROLL</span>
+                <span class="pill pill-emerald">Spreadsheets & Calculators</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">Automated Payroll Attendance & Discrepancy Reconciler</h3>
+              <p>Automatically checks daily attendance records against approved leaves in your HR system. Flags late arrivals, early departures, missed clock-outs (one punch only), and unapproved absences, then calculates exact payroll deduction hours.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.XLSX</li><li>.PDF</li>
+              </ul>
             </div>
 
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">
-              Custom AI Setup & Prompt Configuration
-            </h3>
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant download with ready Excel model</p>
+            </div>
 
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              I will build and set up custom AI prompts and tools tailored
-              directly for your team inside Gemini or ChatGPT to automate your
-              daily tasks.
-            </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> Prompts built
-                specifically for your daily business needs
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> 1-on-1 training
-                and setup session
-              </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-gold-500"></i> 30 days of
-                ongoing updates and support
-              </li>
-            </ul>
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/iyPZ2" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-payroll-audit-reconciler-advisor">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
           </div>
 
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-payroll-audit-reconciler-advisor" hidden>
             <div>
-              <span class="text-2xl font-extrabold text-slate-900"
-                >AED 2,500</span
-              >
-              <span class="text-xs text-slate-500 block">One-time fee</span>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Attendance vs HRMS Approved Leave Matching Sheet</li><li>Irregular Attendance Identification Rules (Lates, Early Outs, Missed Punches)</li><li>Attendance Payroll Deduction Calculator</li><li>Easy Step-by-Step Setup & Review Checklist</li>
+              </ul>
             </div>
-            <a href="index.html#contact" class="btn-glass text-sm py-2 px-5">
-              <span>BOOK SETUP</span>
-              <i class="fa-solid fa-calendar text-[10px]"></i>
-            </a>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Works in Microsoft Excel, Office 365, and Google Sheets. Designed for payroll officers, office managers, and HR teams.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </li>
 
-        <!-- Item 6: Placeholder for Future Skill -->
-        <div
-          class="store-item category-ai-skills crystal-panel p-8 rounded-3xl opacity-60 flex flex-col justify-between bg-white/40"
-        >
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="prism-pill"> COMING SOON </span>
-              <span class="text-xs text-slate-400">.md File</span>
+        <!-- 02 -->
+        <li class="sku" data-category="spreadsheets" id="compensation-banding-advisor">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">SALARY & COMPENSATION</span>
+                <span class="pill pill-emerald">Spreadsheets & Calculators</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">Employee Compensation & Salary Banding Calculator</h3>
+              <p>Build fair, structured salary bands and audit team pay equity without costly HR software. Calculates salary minimums, midpoints, maximums, compa-ratios, and merit pay increases.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.XLSX</li>
+              </ul>
             </div>
 
-            <h3 class="text-2xl font-extrabold text-slate-500 mb-2">
-              Power Query M-Code Assistant
-            </h3>
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
 
-            <p class="text-sm text-slate-400 leading-relaxed mb-6">
-              An AI prompt file that helps you write, debug, and optimize
-              complex Excel Power Query scripts automatically.
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/ogcAM" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-compensation-banding-advisor">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-compensation-banding-advisor" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Structured Multi-Grade Salary Band Template</li><li>Compa-Ratio & Pay Range Audit Formulas</li><li>Merit Pay Increase & Promotion Modeling Sheet</li><li>Quick Reference Implementation Guide</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Quickly identifies out-of-band pay rates and helps maintain fair compensation across your team.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 03 -->
+        <li class="sku" data-category="software" id="ai-knowledge-base-extractor">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">DESKTOP TOOL</span>
+                <span class="pill pill-emerald">Software & Automation Tools</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">AI Knowledge Base Extractor (Desktop Tool)</h3>
+              <p>Easy-to-use desktop program that automatically extracts clean text from documentation websites and saves them into neat Markdown files ready for Gemini 2.5 or custom AI prompts.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.PY</li><li>.EXE</li><li>.MD</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$39.00 <small>USD</small></p>
+              <p class="price-note">Full source code + standalone Windows App</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/zHoCq" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-ai-knowledge-base-extractor">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-ai-knowledge-base-extractor" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Standalone Windows App (.exe, runs without coding)</li><li>Full Python Source Code (CLI & Simple Graphical Window)</li><li>Automatic Page Cleaner (Strips ads, headers, and navigation noise)</li><li>Quick Start Video & Instructions</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Runs 100% locally on your computer with zero monthly software subscriptions.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 04 -->
+        <li class="sku" data-category="ai-prompts" id="talentpulse">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">PERFORMANCE AI</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">TalentPulse — Employee Review & Feedback Generator</h3>
+              <p>Ready-to-use AI prompt system that writes clear, objective, and constructive employee appraisals, performance feedback letters, and improvement plans in minutes.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.TXT</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/p0gNH" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-talentpulse">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-talentpulse" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Employee Performance Review Prompt Templates</li><li>Constructive Performance Improvement Plan (PIP) Prompts</li><li>Fair & Objective Feedback Directives</li><li>Quick Fill-in-the-Blank Parameter Guide</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Compatible with Google Gemini, Antigravity, and everyday AI chat assistants.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 05 -->
+        <li class="sku" data-category="spreadsheets" id="finstack-360">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">CASH FLOW & FINANCE</span>
+                <span class="pill pill-emerald">Spreadsheets & Calculators</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">FinStack-360 — Cash Flow & Financial Consolidator</h3>
+              <p>Practical cash flow spreadsheet to track income, forecast 13-week cash liquidity, and monitor business reserves across single or multiple accounts.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.XLSX</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/Px3yB" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-finstack-360">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-finstack-360" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>13-Week Rolling Cash Flow Planner</li><li>Multi-Account & Business Consolidation Sheet</li><li>Currency Conversion & Sensitivity Tracker</li><li>Clean Financial Summary Dashboard</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Gives small business owners, freelancers, and finance managers immediate visibility into future cash reserves.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 06 -->
+        <li class="sku" data-category="spreadsheets" id="opspulse">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">INVENTORY & ORDERS</span>
+                <span class="pill pill-emerald">Spreadsheets & Calculators</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">OpsPulse — Inventory & Reorder Point Forecaster</h3>
+              <p>Easy inventory spreadsheet that calculates exactly when to reorder stock and how much to buy so you avoid stockouts without tying up cash in excess inventory.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.XLSX</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/3jlUe" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-opspulse">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-opspulse" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Reorder Trigger & Safety Stock Formula Engine</li><li>Economic Order Quantity (EOQ) Calculator</li><li>Fast vs Slow Moving Inventory Classification Grid</li><li>Supplier Lead-Time Reliability Tracker</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Takes the guesswork out of purchasing and inventory planning.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 07 -->
+        <li class="sku" data-category="ai-prompts" id="proposalcraft">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">CLIENT PROPOSALS</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">ProposalCraft — Client Proposal & Contract Creator</h3>
+              <p>Streamlined AI prompts to draft winning client proposals, clear scopes of work, and project agreements with 3-tier value pricing options.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.TXT</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/fA0px" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-proposalcraft">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-proposalcraft" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Client Proposal & Scope of Work (SOW) Generator</li><li>3-Tier Value Pricing & Milestone Templates</li><li>Clear Terms & Scope Protection Clauses</li><li>Executive Summary & Project Justifier Prompt</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Great for freelancers, consultants, and agencies pitching services to clients.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 08 -->
+        <li class="sku" data-category="ai-prompts" id="clientonboard-os">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">CLIENT ONBOARDING</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">ClientOnboard-OS — Client Onboarding & Kickoff Kit</h3>
+              <p>Step-by-step kit to welcome new clients smoothly. Includes intake questionnaires, kickoff agendas, and checklists to keep projects on track from day one.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.PDF</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/a392q" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-clientonboard-os">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-clientonboard-os" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>New Client Intake Questionnaire & Kickoff Agenda</li><li>Communication Cadence & Project SLA Guide</li><li>Accounts & Credentials Handover Checklist</li><li>30-Day Milestone Review Template</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Ensures projects start with clear expectations and zero confusion.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 09 -->
+        <li class="sku" data-category="ai-prompts" id="b2b-strategist">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">SERVICE LAUNCH</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">B2B Strategist — Service Offer & Launch System</h3>
+              <p>Guided AI framework to package your skills into clear, well-priced freelance or consulting service offers that clients understand and buy.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.TXT</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/9Psap" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-b2b-strategist">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-b2b-strategist" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>5-Step Service Packaging Blueprints</li><li>Value & Pricing Calculator Worksheet</li><li>Common Client Questions & Answers Sheet</li><li>Initial Discovery Call Questionnaire</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Helps consultants and freelancers transition from low hourly rates to high-value packages.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 10 -->
+        <li class="sku" data-category="ai-prompts" id="webpage-generator-fddflow">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">WEB DESIGN AI</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">Webpage Generator FDDFlow — Landing Page Creator</h3>
+              <p>Generates clean, fast-loading HTML and Tailwind CSS landing pages with simple copy-paste prompts. No complicated website builders or monthly fees required.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.HTML</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/A2iZC" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-webpage-generator-fddflow">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-webpage-generator-fddflow" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Single-Page HTML & Tailwind Architecture Prompt</li><li>Mobile-Friendly Layout Component Library</li><li>Fast Loading & High Contrast Design Rules</li><li>Built-In Interactive Menu & Accordion Snippets</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Generates lightweight web pages that load instantly on all desktop and mobile devices.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 11 -->
+        <li class="sku" data-category="ai-prompts" id="instant-lesson-planner">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">LESSON PLANNING</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">Instant Lesson Planner — Unit & Lesson Creator</h3>
+              <p>Thoughtful lesson planning prompts for educators, instructors, and corporate trainers. Quickly generates detailed lesson plans, learning objectives, and classroom activities.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.TXT</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/bNdGD" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-instant-lesson-planner">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-instant-lesson-planner" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>5-Step Lesson Structure Framework</li><li>Learning Level & Objective Progression Guide</li><li>Adaptable Activities for Different Learning Styles</li><li>Quick Review & Quiz Question Prompts</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Saves teachers and corporate instructors hours in lesson plan preparation each week.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 12 -->
+        <li class="sku" data-category="ai-prompts" id="health-coach">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">HEALTH & HABITS</span>
+                <span class="pill pill-emerald">AI Prompts & Guides</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">Personal Health, Nutrition & Habit Tracker</h3>
+              <p>Clean personal spreadsheet and AI habit coach to track daily meals, workouts, sleep, and health lab results in one simple place.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.MD</li><li>.XLSX</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">$15.00 <small>USD</small></p>
+              <p class="price-note">Instant digital download</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="https://payhip.com/b/G5Lzm" target="_blank" rel="noopener" class="btn btn-red btn-sm text-center justify-center">
+                Buy on Payhip <span class="arrow">↗</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-health-coach">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-health-coach" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Daily Food & Calorie Tracker Sheet</li><li>Health Lab & Biomarker Reference Log</li><li>Sleep & Energy Rating Scorecard</li><li>Weekly Habit Reflection Prompts</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Applies organized tracking to personal health goals without complicated apps.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 13 -->
+        <li class="sku" data-category="spreadsheets" id="payroll-attendance-template">
+          <div class="sku-row">
+            <span class="sku-idx" aria-hidden="true"></span>
+            
+            <div class="sku-main">
+              <div class="sku-cat">
+                <span class="chip chip-ochre">EXCEL + POWER QUERY</span>
+                <span class="pill pill-emerald">Spreadsheets & Calculators</span>
+              </div>
+              
+              <h3 class="text-xl lg:text-2xl font-extrabold tracking-tight">Payroll Attendance Verification Template (Excel + Power Query)</h3>
+              <p>Complete Excel template powered by Power Query. Imports raw attendance punch logs, pairs clock-ins with clock-outs, highlights irregular punches, and calculates net payable hours automatically.</p>
+              
+              <ul class="formats" aria-label="Available formats">
+                <li>.XLSX</li><li>.M</li><li>.PDF</li>
+              </ul>
+            </div>
+
+            <div class="sku-price">
+              <p class="price">AED 250 <small></small></p>
+              <p class="price-note">~$68 USD // Direct setup file</p>
+            </div>
+
+            <div class="sku-actions">
+              <a href="index.html#contact" class="btn btn-red btn-sm text-center justify-center">
+                Inquire / Purchase <span class="arrow">→</span>
+              </a>
+              <button type="button" class="sku-toggle" aria-expanded="false" aria-controls="specs-payroll-attendance-template">
+                Inspect Included Files <i class="fa-solid fa-chevron-down ml-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Specs Drawer -->
+          <div class="sku-specs" id="specs-payroll-attendance-template" hidden>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">What is Included:</h4>
+              <ul class="mt-2 text-sm text-slate-3 space-y-1.5">
+                <li>Pre-Built Power Query Attendance Import Script</li><li>Missed Punch & Late Arrival Highlighter</li><li>Leave Deduction & Overtime Summary Sheet</li><li>Step-by-Step Video Setup Walkthrough</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm tracking-wide text-slate-2 uppercase font-mono">Usage &amp; Compatibility:</h4>
+              <p class="text-sm text-slate-3 mt-2">Built out of 18 years experience verifying attendance for 4,800+ employees. Zero recurring fees.</p>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="pill pill-emerald"><i class="fa-solid fa-check mr-1"></i> Instant Download</span>
+                <span class="pill pill-slate">Easy Customization</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Help / Custom Request Banner -->
+      <div class="cta-sheet mt-16 p-8 border-2 border-slate bg-paper-2 shadow-hard">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <span class="pill pill-red">CUSTOM REQUESTS</span>
+            <h2 class="display display-md mt-2">Need a Customized Attendance Sheet or AI Setup?</h2>
+            <p class="lead mt-2">
+              If your workplace has specific shift timings, unique penalty rules, or custom machine formats, I can help customize a spreadsheet or Power Query model to match your exact setup.
             </p>
+            <div class="mt-4 flex flex-wrap gap-4 text-sm font-bold text-slate-3">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Easy Video Walkthrough Included</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> 100% Unlocked Excel Formulas</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Direct Friendly Support</span>
+            </div>
           </div>
-
-          <div
-            class="pt-5 border-t border-navy-100 flex items-center justify-between"
-          >
-            <span class="text-xs text-slate-500 font-semibold"
-              >IN DEVELOPMENT</span
-            >
-            <button
-              disabled
-              class="px-4 py-2 bg-slate-200 text-slate-400 rounded-xl text-xs font-bold cursor-not-allowed"
-            >
-              Notify Me
-            </button>
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <a href="index.html#contact" class="btn btn-red w-full text-center justify-center">
+              Send a Custom Inquiry <span class="arrow">→</span>
+            </a>
+            <a href="mailto:federico.dumagpi.jr@gmail.com" class="btn btn-outline w-full text-center justify-center">
+              Email: federico.dumagpi.jr@gmail.com
+            </a>
           </div>
         </div>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <!-- Centered Single-Line Footer (Matching Slate Text Border Color & Transparent Backgrounds) -->
-    <footer
-      class="mt-auto border-t border-navy-100 bg-white/70 backdrop-blur-md py-6"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center text-xs sm:text-sm text-slate-600 gap-3 text-center"
-      >
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <span>Powered by</span>
-
-          <div
-            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-transparent border border-slate-300 hover:border-slate-400 font-bold text-navy-950 shadow-sm transition-all"
-          >
-            <img
-              src="firebaselogo.svg"
-              alt="Firebase Logo"
-              class="w-3.5 h-3.5 object-contain"
-            />
-            <span>Firebase</span>
-          </div>
-
-          <div
-            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-transparent border border-slate-300 hover:border-slate-400 font-bold text-navy-950 shadow-sm transition-all"
-          >
-            <img
-              src="antigravitylogo.svg"
-              alt="Firebase Logo"
-              class="w-3.5 h-3.5 object-contain"
-            />
-            <span>Antigravity</span>
-          </div>
-
-          <div
-            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-transparent border border-slate-300 hover:border-slate-400 font-bold text-navy-950 shadow-sm transition-all"
-          >
-            <img
-              src="aistudiologo.svg"
-              alt="Google AI Studio Logo"
-              class="w-3.5 h-3.5 object-contain"
-            />
-            <span>AI Studio</span>
+  <!-- Site Footer (Compact, Dark, Professional) -->
+  <footer class="site-footer">
+    <div class="frame">
+      <div class="foot-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div>
+          <a href="index.html" class="wordmark">
+            <span>FD</span> FEDERICO DUMAGPI
+          </a>
+          <p>
+            Systems &amp; HR Automation Architect with 18 years experience at Al Ansari Financial Services PJSC. Practical spreadsheets, attendance automation, and AI workflows.
+          </p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="pill pill-emerald" style="background:#064e3b; color:#a7f3d0; border-color:#059669;">DUBAI, UAE</span>
+            <span class="pill pill-slate" style="background:#1f2937; color:#e5e7eb; border-color:#374151;">ISO 9001 AUDITOR</span>
           </div>
         </div>
-        <span class="hidden sm:inline">•</span>
-        <p>&copy; 2026 Federico Dumagpi Jr. All rights reserved.</p>
-      </div>
-    </footer>
 
-    <!-- Liquid Crystal JavaScript Engine -->
-    <script src="script.js"></script>
-  </body>
+        <!-- Col 2: Navigation -->
+        <div>
+          <h2>NAVIGATION</h2>
+          <ul>
+            <li><a href="index.html#system">01 // Architecture</a></li>
+            <li><a href="index.html#capabilities">02 // Capabilities</a></li>
+            <li><a href="index.html#track-record">03 // Experience</a></li>
+            <li><a href="store.html">04 // Store &amp; Solutions</a></li>
+            <li><a href="index.html#contact">05 // Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Online Stores -->
+        <div>
+          <h2>ONLINE STORES</h2>
+          <ul>
+            <li><a href="https://payhip.com/FDigitalFlow" target="_blank" rel="noopener">Payhip Store (FDigitalFlow) ↗</a></li>
+            <li><a href="https://dumagpi8.gumroad.com/" target="_blank" rel="noopener">Gumroad (dumagpi8) ↗</a></li>
+            <li><a href="https://payhip.com/b/iyPZ2" target="_blank" rel="noopener">Payroll Attendance Sheet ↗</a></li>
+            <li><a href="https://payhip.com/b/zHoCq" target="_blank" rel="noopener">AI Knowledge Base Extractor ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Access -->
+        <div>
+          <h2>DIRECT ACCESS</h2>
+          <ul>
+            <li><a href="mailto:federico.dumagpi.jr@gmail.com">federico.dumagpi.jr@gmail.com</a></li>
+            <li><span class="text-xs text-gray-400 block mt-1">HOURS: 08:00 - 18:00 GST</span></li>
+            <li><span class="text-xs text-gray-400 block">LOCATION: DUBAI, UAE</span></li>
+            <li><span class="text-xs text-gray-400 block mt-1">Freelance &amp; template inquiries welcome</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-bar">
+        <div>
+          <p class="meta m-0">&copy; 2026 FEDERICO DUMAGPI. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div>
+          <span class="tech-badge">
+            <i class="fa-solid fa-bolt text-red-500"></i> Powered by Firebase • Antigravity
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Submission Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <div>
+      <strong>Message Sent!</strong>
+      <p class="meta" style="margin:0;">Thank you. Federico will reply to your email soon.</p>
+    </div>
+  </div>
+
+  <!-- Vanilla Interaction Script -->
+  <script src="script.js"></script>
+</body>
 </html>
