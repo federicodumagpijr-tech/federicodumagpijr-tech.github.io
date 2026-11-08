@@ -10,3 +10,6 @@ desktop.ini
 # Raw asset backups (not used in production)
 bg_images/
 images/
+
+# Firebase local cache
+.firebase/
