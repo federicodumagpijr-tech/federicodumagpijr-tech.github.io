@@ -1,0 +1,90 @@
+================================================================================
+CLIENT PROPOSAL & CONTRACT CREATOR: PAYHIP PUBLISHING & LISTING KIT
+================================================================================
+
+--------------------------------------------------------------------------------
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Primary Title:
+Client Proposal & Contract Creator
+
+Subtitle:
+Turn rough client meeting notes into clear, professional project proposals and contracts in minutes.
+
+--------------------------------------------------------------------------------
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Business & Money > Entrepreneurship > Resources
+
+--------------------------------------------------------------------------------
+3. SEARCH DISCOVERY TAGS
+--------------------------------------------------------------------------------
+client proposal, sow template, freelance contract, statement of work, agency proposal, proposal generator, client onboarding, business agreement
+
+--------------------------------------------------------------------------------
+4. RECOMMENDED PRICING STRATEGY (USD)
+--------------------------------------------------------------------------------
+Base Price (Single User License): $15.00 USD
+Agency / Commercial License: Contact creator for custom multi-seat agency pricing and client deployment rights.
+
+--------------------------------------------------------------------------------
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title:
+Client Proposal & Contract Creator - Professional SOW Generator
+
+SEO Meta Description (Under 155 Characters):
+Quickly create professional client proposals, statements of work, and contracts from your notes. Protect your margins and close deals faster.
+
+--------------------------------------------------------------------------------
+6. PAYHIP PLAIN-TEXT LISTING DESCRIPTION
+(Copy-paste directly into Payhip's visual rich-text editor. Zero HTML tags used.)
+--------------------------------------------------------------------------------
+
+Stop wasting hours manually writing client proposals, project scopes, and pricing estimates from scratch.
+
+Client Proposal & Contract Creator turns messy discovery notes, bullet points, or call summaries into clear, professional proposals that clients love to sign.
+
+It automatically organizes your projects into clean phases, sets firm project boundaries to prevent unpaid extra work, and structures your pricing into clear packages so clients can easily choose the right option.
+
+• WHAT’S INCLUDED IN THE DOWNLOAD:
+• Client Proposal & Contract Creator AI Tool (01_Source/SKILL.md)
+• Step-by-Step User Guide (ReadMe.pdf)
+• 5 Ready-to-Use Scenario Prompts (Sample-Prompts.pdf)
+• Commercial License for Client Work (Commercial-License.pdf)
+• Lifetime access to version updates
+
+• WHO THIS IS FOR:
+• Freelancers, consultants, and service providers
+• Web designers, developers, and digital agencies
+• Marketing strategists and business advisors
+• Anyone who needs to quote and propose client projects quickly
+
+• HOW IT WORKS IN 3 SIMPLE STEPS:
+1. Open the tool on your computer.
+2. Paste your rough client notes, meeting highlights, or project details.
+3. Get a complete, polished proposal with timelines, milestones, and pricing packages ready to send to your client.
+
+• BUILT-IN SCOPE PROTECTION:
+Every proposal clearly outlines what is included and what is outside the project scope, making sure you get paid fairly for extra work or changes.
+
+• COMMERCIAL USAGE & AGENCY INQUIRIES:
+Your $15 purchase includes a standard license to create unlimited proposals for your paying clients.
+For multi-user agency licensing or enterprise team deployments, please contact the creator directly through Payhip for a custom quote.
+
+Instant Download: Receive your complete .zip archive immediately upon checkout.
+
+--------------------------------------------------------------------------------
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (GEMINI / ANTIGRAVITY READY)
+Palette 1: Cyan to Purple (#0891B2 -> #4F46E5 -> #9333EA)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels).
+
+- Dimensions & Aspect Ratio: 1200 x 1200 pixels, exactly 1:1 square ratio, clean JPEG output format.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter.
+- Top-Left Typography: Prominent title at the top-left reading "CLIENT PROPOSAL" in bold, heavy geometric navy sans-serif typography (#0F172A), with "& CONTRACT CREATOR" directly below in a modern, vibrant cyan-indigo (#0891B2). High-contrast, clean, and commanding.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of an executive agreement document with a checkmark shield, placed dead center, bridging the white upper canvas and the lower colored banner.
+- Dual-Tone Split-Cut Effect: A crisp, sharp angled horizontal partition cleanly intersects the central document icon across its middle. The upper half of the icon is colored in deep cyan-indigo (#0891B2) against the white background, while the lower half of the icon cleanly inverts to solid crisp white (#FFFFFF) against the gradient banner below.
+- Bottom Description Banner: A solid, vibrant gradient color block anchors the bottom 35% of the canvas transitioning smoothly from cyan (#0891B2) through indigo (#4F46E5) to purple (#9333EA) [Tailwind: from-cyan-600 via-indigo-600 to-purple-600]. Centered within this banner is a clean, sharp white sans-serif subtitle: "Turn Meeting Notes Into Winning Proposals • Fast SOW & Contract Generator".
+- Overall Aesthetic: Square 1200x1200px modern tech product packaging, professional studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode elements on the upper canvas.
+================================================================================

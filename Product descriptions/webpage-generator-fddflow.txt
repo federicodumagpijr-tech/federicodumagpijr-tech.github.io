@@ -1,0 +1,83 @@
+================================================================================
+PAYHIP COMMERCIAL LISTING KIT — PRODUCT #7 (PALETTE 7: VIOLET TO PINK)
+================================================================================
+
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Title:
+Instant Website & Landing Page Creator
+
+Subtitle:
+Build Modern, Mobile-Responsive Websites, Sales Pages & Digital Storefronts in Minutes Without Coding
+
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Primary Category:
+Design > UI & Web
+
+3. SEARCH DISCOVERY TAGS (8 HIGH-INTENT TAGS)
+--------------------------------------------------------------------------------
+landing page builder, website template generator, html website creator, web design tool, sales page builder, portfolio website, startup landing page, no code web design
+
+4. PRICING STRATEGY
+--------------------------------------------------------------------------------
+Base Price:
+$15.00 USD (Standard Single-User & Freelance Client Deliverable License)
+
+Agency / Multi-Seat Commercial License:
+Contact creator directly for multi-seat web agency, design studio, or enterprise team licensing.
+
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title (57 chars):
+Instant Website & Landing Page Creator - Web Builder Kit
+
+SEO Meta Description (153 chars):
+Generate complete, mobile-responsive websites, sales landing pages, and digital storefronts in minutes. Match any reference style and host free on GitHub.
+
+6. PAYHIP PLAIN-TEXT PRODUCT DESCRIPTION (ZERO HTML / ZERO MARKDOWN)
+--------------------------------------------------------------------------------
+Need a sleek, high-converting landing page for your business, a digital product storefront with instant checkout, or a multi-page website for a client—without spending weeks wrestling with page builders or expensive monthly subscriptions? The Instant Website & Landing Page Creator (FDDFlow v2.0) turns your AI workspace into a senior front-end web designer and conversion copywriter.
+
+Simply share your business details, upload a document or brochure, or paste a reference website URL whose style you love. The system extracts the color palette, structures your conversion sections, writes benefit-driven copy, and outputs complete, ready-to-host HTML files you can open immediately in your browser or publish for free on GitHub Pages, Netlify, or Vercel.
+
+• What’s Included in the Download
+• Complete Webpage & Landing Page Generator AI Skill (FDDFlow v2.0): Engineered with reference URL color emulation, 12 built-in aesthetic design systems, single-page and multi-page generation, and built-in Payhip, Stripe, and WhatsApp lead-capture integrations.
+• Interactive Website Brief & Theme Token Studio (HTML App): Open in any browser to test 7 curated style presets, preview live color gradients, generate CSS design tokens, and copy a complete website build prompt in one click.
+• 3-Minute Quick-Start & Deployment Guide (PDF): Step-by-step setup instructions and a beginner-friendly guide to free hosting on GitHub Pages.
+• 5 Copy-Paste Website Blueprint Prompts (PDF): Ready-to-run prompts for Liquid Crystal Digital Storefronts, Stripe-style B2B Consulting Pages, Healthcare/Clinic Booking Sites, 4-Page Corporate Websites, and Reference URL Emulation.
+• Commercial Client Deliverable License (PDF): Build unlimited websites and landing pages for your own projects AND for paying freelance clients.
+
+• Key Capabilities Built Into Version 2.0
+• Reference Website Color & Layout Emulation: Share any benchmark URL and the generator automatically builds a matching CSS color token system and visual hierarchy.
+• 12 Curated Aesthetic Presets: Includes Liquid Crystal Frosted Glass, Linear/Vercel Dark Tech, Stripe Clean Editorial, Executive B2B, Healthcare Trust, Luxury Boutique, Neo-Brutalist, and Bento Grid layouts.
+• Single-Page or Multi-Page Architecture: Generate a single high-converting sales page (`index.html`) or a complete multi-page website (`about.html`, `services.html`, `pricing.html`, `contact.html`) with shared navigation.
+• Built for Conversions & Payments: Automatically wires up Payhip modal buy buttons, Stripe payment links, monthly/annual pricing toggles, interactive FAQ accordions, and direct-to-WhatsApp lead forms.
+
+• Who This Is Built For
+• Solopreneurs, creators, and digital product sellers launching storefronts and sales pages.
+• Freelancers, consultants, and agencies who want to deliver custom client websites in hours instead of weeks.
+• Local businesses, clinics, and service providers who want a fast, modern website with zero monthly hosting fees.
+
+• 3-Step Quick Start
+• Step 1: Unzip the package and open the interactive Website Brief & Theme Studio in your browser (or install the skill file in your AI workspace).
+• Step 2: Choose your style preset, customize your brand colors, and click Copy Complete Website Build Prompt.
+• Step 3: Paste into your AI assistant to generate your complete, mobile-responsive website files ready to view or publish online.
+
+• License & Agency Inquiries
+• Your $15.00 USD purchase includes a Commercial Client Deliverable License (you keep 100% of the revenue from websites you build for clients). For multi-seat agencies or design teams, please contact the creator directly for custom licensing.
+
+• Instant Download Guarantee
+• Immediate access to the complete .ZIP bundle containing the v2.0 AI skill, interactive HTML Theme Studio, and all 3 printable PDF manuals right after checkout.
+
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (1:1 SQUARE • PALETTE 7: VIOLET TO PINK)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels, JPEG format).
+
+- Dimensions & Consistency: 1200 x 1200 pixels, 1:1 square aspect ratio, JPEG format, identical margins, padding, and layout geometry as the storefront catalog series.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter.
+- Top-Left Typography: Prominent title at the top-left reading "INSTANT WEBSITE" in bold, heavy geometric navy sans-serif typography (#0F172A), with "& PAGE CREATOR" directly below in a modern vibrant violet (#7C3AED). High-contrast, clean, and commanding.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of a modern responsive browser window frame with a modular bento UI layout grid and a launch cursor/spark badge, placed dead center and bridging the white upper canvas and the lower colored banner.
+- Dual-Tone Split-Cut Effect: A crisp, sharp horizontal color partition cleanly intersects the central icon across its middle where the white upper background meets the lower banner. The upper half of the icon is strictly colored in vibrant Violet (#7C3AED) matching Palette 7 against the white background, while the lower half of the icon cleanly inverts to solid crisp white (#FFFFFF) against the colored gradient banner below.
+- Bottom Description Banner: A bold color block anchors the bottom 35% of the canvas featuring a smooth horizontal gradient from Violet (#7C3AED) through Fuchsia (#C026D3) to Pink (#DB2777) (Tailwind: from-violet-600 via-fuchsia-600 to-pink-600). Centered within this banner is a clean white sans-serif subtitle: "Build Modern, High-Converting Websites & Landing Pages in Minutes".
+- Overall Aesthetic: Modern tech product packaging, professional studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode elements on the upper canvas.

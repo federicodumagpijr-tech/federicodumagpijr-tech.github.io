@@ -1,0 +1,83 @@
+================================================================================
+PAYHIP COMMERCIAL LISTING KIT — PRODUCT #6 (PALETTE 6: SKY TO INDIGO)
+================================================================================
+
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Title:
+B2B Service & Offer Launch Strategist
+
+Subtitle:
+Turn Your Work Experience Into a High-Value B2B Offer, Price It for Profit & Land Your First Client in 30–60 Days
+
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Primary Category:
+Business & Money > Entrepreneurship > Resources
+
+3. SEARCH DISCOVERY TAGS (8 HIGH-INTENT TAGS)
+--------------------------------------------------------------------------------
+b2b sales script, consulting offer builder, freelance business plan, service pricing calculator, lead generation guide, client acquisition, go to market strategy, solopreneur toolkit
+
+4. PRICING STRATEGY
+--------------------------------------------------------------------------------
+Base Price:
+$15.00 USD (Standard Single-User & Solopreneur License)
+
+Agency / Incubator / Multi-Seat Commercial License:
+Contact creator directly for custom coaching cohort, university incubator, or multi-seat agency pricing and client deployment terms.
+
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title (56 chars):
+B2B Service & Offer Launch Strategist - Client Launch Kit
+
+SEO Meta Description (152 chars):
+Package your skills into a high-value B2B service, calculate client ROI, get word-for-word outreach & sales scripts, and land your first client in 30 days.
+
+6. PAYHIP PLAIN-TEXT PRODUCT DESCRIPTION (ZERO HTML / ZERO MARKDOWN)
+--------------------------------------------------------------------------------
+Have valuable real-world work experience in administration, operations, healthcare, trades, finance, HR, or tech—but not sure how to package it into a high-paying B2B service? The B2B Service & Offer Launch Strategist is an interactive, step-by-step go-to-market system that guides you from raw skills to your first paying business client in 30 to 60 days.
+
+Instead of overwhelming you with generic business theory, this strategist walks you through 5 focused phases one step at a time: uncovering your unfair advantage, calculating your client’s cost of inaction, pre-selling your offer before building, anchoring 3-tier setup and monthly retainer pricing, and executing a daily 4-week outreach plan.
+
+• What’s Included in the Download
+• Interactive 5-Phase B2B Strategist AI Skill (v2.0): Guides you step-by-step through Intake, Unfair Advantage & Offer Design, Lean Market Validation, 3-Tier Pricing & Discovery Sales Scripts, and a 4-Week Execution Roadmap—plus automatic export of your customized HTML Business Playbook.
+• Offline B2B Client ROI & 3-Tier Pricing Calculator (HTML App): Open in any browser to model your client’s monthly hours wasted and error costs across AED, USD, GBP, EUR, or SAR, calculate setup payback days, and generate your Phase 1 launch prompt in one click.
+• 3-Minute Quick-Start & User Guide (PDF): Step-by-step installation instructions and an overview of the 5-phase methodology.
+• 5 Real-World B2B Launch Scenarios (PDF): Copy-paste kickoff prompts for HR/Payroll specialists, Clinic/Healthcare coordinators, Fleet/Maintenance supervisors, Excel/Financial analysts, and Web/AI builders.
+• Commercial License Agreement (PDF): Full usage rights for launching your own B2B offers and 1-on-1 coaching sessions.
+
+• Key Capabilities Built Into Version 2.0
+• Works for Any Career Background: Specifically engineered for both non-technical professionals (office admin, clinic ops, fleet maintenance, retail inventory, HR) and technical specialists (Excel automation, web design, AI workflows).
+• Quantitative Client ROI Math: Proves how your fixed setup fee and monthly retainer pay for themselves by quantifying the client’s monthly labor waste and compliance risk.
+• 3-Channel Validation Scripts: Includes copy-paste outreach messages for Warm Contacts, Cold LinkedIn/Email Bottleneck Audits, and Direct Local/WhatsApp Business Openers.
+• 3-Tier Anchored Pricing & 6-Objection Counter-Matrix: Word-for-word scripts to handle pushbacks like "We do this in-house", "Send me a brochure", or "We have no budget right now."
+
+• Who This Is Built For
+• Employees and career transitioners launching their first independent B2B service or consulting side-business.
+• Freelancers and technical builders tired of low hourly rates who want to sell fixed-price setups and monthly retainers.
+• Business coaches and consultants who want a structured, repeatable offer-validation framework.
+
+• 3-Step Quick Start
+• Step 1: Unzip the download bundle and open the B2B Offer ROI Calculator in your browser (or install the skill file in your AI workspace).
+• Step 2: Enter your work background, target industry, and preferred currency, then click Copy Phase 1 Strategist Prompt.
+• Step 3: Paste into your AI assistant and answer the interactive phase checkpoints to build your complete 30-day client acquisition playbook.
+
+• License & Agency Inquiries
+• Your $15.00 USD purchase includes a Standard Single-User License. For business incubators, coaching cohorts, or multi-seat agency licensing, please contact the creator directly for custom pricing.
+
+• Instant Download Guarantee
+• Immediate access to the complete .ZIP package containing the v2.0 AI skill, interactive HTML ROI calculator, and all 3 printable PDF guides right after checkout.
+
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (1:1 SQUARE • PALETTE 6: SKY TO INDIGO)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels, JPEG format).
+
+- Dimensions & Consistency: 1200 x 1200 pixels, 1:1 square aspect ratio, JPEG format, identical margins, padding, and layout geometry as the storefront catalog series.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter.
+- Top-Left Typography: Prominent title at the top-left reading "B2B SERVICE & OFFER" in bold, heavy geometric navy sans-serif typography (#0F172A), with "LAUNCH STRATEGIST" directly below in a modern vibrant sky blue (#0284C7). High-contrast, clean, and commanding.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of a strategic business target bullseye combined with an upward growth arrow and B2B handshake briefcase badge, placed dead center and bridging the white upper canvas and the lower colored banner.
+- Dual-Tone Split-Cut Effect: A crisp, sharp horizontal color partition cleanly intersects the central icon across its middle where the white upper background meets the lower banner. The upper half of the icon is strictly colored in vibrant Sky Blue (#0284C7) matching Palette 6 against the white background, while the lower half of the icon cleanly inverts to solid crisp white (#FFFFFF) against the colored gradient banner below.
+- Bottom Description Banner: A bold color block anchors the bottom 35% of the canvas featuring a smooth horizontal gradient from Sky Blue (#0284C7) through Royal Blue (#2563EB) to Indigo (#4F46E5) (Tailwind: from-sky-600 via-blue-600 to-indigo-600). Centered within this banner is a clean white sans-serif subtitle: "Turn Your Skills Into High-Value B2B Offers & Land Clients in 30 Days".
+- Overall Aesthetic: Modern tech product packaging, professional studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode elements on the upper canvas.

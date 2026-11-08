@@ -6,3 +6,7 @@ desktop.ini
 .idea/
 *.tmp
 *.log
+
+# Raw asset backups (not used in production)
+bg_images/
+images/

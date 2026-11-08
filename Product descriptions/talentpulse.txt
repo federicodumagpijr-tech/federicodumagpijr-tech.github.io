@@ -1,0 +1,96 @@
+================================================================================
+EMPLOYEE REVIEW & FEEDBACK GENERATOR: PAYHIP PUBLISHING & LISTING KIT
+================================================================================
+
+--------------------------------------------------------------------------------
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Primary Title:
+Employee Review & Feedback Generator
+
+Subtitle:
+Turn scattered peer reviews and manager feedback into clear, objective 1-page performance appraisals and 90-day growth plans in minutes.
+
+--------------------------------------------------------------------------------
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Business & Money > Management & Leadership
+
+--------------------------------------------------------------------------------
+3. SEARCH DISCOVERY TAGS
+--------------------------------------------------------------------------------
+performance review, employee evaluation, 360 feedback, hr templates, appraisal form, staff evaluation, management tools, employee growth plan
+
+--------------------------------------------------------------------------------
+4. RECOMMENDED PRICING STRATEGY (USD)
+--------------------------------------------------------------------------------
+Base Price (Single Team License): $15.00 USD
+Enterprise HR & Multi-Seat License: Contact creator for custom enterprise-wide HR deployment and multi-team pricing.
+
+--------------------------------------------------------------------------------
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title:
+Employee Review & Feedback Generator - 360 Appraisal Tool
+
+SEO Meta Description (Under 155 Characters):
+Turn scattered peer feedback into objective 1-page performance review summaries and 90-day employee growth plans in minutes.
+
+--------------------------------------------------------------------------------
+6. PAYHIP PLAIN-TEXT LISTING DESCRIPTION
+(Copy-paste directly into Payhip's visual rich-text editor. Zero HTML tags used.)
+--------------------------------------------------------------------------------
+
+Performance review season shouldn't force team leaders and HR managers to spend 40+ hours drowning in messy, scattered peer feedback comments.
+
+Employee Review & Feedback Generator is an automated appraisal system that synthesizes qualitative multi-rater feedback into clear, objective 1-page performance reviews and actionable 90-day employee development plans in minutes.
+
+Instead of writing evaluations from scratch, it automatically groups feedback into key competencies, highlights positive achievements backed by real examples, flags appraisal bias, and outlines clear growth goals for your next review cycle.
+
+• WHAT’S INCLUDED IN THE DOWNLOAD:
+• Employee Review & Feedback Generator Tool (01_Source/SKILL.md)
+• Automated Cloud Flow Template (TalentPulse-Workflow.json)
+• Standardized 360 Feedback Survey Form (360-Review-Intake-Template.csv)
+• Step-by-Step User Implementation Guide (ReadMe.pdf)
+• Competency Scoring Rubric & Bias-Detection Reference (Config-Setup.pdf)
+• Commercial Team Usage License (Commercial-License.pdf)
+• Lifetime access to version updates
+
+• WHO THIS IS BUILT FOR:
+• Team Leads, Department Heads & Engineering Managers
+• HR Directors & People Operations Specialists
+• Fractional People Executives & HR Consultants
+• Small Business Owners seeking fair, structured appraisals
+
+• HOW IT WORKS IN 3 SIMPLE STEPS:
+1. Distribute peer review questions using the included intake template.
+2. Paste or ingest the raw responses into the tool.
+3. Instantly receive an objective 1-page performance review scorecard and tailored 90-day growth plan.
+
+• BUILT-IN APPRAISAL BIAS PROTECTION:
+Scans feedback to identify recency bias, halo/horns distortions, and vague non-constructive criticism, ensuring fair and equitable performance evaluations.
+
+• COMMERCIAL RIGHTS & ENTERPRISE INQUIRIES:
+Your $15 purchase includes a single-team license for unlimited appraisals.
+For enterprise-wide company rollouts or multi-department deployments, please contact the creator directly through Payhip for custom pricing.
+
+Instant Download: Receive your complete .zip archive immediately upon checkout.
+
+--------------------------------------------------------------------------------
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (GEMINI / ANTIGRAVITY READY)
+Palette 3: Purple to Rose (#9333EA -> #DB2777 -> #E11D48)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels).
+
+- Dimensions & Aspect Ratio: Exactly 1200 x 1200 pixels, 1:1 square ratio, clean high-resolution JPEG format.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter. Strictly light mode.
+- Top-Left Typography: Prominently positioned at the top-left reading "EMPLOYEE REVIEW" in bold, heavy geometric navy typography (#0F172A), with "& FEEDBACK GENERATOR" directly below in vibrant purple (#9333EA). Clean, commanding, two-tone hierarchy.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of a 360-degree performance evaluation radar chart with an ascending star growth arrow, placed dead center, bridging the white upper canvas and lower colored banner.
+- Dual-Tone Split & Cut-Out Effect (CRITICAL COLOR MATCHING):
+  * The icon is bisected horizontally across its center by an angled partition line.
+  * Upper Icon Half (against the white canvas): MUST be colored in the exact primary color of Palette 3: vibrant Purple (#9333EA).
+  * Lower Icon Half (against the colored banner): Cleanly inverts to solid crisp white (#FFFFFF) for maximum contrast against the banner.
+- Bottom Description Banner: Solid vibrant gradient block anchoring the lower 35% of the canvas transitioning smoothly from purple (#9333EA) through pink (#DB2777) to rose (#E11D48) [from-purple-600 via-pink-600 to-rose-600].
+- Subtitle: Centered inside the bottom banner in clean, high-contrast white sans-serif text: "Turn Peer Feedback Into Clear Appraisals & Growth Plans • Ready in Minutes".
+- Overall Aesthetic: Square 1200x1200px tech product packaging, modern studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode on the upper canvas.
+================================================================================

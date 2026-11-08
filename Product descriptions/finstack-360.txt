@@ -1,0 +1,82 @@
+================================================================================
+PAYHIP COMMERCIAL LISTING KIT — PRODUCT #9 (PALETTE 9: ROSE TO ORANGE)
+================================================================================
+
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Title:
+Multi-Company Profit & Cash Flow Consolidator
+
+Subtitle:
+Combine Multi-Branch & Multi-Currency Financials Into One Executive P&L Dashboard in Seconds
+
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Primary Category:
+Business & Money > Accounting
+
+3. SEARCH DISCOVERY TAGS (8 HIGH-INTENT TAGS)
+--------------------------------------------------------------------------------
+financial consolidation, profit and loss excel, multi currency accounting, cash flow dashboard, fractional cfo template, bookkeeping automation, multi branch p&l, power query finance
+
+4. PRICING STRATEGY
+--------------------------------------------------------------------------------
+Base Price:
+$15.00 USD (Standard Single-User & Solo CFO License)
+
+Agency / CPA Firm / Multi-Seat Commercial License:
+Contact creator directly for multi-seat accounting firm, bookkeeping agency, or private equity portfolio licensing.
+
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title (58 chars):
+Multi-Company Profit & Cash Flow Consolidator - Excel + AI
+
+SEO Meta Description (154 chars):
+Eliminate month-end copy-pasting. Combine multi-branch and multi-currency CSVs, eliminate intercompany fees, and build executive P&Ls in Excel + AI.
+
+6. PAYHIP PLAIN-TEXT PRODUCT DESCRIPTION (ZERO HTML / ZERO MARKDOWN)
+--------------------------------------------------------------------------------
+Stop wasting 20+ hours every month manually stitching together subsidiary spreadsheets, fixing broken VLOOKUPs, and calculating currency exchange rates by hand. The Multi-Company Profit & Cash Flow Consolidator (FinStack 360 v2.0) gives business owners, controllers, and fractional CFOs a 1-click system to combine multiple branches, companies, and currencies into a clean, audit-ready Executive Profit & Loss statement.
+
+Simply drop your monthly CSV exports from QuickBooks, Xero, Stripe, or your accounting system into a folder, click Refresh in Excel, or run the included AI Fractional CFO skill to automatically translate currencies, eliminate intercompany management fees, and generate board-ready financial commentary.
+
+• What’s Included in the Download
+• Multi-Entity Consolidation Master Workbook (Excel .xlsx): Pre-wired with Consolidated Executive P&L formulas across US (USD), European (EUR), UK (GBP), and UAE (AED) subsidiaries, plus an automated Intercompany Elimination column and FX Control Table.
+• Interactive Multi-Currency P&L Simulator (HTML App): Open in any browser to test subsidiary revenue, COGS, OpEx, exchange rates, and intercompany eliminations in real time—plus a one-click Copy AI CFO Prompt button.
+• AI Multi-Entity Controller & Fractional CFO Skill (v2.0 .md): Turns your AI workspace into a senior financial analyst that builds consolidated P&Ls, subsidiary efficiency scorecards, EBITDA variance bridges, and executive board notes.
+• Automated Multi-CSV Ingestion Script (Power Query .m) & 4 Sample Entity Datasets (.csv): Automatically combines unlimited entity CSV files and normalizes 7 currencies (USD, EUR, GBP, AED, SAR, CAD, AUD).
+• 3 Printable Implementation & Schema Manuals (PDF): Includes the Quick-Start Setup Guide, the 6-Column Data Schema & AI Prompt Manual, and the Commercial CFO License.
+
+• Key Capabilities Built Into Version 2.0
+• Automatic Multi-Currency Normalization: Translates local subsidiary numbers into your main reporting currency with full audit-trail visibility.
+• Intercompany Elimination Guardrails: Prevents double-counting revenue and expenses when one branch or company bills another for management fees or shared services.
+• Instant Board & Investor Narratives: Generates clear, 4-bullet executive summaries explaining gross margin shifts, EBITDA performance, and 90-day cash priorities.
+
+• Who This Is Built For
+• Founders and operators running multiple branches, clinics, stores, or international subsidiaries.
+• Fractional CFOs, financial controllers, and accountants automating month-end close packages.
+• E-commerce holding companies consolidating multi-brand and multi-currency storefronts.
+
+• 3-Step Quick Start
+• Step 1: Unzip the package and open the Excel Consolidator Workbook or the interactive Browser CFO Simulator.
+• Step 2: Drop your monthly entity CSV exports into the data folder (or enter your branch numbers into the simulator).
+• Step 3: Click Refresh All in Excel and paste into the included AI CFO skill to generate your complete month-end board report.
+
+• License & Agency Inquiries
+• Your $15.00 USD purchase includes a Standard Corporate & Solo CFO License. For multi-seat CPA firms, bookkeeping agencies, or advisory teams, please contact the creator directly for custom licensing.
+
+• Instant Download Guarantee
+• Immediate access to the complete .ZIP archive containing the Excel workbook, HTML simulator, AI CFO skill, Power Query script, 4 sample entity datasets, and all 3 PDF manuals right after checkout.
+
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (1:1 SQUARE • PALETTE 9: ROSE TO ORANGE)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels, JPEG format).
+
+- Dimensions & Consistency: 1200 x 1200 pixels, 1:1 square aspect ratio, JPEG format, identical margins, padding, and layout geometry as the storefront catalog series.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter.
+- Top-Left Typography: Prominent title at the top-left reading "MULTI-COMPANY P&L" in bold, heavy geometric navy sans-serif typography (#0F172A), with "& CASH CONSOLIDATOR" directly below in a modern vibrant rose red (#E11D48). High-contrast, clean, and commanding.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of stacked multi-entity financial ledger layers converging into a unified executive chart and verification checkmark badge, placed dead center and bridging the white upper canvas and the lower colored banner.
+- Dual-Tone Split-Cut Effect: A crisp, sharp horizontal color partition cleanly intersects the central icon across its middle where the white upper background meets the lower banner. The upper half of the icon is strictly colored in vibrant Rose (#E11D48) matching Palette 9 against the white background, while the lower half of the icon cleanly inverts to solid crisp white (#FFFFFF) against the colored gradient banner below.
+- Bottom Description Banner: A bold color block anchors the bottom 35% of the canvas featuring a smooth horizontal gradient from Rose (#E11D48) through Red (#DC2626) to Orange (#EA580C) (Tailwind: from-rose-600 via-red-600 to-orange-600). Centered within this banner is a clean white sans-serif subtitle: "Combine Multi-Branch & Multi-Currency Financials in 1 Click".
+- Overall Aesthetic: Modern tech product packaging, professional studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode elements on the upper canvas.

@@ -1,0 +1,94 @@
+================================================================================
+INSTANT LESSON & UNIT PLANNER: PAYHIP PUBLISHING & LISTING KIT
+================================================================================
+
+--------------------------------------------------------------------------------
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Primary Title:
+Instant Lesson & Unit Planner
+
+Subtitle:
+Turn any topic into structured, differentiated K-12 lesson plans and classroom activities in under 2 minutes.
+
+--------------------------------------------------------------------------------
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Education > Classroom
+
+--------------------------------------------------------------------------------
+3. SEARCH DISCOVERY TAGS
+--------------------------------------------------------------------------------
+lesson plan, unit planner, teacher resources, homeschool curriculum, k12 teaching, classroom activities, differentiated instruction, lesson planning
+
+--------------------------------------------------------------------------------
+4. RECOMMENDED PRICING STRATEGY (USD)
+--------------------------------------------------------------------------------
+Base Price (Single Educator License): $15.00 USD
+School District / Co-op Multi-Seat License: Contact creator for custom institutional pricing and school-wide deployment.
+
+--------------------------------------------------------------------------------
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title:
+Instant Lesson & Unit Planner - K-12 Differentiated Lesson Tool
+
+SEO Meta Description (Under 155 Characters):
+Stop spending your weekends planning lessons. Generate complete K-12 lesson plans, engaging hooks, 3-tier activities, and exit tickets in under 2 minutes.
+
+--------------------------------------------------------------------------------
+6. PAYHIP PLAIN-TEXT LISTING DESCRIPTION
+(Copy-paste directly into Payhip's visual rich-text editor. Zero HTML tags used.)
+--------------------------------------------------------------------------------
+
+Stop sacrificing your weekends and evenings to lesson planning.
+
+Instant Lesson & Unit Planner is an easy-to-use digital tool designed specifically for K-12 teachers and homeschooling parents. It transforms any subject, standard, or book chapter into a complete, ready-to-teach lesson plan in under two minutes.
+
+Instead of generic ideas, it gives you a complete classroom-tested framework: attention-grabbing warm-up hooks, direct instruction guides, and pre-built 3-tier differentiation so every student succeeds—from struggling learners to advanced students.
+
+• WHAT’S INCLUDED IN THE DOWNLOAD:
+• Instant Lesson & Unit Planner Tool (01_Source/SKILL.md)
+• Step-by-Step Setup & User Guide (ReadMe.pdf)
+• 5 Plug-and-Play Prompts for Math, Science, Reading & Homeschool (Sample-Prompts.pdf)
+• Educator Classroom License (Commercial-License.pdf)
+• Lifetime access to version updates
+
+• WHO THIS IS BUILT FOR:
+• Elementary, Middle, and High School Classroom Teachers
+• Homeschool Parents teaching single or multi-age children
+• Instructional Coaches & Curriculum Specialists
+• Private Tutors and Homeschool Co-op Instructors
+
+• HOW IT WORKS IN 3 SIMPLE STEPS:
+1. Open the tool on your computer.
+2. Enter your subject, grade level, and lesson topic.
+3. Instantly receive an 8-part lesson plan complete with objectives, activities, vocabulary, and an exit ticket with answer keys.
+
+• BUILT-IN 3-TIER DIFFERENTIATION:
+Every lesson automatically includes three learning tiers: scaffolded support with sentence stems for struggling students, on-level mastery practice, and higher-order extension challenges for advanced learners.
+
+• LICENSE & SCHOOL DISTRICT INQUIRIES:
+Your $15 purchase includes a personal educator license for unlimited lessons in your classroom or homeschool.
+For school-wide, district-level, or homeschool co-op multi-seat licenses, please contact the creator directly through Payhip for custom pricing.
+
+Instant Download: Receive your complete .zip archive immediately upon checkout.
+
+--------------------------------------------------------------------------------
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (GEMINI / ANTIGRAVITY READY)
+Palette 2: Emerald to Cyan (#059669 -> #0D9488 -> #0891B2)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels).
+
+- Dimensions & Aspect Ratio: Exactly 1200 x 1200 pixels, 1:1 square ratio, clean high-resolution JPEG format.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter. Strictly light mode.
+- Top-Left Typography: Prominently positioned at the top-left reading "INSTANT LESSON" in bold, heavy geometric navy typography (#0F172A), with "& UNIT PLANNER" directly below in vibrant emerald green (#059669). Clean, commanding, two-tone hierarchy.
+- Central Subject Icon: A large, centered minimalist vector icon of an open educational curriculum book with an illuminated lightbulb and progress checklist, placed dead center, bridging the white upper canvas and lower colored banner.
+- Dual-Tone Split & Cut-Out Effect (CRITICAL COLOR MATCHING):
+  * The icon is bisected horizontally across its center by an angled partition line.
+  * Upper Icon Half (against the white canvas): MUST be colored in the exact primary color of Palette 2: vibrant Emerald Green (#059669).
+  * Lower Icon Half (against the colored banner): Cleanly inverts to solid crisp white (#FFFFFF) for maximum contrast against the banner.
+- Bottom Description Banner: Solid vibrant gradient block anchoring the lower 35% of the canvas transitioning smoothly from emerald (#059669) through teal (#0D9488) to cyan (#0891B2) [from-emerald-600 via-teal-600 to-cyan-600].
+- Subtitle: Centered inside the bottom banner in clean, high-contrast white sans-serif text: "K-12 Differentiated Lesson Plans & Activities • Ready in 2 Minutes".
+- Overall Aesthetic: Square 1200x1200px educational product packaging, modern studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode on the upper canvas.
+================================================================================

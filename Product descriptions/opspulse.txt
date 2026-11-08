@@ -1,0 +1,82 @@
+================================================================================
+PAYHIP COMMERCIAL LISTING KIT — PRODUCT #8 (PALETTE 8: TEAL TO GREEN)
+================================================================================
+
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Title:
+Inventory & Reorder Point Forecaster
+
+Subtitle:
+Prevent Stockouts, Calculate Safety Stock & Automate Supplier Purchase Orders for E-Commerce & Retail
+
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Primary Category:
+Business & Money > Management & Leadership
+
+3. SEARCH DISCOVERY TAGS (8 HIGH-INTENT TAGS)
+--------------------------------------------------------------------------------
+inventory tracker, reorder point calculator, safety stock excel, ecommerce inventory, amazon fba inventory, purchase order template, stockout forecaster, supply chain planner
+
+4. PRICING STRATEGY
+--------------------------------------------------------------------------------
+Base Price:
+$15.00 USD (Standard Single-User & Brand Operator License)
+
+Agency / 3PL / Multi-Brand Commercial License:
+Contact creator directly for multi-brand aggregator, 3PL, or multi-seat agency pricing and client deployment terms.
+
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title (56 chars):
+Inventory & Reorder Point Forecaster - Stock & PO System
+
+SEO Meta Description (153 chars):
+Stop stockouts and over-ordering. Calculate weighted sales velocity, safety stock, reorder points, and supplier purchase orders in Excel + AI in minutes.
+
+6. PAYHIP PLAIN-TEXT PRODUCT DESCRIPTION (ZERO HTML / ZERO MARKDOWN)
+--------------------------------------------------------------------------------
+Running out of your best-selling products kills your sales momentum and search rankings, while over-ordering slow products ties up thousands of dollars in warehouse cash. The Inventory & Reorder Point Forecaster (OpsPulse v2.0) gives e-commerce sellers, retail managers, and supply chain operators a plug-and-play system to know exactly what to reorder, how many units to buy, and when to send the Purchase Order.
+
+Combining a pre-wired multi-tab Excel workbook, an automated data import script, an interactive browser simulator, and a dedicated AI Supply Chain Planner skill, this toolkit replaces guesswork with proven inventory math in 15 minutes a week.
+
+• What’s Included in the Download
+• Multi-Tab Inventory & Reorder Forecaster Workbook (Excel .xlsx): Pre-built with live formulas for Weighted Daily Velocity (30-day and 90-day blend), ABC-tiered Safety Stock, Reorder Point (ROP) thresholds, Days of Supply Remaining, and MOQ-adjusted Purchase Order quantities and costs.
+• Interactive Reorder Point & PO Simulator (HTML App): Open in any browser to test lead-time delays, safety buffers, case-pack rounding, and PO cash requirements—plus a one-click Copy AI Audit Prompt button.
+• AI Supply Chain & Inventory Planner Skill (v2.0 .md): Turns your AI workspace into a senior demand planner that runs ABC-XYZ Pareto segmentation, dead-stock cash recovery plans, and supplier container consolidation.
+• Automated Order Velocity Import Script (Power Query .m) & Sample Dataset (.csv): Cleanly summarizes raw order exports from Shopify, Amazon, WooCommerce, or POS systems.
+• 3 Printable User & SOP Manuals (PDF): Includes the Quick-Start Implementation Guide, the 15-Minute Monday Morning Inventory Audit SOP, and the Commercial Brand License.
+
+• Key Capabilities Built Into Version 2.0
+• Dynamic Reorder Point (ROP) Alerts: Automatically flags every SKU as CRITICAL: EXPEDITE PO, REORDER NOW, HEALTHY, or OVERSTOCK REVIEW based on real lead times.
+• Supplier MOQ & Case-Pack Rounding: Never send an invalid order quantity again—recommended PO quantities automatically round up to match factory minimums and master cartons.
+• Dead-Stock Cash Recovery: Pinpoints slow-moving SKUs with over 90 days of supply and calculates how much working capital you can free up.
+
+• Who This Is Built For
+• Shopify, Amazon FBA, and WooCommerce store owners managing physical inventory.
+• Retail buyers, warehouse managers, and wholesale distributors tracking supplier lead times.
+• E-commerce operations consultants and agencies auditing client supply chains.
+
+• 3-Step Quick Start
+• Step 1: Unzip the bundle and open the Excel Forecaster Workbook or the interactive Browser Simulator.
+• Step 2: Enter your current stock levels, daily sales velocity, and supplier lead times (or import your sales CSV).
+• Step 3: Review your automated Reorder Point alerts and paste into the included AI skill to generate ready-to-send Supplier Purchase Orders.
+
+• License & Agency Inquiries
+• Your $15.00 USD purchase includes a Standard Brand Operator License. For multi-brand aggregators, 3PLs, or multi-seat agency licensing, please contact the creator directly for custom pricing.
+
+• Instant Download Guarantee
+• Immediate access to the complete .ZIP archive containing the Excel workbook, HTML simulator, AI skill, Power Query script, sample data, and all 3 PDF guides right after checkout.
+
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (1:1 SQUARE • PALETTE 8: TEAL TO GREEN)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels, JPEG format).
+
+- Dimensions & Consistency: 1200 x 1200 pixels, 1:1 square aspect ratio, JPEG format, identical margins, padding, and layout geometry as the storefront catalog series.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter.
+- Top-Left Typography: Prominent title at the top-left reading "INVENTORY & REORDER" in bold, heavy geometric navy sans-serif typography (#0F172A), with "POINT FORECASTER" directly below in a modern vibrant teal (#0D9488). High-contrast, clean, and commanding.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of a 3D isometric warehouse inventory cube/box with a circular reorder sync arrow and verification checkmark badge, placed dead center and bridging the white upper canvas and the lower colored banner.
+- Dual-Tone Split-Cut Effect: A crisp, sharp horizontal color partition cleanly intersects the central icon across its middle where the white upper background meets the lower banner. The upper half of the icon is strictly colored in vibrant Teal (#0D9488) matching Palette 8 against the white background, while the lower half of the icon cleanly inverts to solid crisp white (#FFFFFF) against the colored gradient banner below.
+- Bottom Description Banner: A bold color block anchors the bottom 35% of the canvas featuring a smooth horizontal gradient from Teal (#0D9488) through Emerald (#059669) to Green (#16A34A) (Tailwind: from-teal-600 via-emerald-600 to-green-600). Centered within this banner is a clean white sans-serif subtitle: "Prevent Stockouts, Calculate Safety Stock & Automate Purchase Orders".
+- Overall Aesthetic: Modern tech product packaging, professional studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode elements on the upper canvas.

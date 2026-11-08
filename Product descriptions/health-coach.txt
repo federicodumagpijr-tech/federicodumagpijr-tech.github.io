@@ -1,0 +1,85 @@
+================================================================================
+PAYHIP COMMERCIAL LISTING KIT — PRODUCT #5 (PALETTE 5: BLUE TO PURPLE)
+================================================================================
+
+1. SIMPLE COMMERCIAL TITLE & SUBTITLE
+--------------------------------------------------------------------------------
+Title:
+Personal Health, Nutrition & Lab Tracker Coach
+
+Subtitle:
+Track Lab Results, Plan Heart-Healthy Meals, Time Medications Safely & Build Sustainable Fitness Habits
+
+2. PAYHIP MARKETPLACE CATEGORY
+--------------------------------------------------------------------------------
+Primary Category:
+Self Improvement > Productivity
+(Alternative if listed under Health: Health & Fitness > Diet & Nutrition)
+
+3. SEARCH DISCOVERY TAGS (8 HIGH-INTENT TAGS)
+--------------------------------------------------------------------------------
+health coach, nutrition planner, lab result tracker, meal prep guide, fitness habit tracker, cholesterol diet plan, blood pressure log, personal wellness
+
+4. PRICING STRATEGY
+--------------------------------------------------------------------------------
+Base Price:
+$15.00 USD (Standard Personal & Individual Coach License)
+
+Agency / Clinic / Multi-Seat Commercial License:
+Contact creator directly for custom clinic, gym, corporate wellness, or multi-seat agency pricing and client deployment terms.
+
+5. PAYHIP SEO METADATA
+--------------------------------------------------------------------------------
+SEO Meta Title (57 chars):
+Personal Health, Nutrition & Lab Tracker Coach - AI Kit
+
+SEO Meta Description (151 chars):
+Track cholesterol & blood pressure labs, compare grocery labels, time medications safely, and build heart-healthy meal & workout plans in minutes.
+
+6. PAYHIP PLAIN-TEXT PRODUCT DESCRIPTION (ZERO HTML / ZERO MARKDOWN)
+--------------------------------------------------------------------------------
+Take the guesswork out of managing your lab results, daily nutrition, medication timing, and workouts. The Personal Health, Nutrition & Lab Tracker Coach turns your AI assistant into a structured, evidence-based wellness and clinical nutrition companion grounded in proven heart-health, blood pressure, and exercise guidelines.
+
+Whether you want to lower your LDL cholesterol with soluble fiber, bring your blood pressure into a healthy range, compare supermarket nutrition labels from a photo, figure out what to cook from your fridge tonight, or follow a joint-friendly strength and walking plan, this toolkit gives you clear tables, calculators, and step-by-step action plans in seconds.
+
+• What’s Included in the Download
+• Complete Health, Clinical Nutrition & Fitness Coach AI Skill (v2.0): Built-in protocols for cardiovascular lab tracking, blood pressure logging, Mifflin-St Jeor calorie and macro math, TLC and DASH meal planning, the Two-Hour Fiber Rule for medication safety, and FITT-VP exercise programming.
+• Interactive Offline Health Intake & Biomarker Dashboard (HTML App): Open in any browser with zero cloud uploads to calculate your BMI, BMR, TDEE, fat-loss calorie target, AHA blood pressure stage, Non-HDL cholesterol, and Triglyceride-to-HDL ratio—plus a one-click Copy Prompt button.
+• 3-Minute Quick-Start & User Manual (PDF): Step-by-step setup instructions and best practices for privacy-safe lab and label tracking.
+• 6 Real-World Copy-Paste Coaching Scenarios (PDF): Ready-to-run prompts for lab trend analysis, grocery aisle label showdowns, fridge-to-table dinners, medication and soluble fiber timetables, post-cheat-meal recovery, and 4-week home dumbbell routines.
+• Standard User & Coaching License (PDF): Clear terms for personal wellness tracking and certified coaching client deliverables.
+
+• Key Capabilities You Can Run Anytime
+• Longitudinal Blood Lab & Blood Pressure Tracking: Turn messy lab numbers (Cholesterol, LDL, HDL, Triglycerides, HbA1c, Fasting Glucose, Liver, Kidney, and CBC panels) into clear progress tables and doctor-visit checklists.
+• Supermarket Label Comparison: Compare two food products or nutrition label photos side by side to spot hidden sodium, saturated fats, and added sugars with a healthier aisle swap.
+• Fridge-to-Table Clinical Cooking: Tell the coach what ingredients you have at home and get 3 heart-healthy, macro-balanced recipes in under 30 minutes.
+• Medication & Two-Hour Fiber Timing Schedule: Automatically build a daily timetable that keeps gel-forming soluble fibers (like psyllium husk, chia, and oats) safely separated by 2 hours from your prescriptions.
+• Guilt-Free Post-Meal Reset: Ate a heavy restaurant pizza or burger meal? Get a science-backed 24-hour recovery plan with post-meal walking and potassium-rich follow-up meals without crash dieting.
+
+• Who This Is Built For
+• Everyday individuals tracking cholesterol, blood pressure, blood sugar, or weight loss goals.
+• Busy professionals who want fast, heart-healthy fridge-to-table meal ideas and realistic home or gym workout plans.
+• Personal trainers, nutrition coaches, and wellness practitioners who want structured intake dashboards and evidence-based templates for client check-ins.
+
+• 3-Step Quick Start
+• Step 1: Unzip the package and open the interactive Health Intake Dashboard in your browser (or drop the skill file into your AI workspace).
+• Step 2: Enter your baseline metrics, blood pressure, or recent lab numbers and click Copy Complete Health Dossier Prompt.
+• Step 3: Paste into your AI assistant to generate your customized lab tracker, medication-fiber timetable, 7-day meal plan, and 4-week workout blueprint.
+
+• License & Clinic / Agency Inquiries
+• Your $15.00 USD purchase includes a Standard Personal & Individual Coach License. For multi-seat fitness studios, nutrition practices, or corporate wellness licensing, please contact the creator directly for custom pricing.
+
+• Instant Download Guarantee
+• Instant access to the complete .ZIP bundle containing the v2.0 AI skill, interactive HTML calculator dashboard, and all 3 printable PDF manuals immediately after checkout.
+
+7. SINGLE LIGHT-MODE COVER IMAGE PROMPT (1:1 SQUARE • PALETTE 5: BLUE TO PURPLE)
+--------------------------------------------------------------------------------
+A minimalist technical commercial product cover in clean light mode, square 1:1 aspect ratio (1200 x 1200 pixels, JPEG format).
+
+- Dimensions & Consistency: 1200 x 1200 pixels, 1:1 square aspect ratio, JPEG format, identical margins, padding, and layout geometry as the storefront catalog series.
+- Canvas & Background: Pristine solid white background (#FFFFFF) occupying the upper 65% of the canvas with generous negative whitespace and zero clutter.
+- Top-Left Typography: Prominent title at the top-left reading "PERSONAL HEALTH" in bold, heavy geometric navy sans-serif typography (#0F172A), with "& NUTRITION COACH" directly below in a modern vibrant royal blue (#2563EB). High-contrast, clean, and commanding.
+- Central Subject Icon: A large, centered minimalist dual-tone vector icon of a medical heart-pulse shield combined with a nutrition leaf and clinical lab chart, placed dead center and bridging the white upper canvas and the lower colored banner.
+- Dual-Tone Split-Cut Effect: A crisp, sharp horizontal color partition cleanly intersects the central icon across its middle where the white upper background meets the lower banner. The upper half of the icon is strictly colored in vibrant Royal Blue (#2563EB) matching Palette 5 against the white background, while the lower half of the icon cleanly inverts to solid crisp white (#FFFFFF) against the colored gradient banner below.
+- Bottom Description Banner: A bold color block anchors the bottom 35% of the canvas featuring a smooth horizontal gradient from Blue (#2563EB) through Indigo (#4F46E5) to Purple (#9333EA) (Tailwind: from-blue-600 via-indigo-600 to-purple-600). Centered within this banner is a clean white sans-serif subtitle: "Track Lab Results, Plan Heart-Healthy Meals & Build Fitness Habits".
+- Overall Aesthetic: Modern tech product packaging, professional studio lighting, ultra-sharp vector graphics, vector precision, clean edges, strictly light mode, absolutely zero dark mode elements on the upper canvas.
