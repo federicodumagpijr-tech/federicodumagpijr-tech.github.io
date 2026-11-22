@@ -948,7 +948,14 @@
     var validCategories = { all: true };
     categoryGroups.forEach(function (group) {
       var cat = group.getAttribute('data-category');
-      if (cat) validCategories[cat] = true;
+      if (cat) {
+        validCategories[cat] = true;
+        var groupBadge = group.querySelector('.category-head .badge');
+        if (groupBadge) {
+          var catCount = countsByCat[cat] || 0;
+          groupBadge.textContent = catCount + ' ' + (catCount === 1 ? 'Toolkit' : 'Toolkits');
+        }
+      }
     });
 
     filterBtns.forEach(function (btn) {
