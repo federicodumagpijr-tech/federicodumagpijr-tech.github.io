@@ -16,6 +16,7 @@
     var clean = (path || '/').replace(/\/+$/, '') || '/';
     if (clean === '/index.html') return '/';
     if (clean === '/store.html') return '/store';
+    if (clean === '/attendance-reconciliation-guide.html') return '/attendance-reconciliation-guide';
     return clean;
   }
 
@@ -92,6 +93,13 @@
 
         if (currentPath === '/store') {
           isMatch = parsed.pathname === '/store';
+          if (isMatch) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        } else if (currentPath === '/attendance-reconciliation-guide') {
+          isMatch = parsed.pathname === '/attendance-reconciliation-guide';
           if (isMatch) {
             link.setAttribute('aria-current', 'page');
           } else {
@@ -673,7 +681,7 @@
 
       if (submittedParam === '1') {
         setSuccessStatus(
-          'Thank you — your inquiry was submitted. Federico Dumagpi Jr. will reply by email within 24 hours (Dubai UTC+4).'
+          'Thank you — your inquiry was submitted. Federico Dumagpi will reply by email within 24 hours (Dubai UTC+4).'
         );
       }
     }
@@ -899,7 +907,7 @@
         setSuccessStatus(
           'Inquiry received — thank you, ' +
             nameVal +
-            '. Federico Dumagpi Jr. will reply to ' +
+            '. Federico Dumagpi will reply to ' +
             emailVal +
             ' within 24 hours (Dubai UTC+4).'
         );
@@ -1051,9 +1059,12 @@
         applyCategoryFilter('all');
       }
 
+      var detailsEl = card.querySelector('details.sku-specs-details');
       var specsPanel = document.getElementById('specs-' + card.id);
       var toggleBtn = card.querySelector('[data-spec-toggle]');
-      if (toggleBtn) {
+      if (detailsEl) {
+        detailsEl.open = true;
+      } else if (toggleBtn) {
         setSpecExpanded(toggleBtn, true);
       } else if (specsPanel) {
         specsPanel.hidden = false;
@@ -1082,52 +1093,9 @@
     var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
     if (!revealEls.length) return;
 
-    function revealAll() {
-      revealEls.forEach(function (el) {
-        el.classList.add('is-visible');
-      });
-    }
-
-    if (prefersReducedMotion() || typeof IntersectionObserver === 'undefined') {
-      revealAll();
-      return;
-    }
-
-    var observer = new IntersectionObserver(
-      function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
     revealEls.forEach(function (el) {
-      observer.observe(el);
+      el.classList.add('is-visible');
     });
-
-    var fallbackTimer = setTimeout(function () {
-      revealAll();
-      observer.disconnect();
-    }, 1500);
-
-    if (reducedMotionQuery) {
-      var onMotionChange = function (e) {
-        if (e.matches) {
-          clearTimeout(fallbackTimer);
-          revealAll();
-          observer.disconnect();
-        }
-      };
-      if (reducedMotionQuery.addEventListener) {
-        reducedMotionQuery.addEventListener('change', onMotionChange);
-      } else if (reducedMotionQuery.addListener) {
-        reducedMotionQuery.addListener(onMotionChange);
-      }
-    }
   }
 
   /* ==========================================================================

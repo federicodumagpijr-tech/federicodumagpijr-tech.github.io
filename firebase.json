@@ -90,6 +90,15 @@
         ]
       },
       {
+        "source": "/attendance-reconciliation-guide",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
         "source": "/styles.css",
         "headers": [
           {
